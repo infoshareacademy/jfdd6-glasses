@@ -1,0 +1,16 @@
+nav {
+    position: fixed;
+    top:0;
+    right:0;
+    height: 100px;
+    background-color: #383838;
+    color: white;
+}
+
+nav li {
+    display: inline;
+}
+
+nav ul {
+    list-style-type: none;
+}

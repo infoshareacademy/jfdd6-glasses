@@ -1,0 +1,17 @@
+header, main, footer {
+    border: 1px solid grey;
+    margin-bottom: 4px;
+}
+
+nav {
+    border: 1px dashed blue;
+}
+
+div {
+    border: 1px solid green;
+}
+
+section {
+    border: 1px dotted darkorange;
+    padding: 5px;
+}

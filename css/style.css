@@ -1,12 +1,9 @@
-header {
-    height: 50px;
-}
-
 nav {
     position: fixed;
+    width: 100%;
     top:0;
-    left: 10px;
-    right: 10px;
+    //height: 100px;
+    margin: auto;
     background-color: #383838;
     color: white;
 }

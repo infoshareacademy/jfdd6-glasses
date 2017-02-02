@@ -1,32 +1,40 @@
-header {
-    height: 50px;
+/*może podłożyć normalize.css?*/
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-
-
 /* ----NAWIGACJA---- */
-nav img {
-    height: 100px;
-//float: left;
-    margin-left: 20px;
-    margin-top: 10px;
-    display: block;
+header {
+    /*display: block;*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:#383838;
+}
+
+#logo {
+    /*display: block;*/
+    float: left;
+}
+
+#logo img {
+    /*max-width: 5vw;*/
+    width: 75px;
+}
+
+nav {
+ /*nie wiem co tu, chyba nic nie potrzeba*/
 }
 
 nav ul {
     list-style-type: none;
-    position: fixed;
-    width: 100%;
-    top:0;
-    right: 0;
-    margin: 0;
-    background-color: #383838;
-    color: white;
+    float: right;
 }
 
 nav li {
     width: 150px;
-    float: right;
+    float: left;
     text-align: center;
 }
 
@@ -34,12 +42,13 @@ li > a {
     text-decoration: none;
     color: white;
     display: block;
-    padding: 20px 10px;
+    padding: 10px 10px;
 }
 
 nav li:hover a{
     background-color: #a2a2a2;
 }
+
 
 /*  ----SEKCJE---- */
 

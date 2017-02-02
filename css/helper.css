@@ -15,3 +15,11 @@ section {
     border: 1px dotted darkorange;
     padding: 5px;
 }
+
+li {
+    border: 1px dashed greenyellow;
+}
+
+ul {
+    border: 1px solid red;
+}

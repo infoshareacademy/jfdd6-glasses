@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/helper.css">
+    <!--link rel="stylesheet" href="css/normalize.css"-->
 
 </head>
 
@@ -11,22 +15,41 @@
 <!-- HEADER: z lewej logo, z prawej menu - 4 przyciski -->
 <header>
     <nav>
-        <ul>
-            <li><a href="#section1">Sekcja 1</a></li>
-            <li><a href="#section2">Sekcja 2</a></li>
-            <li><a href="#section3">Sekcja 3</a></li>
-        </ul>
+        <div id="logo">
+            <!--przycisk powrotu na początek strony-->
+            <a href="#">
+                <img src="img/logo.png" alt="project logo">
+            </a>
+        </div>
+        <!--raczej powinien być w divie bo inaczej ul rozszerza się na całą stronę i wypycha logo-->
+        <div id="menu">
+            <ul>
+                <li><a href="#section1">Sekcja 1</a></li>
+                <li><a href="#section2">Sekcja 2</a></li>
+                <li><a href="#section3">Sekcja 3</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 <!-- Główna zawartość strony, każda sekcja to inne tło, w każdej sekcji
 oczywiście divy i inne bajery z tym, co potrzebne:-->
 <main>
-    <section>
-        zajawka, zad. 5
+    <section id="section0">
+        <h1>zajawka, zad. 5 [#section0]     UWAGA: JAK NIE JEST H1 TO CHOWA SIĘ POD MENU :)</h1>
+        turpis a sem feugiat, volutpat consectetur nulla consectetur.
+        Integer a ante ut dolor interdum volutpat. In dictum eleifend ipsum, id scelerisque dui laoreet
+        ultricies. Donec et diam porttitor, pharetra quam ac, varius turpis.
+        Etiam dictum magna sed nunc sollicitudin, sit amet venenatis diam laoreet. Ut odio risus,
+        varius eu leo ac, porta placerat velit. Aenea st pulvinar scelerisque. Etiam ac turpis vitae ligula auctor laoreet.
+        Phasellus congue turpis a sem feugiat, volutpat consectetur nulla consectetur.
+        Integer a ante ut dolor interdum volutpat. In dictum eleifend ipsum, id scelerisque dui laoreet
+        ultricies. Donec et diam porttitor, pharetra quam ac, varius turpis.
+        Etiam dictum magna sed nunc sollicitudin, sit amet venenatis diam laoreet. Ut odio risus,
+        varius eu leo ac, porta placerat v
     </section>
 
     <section id="section1">
-        funkcjonalność krótka, zad. 6
+        <h1>funkcjonalność krótka, zad. 6 [#section1]</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque nibh nec nulla euismod luctus.
             Morbi finibus elementum mi eu malesuada. Duis ut maximus erat. Morbi sit amet felis massa.
@@ -74,7 +97,7 @@ oczywiście divy i inne bajery z tym, co potrzebne:-->
     </section>
 
     <section id="section2">
-        zapis na premierę, zad. 7 <br>
+        <h1>zapis na premierę, zad. 7 [#section2]</h1><br>
         <br>
         Zainteresowany? Zainteresowana? Damy Wam znać o starcie prosto na skrzynkę!
         <form action="" method="post">
@@ -83,7 +106,7 @@ oczywiście divy i inne bajery z tym, co potrzebne:-->
         </form>    </section>
 
     <section id="section3">
-        zespół, zad. 9
+        <h1>zespół, zad. 9 [#section3]</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque nibh nec nulla euismod luctus.
             Morbi finibus elementum mi eu malesuada. Duis ut maximus erat. Morbi sit amet felis massa.

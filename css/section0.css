@@ -4,13 +4,13 @@ main {
 
 #section0 {
     background: url(../img/movie-918655_1280.jpg);
-    height: 600px
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
 }
 
 .welcome {
     position: relative;
     color: #8c6640;
-    font-size: 2rem;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
@@ -19,3 +19,18 @@ main {
     text-align: center;
     padding: 20px;
 }
+
+.welcome a {
+    text-decoration: none;
+    color: #8c6640;
+}
+
+.main_p {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.sec_p {
+    font-size: 1.3rem;
+}
+

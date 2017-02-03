@@ -12,13 +12,13 @@
 <!-- HEADER: z lewej logo, z prawej menu - 4 przyciski -->
 <header>
     <nav>
-        <div id="logo">
-            <!--przycisk powrotu na początek strony-->
+        <div class="logo">
             <a href="#">
                 <img src="img/logo.png" alt="project logo">
             </a>
         </div>
-        <!--raczej powinien być w divie bo inaczej ul rozszerza się na całą stronę i wypycha logo-->
+
+        <!-- przerobić na flexa-->
         <div id="menu">
             <ul>
                 <li><a href="#section1">Sekcja 1</a></li>
@@ -64,13 +64,18 @@ oczywiście divy i inne bajery z tym, co potrzebne:-->
     </section>
 
     <section id="section2">
-        <h1>zapis na premierę, zad. 7 [#section2]</h1><br>
-        <br>
-        Zainteresowany? Zainteresowana? Damy Wam znać o starcie prosto na skrzynkę!
-        <form action="" method="post">
-            <input type="email" name="email" placeholder="Podaj swój adres e-mail">
-            <input type="submit" value="Wyślij">
-        </form>    </section>
+        <div class="formularz">
+            <p>Zainteresowany? Zainteresowana? Damy Wam znać o starcie prosto na skrzynkę!</p>
+            <form action="" method="post">
+                <input type="email" name="email" placeholder="Podaj swój adres e-mail">
+                <input type="submit" value="Wyślij">
+            </form>
+            <ul>
+                <li>Wyślemy tylko jednego maila z datą uruchomienia Klatki.</li>
+                <li>Wasze adresy mailowe są przechowywane w bezpieczny sposób.</li>
+            </ul>
+        </div>
+    </section>
 
     <section id="section3">
         <h1>zespół, zad. 9 [#section3]</h1>

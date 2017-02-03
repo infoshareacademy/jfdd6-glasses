@@ -5,15 +5,15 @@ header {
     top: 0;
     width: 100%;
     background-color:#383838;
+    z-index: 99;
 }
 
-#logo {
+.logo {
     /*display: block;*/
     float: left;
 }
 
-#logo img {
-    /*max-width: 5vw;*/
+.logo img {
     width: 75px;
 }
 
@@ -24,6 +24,8 @@ nav {
 nav ul {
     list-style-type: none;
     float: right;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {

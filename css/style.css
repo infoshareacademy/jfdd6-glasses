@@ -56,20 +56,3 @@ main {
     margin-top: 50px;
 }
 
-#section0 {
-    background: url(../img/movie-918655_1280.jpg);
-    height: 600px
-}
-
-.welcome {
-    position: relative;
-    color: black;
-    font-size: 2rem;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 500px;
-    background-color: rgba(251, 251, 251, 0.47);
-    text-align: center;
-    padding: 20px;
-}

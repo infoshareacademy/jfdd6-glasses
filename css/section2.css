@@ -10,13 +10,7 @@
 #section2 {
     display: flex;
     justify-content: center;
-    position: relative;
 }
-
-#section2 h1 {
-     position: absolute;
-     left: 0;
- }
 
 #section2 input[type="email"] {
     margin-left: 20px;

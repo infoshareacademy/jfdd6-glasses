@@ -1,0 +1,18 @@
+#section2 ul {
+    list-style-type: square;
+    font-size: small;
+}
+
+.formularz {
+    width: 50%;
+}
+
+#section2 {
+    display: flex;
+    justify-content: center;
+}
+
+#section2 input[type="email"] {
+    margin-left: 20px;
+}
+

@@ -1,46 +1,63 @@
-/* ----NAWIGACJA---- */
-header {
-    /*display: block;*/
-    position: fixed;
+/* Ostylowanie zasadnicze, wspolne dla wielu elementów */
+
+.header,
+.nav-bar,
+.logo,
+.menu,
+.menu li,
+.menu a,
+.menu li:hover a {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Ostylowanie poszczególnych elementów */
+
+/* Kontenery główne, nagłówka i paska nawigacji */
+.header {
+    position: fixed;                /* ISSUE: kiedy jest fixed to musi być width: 100% */
     top: 0;
-    width: 100%;
+    width: 100%;                    /* ISSUE: potrzebne ze względu na position: fixed */
+    /*height: 3.5rem;*/             /* ISSUE: czy powinien być,  bo i tak wysokość obrazka determinuje wysokość headera */
     background-color:#383838;
     z-index: 99;
 }
 
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            /* ISSUE: czy konieczny */
+    width: 80%;
+    /*height: 3.5rem;*/             /* ISSUE: czy powinien być,  bo i tak wysokość obrazka determinuje wysokość nav-bara */
+    margin: 0 auto;
+}
+
+/* Logo i pasek/przyciski menu */
 .logo {
-    /*display: block;*/
-    float: left;
+    height: 3.5rem;
+    display: block;                 /* ISSUE: bez tego <img> nie wypełnia poprawnie <a> */
 }
 
-.logo img {
-    width: 75px;
-}
-
-nav {
-    /*nie wiem co tu, chyba nic nie potrzeba*/
-}
-
-nav ul {
+.menu {                             /* ISSUE: dziwnie się zachowuje przy zoom przeglądarki */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style-type: none;
-    float: right;
-    margin: 0;
-    padding: 0;
+    width: 30%;
 }
 
-nav li {
-    width: 150px;
-    float: left;
-    text-align: center;
-}
-
-li > a {
+.menu a {
     text-decoration: none;
     color: white;
-    display: block;
-    padding: 10px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
-nav li:hover a{
-    background-color: #a2a2a2;
+.menu li:hover a {
+    border-bottom: 2px solid white;
 }
+
+/* tbc */

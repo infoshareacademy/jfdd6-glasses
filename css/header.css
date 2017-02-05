@@ -40,12 +40,16 @@
     display: block;                 /* ISSUE: bez tego <img> nie wypełnia poprawnie <a> */
 }
 
-.menu {                             /* ISSUE: dziwnie się zachowuje przy zoom przeglądarki */
+.menu {                             /* ISSUE: dziwnie się zachowuje przy zoom przeglądarki - leci w prawo */
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
     width: 30%;
+}
+
+.menu .button {
+    padding: 0 1.5rem;             /* żeby przyciski nie sklejały się przy powiększeniu */
 }
 
 .menu a {

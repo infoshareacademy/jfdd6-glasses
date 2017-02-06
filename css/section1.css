@@ -97,7 +97,7 @@
     border-radius: 8px;
 }
 
-.section1-link:hover, a:active{
+.section1-link:hover, .section1-link a:active{
     text-decoration: none;
     color: #ffffff;
     margin: 0;
@@ -105,7 +105,7 @@
     background-color: #840811;
 }
 
-.section1-link a:link, a:visited{
+.section1-link a:link, .section1-link a:visited{
     text-decoration: none;
     color: #000000;
     margin: 0;

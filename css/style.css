@@ -15,12 +15,17 @@ html, body {
     padding: 0;
 }
 
-/*fix, żeby sekcje z linków nie wchodziły pod nagłówek*/
-#section1:target, #section2:target, #section3:target {
+/*usunięcie wchodzenia sekcji pod nagłówek*/
+:target {
     border-top: 65px solid transparent;
     margin-top: -65px;
     background-clip: padding-box;
 }
+
+.tape {
+    max-width: 1440px;
+    margin: auto;
+ }
 
 
 /*!* ----NAWIGACJA---- *!*/

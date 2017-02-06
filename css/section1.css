@@ -30,8 +30,8 @@
 }
 
 .section1-items{
-    min-width: 320px;
-    max-width: 320px;
+    min-width: 300px;
+    max-width: 300px;
     min-height: 450px;
     background: green;
     margin: 20px;

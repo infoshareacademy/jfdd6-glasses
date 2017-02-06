@@ -18,9 +18,9 @@
 /* Kontenery główne nagłówka i paska nawigacji */
 .header {
     /*background-color: silver;       !* temporary *!*/
-    position: fixed;                /* ISSUE: kiedy jest fixed to musi być width: 100% */
+    position: fixed;
     top: 0;
-    width: 100%;                    /* ISSUE: potrzebne ze względu na position: fixed */
+    width: 100%;
     background-color:#383838;
     z-index: 99;
 }
@@ -73,8 +73,9 @@ niepoprawne metodycznie, to rozbić nav-bar na nav-bar-logo i nav-bar-menu*/
     letter-spacing: 0.2rem;
 }
 
-.menu li:hover a {
+.menu .menu-button:hover a {
     border-bottom: 2px solid white;
 }
+
 
 /* tbc */

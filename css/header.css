@@ -1,46 +1,80 @@
-/* ----NAWIGACJA---- */
-header {
-    /*display: block;*/
-    position: fixed;
+/* Ostylowanie zasadnicze, wspolne dla wielu elementów --------------------------------------------------------------*/
+.header,
+.nav-bar,
+.logo-container,
+.logo,
+.menu,
+.menu-button,
+.menu a,
+.menu li:hover a {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    /*border: 1px solid yellow;    !* temporary *!*/
+}
+
+/* Ostylowanie poszczególnych elementów -----------------------------------------------------------------------------*/
+/* Kontenery główne nagłówka i paska nawigacji */
+.header {
+    /*background-color: silver;       !* temporary *!*/
+    position: fixed;                /* ISSUE: kiedy jest fixed to musi być width: 100% */
     top: 0;
-    width: 100%;
+    width: 100%;                    /* ISSUE: potrzebne ze względu na position: fixed */
     background-color:#383838;
     z-index: 99;
 }
 
+.nav-bar {
+    /*background-color: darkturquoise;       !* temporary *!*/
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Logo i pasek/przyciski menu */
+.logo-container {
+    /*background-color: yellow;       !* temporary *!*/
+    height: 3.5rem;                 /* DETERMINUJE WYSOKOŚĆ CAŁEGO HEADERA I NAVBARA */
+}
+
+/* Póki co, wystające logo zrobione w ten sposób, że obraz wychodzi ze swojego rodzica. Jeżeli to okaże się
+niepoprawne metodycznie, to rozbić nav-bar na nav-bar-logo i nav-bar-menu*/
 .logo {
-    /*display: block;*/
-    float: left;
+    /*background-color: magenta;      !* temporary *!*/
+    display: block;                 /* ISSUE: bez tego <img> nie wypełnia poprawnie <a> */
+    background-color: #383838;
+    height: 5rem;                   /* ISSUE: działa, ale obraz wychodzi poza logo-container */
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
 }
 
-.logo img {
-    width: 75px;
-}
-
-nav {
-    /*nie wiem co tu, chyba nic nie potrzeba*/
-}
-
-nav ul {
+.menu {
+    /*background-color: greenyellow;       !* temporary *!*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style-type: none;
-    float: right;
-    margin: 0;
-    padding: 0;
+    /*width: 45%;                     !* wyłączam, bo dzieci wymiarują i lepiej się zachowuje przy zmianie rozmiaru przeglądarki *!*/
 }
 
-nav li {
-    width: 150px;
-    float: left;
-    text-align: center;
+.menu-button {
+    /*background-color: royalblue;       !* temporary *!*/
+    padding: 0 1.5rem;
 }
 
-li > a {
+.menu a {
+    /*background-color: cornflowerblue;       !* temporary *!*/
     text-decoration: none;
     color: white;
-    display: block;
-    padding: 10px 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
 }
 
-nav li:hover a{
-    background-color: #a2a2a2;
+.menu li:hover a {
+    border-bottom: 2px solid white;
 }
+
+/* tbc */

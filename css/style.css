@@ -15,6 +15,14 @@ html, body {
     padding: 0;
 }
 
+/*fix, żeby sekcje z linków nie wchodziły pod nagłówek*/
+#section1:target, #section2:target, #section3:target {
+    border-top: 65px solid transparent;
+    margin-top: -65px;
+    background-clip: padding-box;
+}
+
+
 /*!* ----NAWIGACJA---- *!*/
 /*header {*/
     /*!*display: block;*!*/
@@ -63,7 +71,6 @@ html, body {
 
 /*  ----SEKCJE---- */
 
-main {
-    margin-top: 50px;
-}
-
+/*main {*/
+    /*margin-top: 50px;*/
+/*}*/

@@ -1,18 +1,67 @@
-#section2 ul {
-    list-style-type: square;
-    font-size: small;
-}
-
-.formularz {
-    width: 50%;
+@font-face {
+    font-family: 'eraserregular';
+    src: url('../fonts/EraserRegular-webfont.woff') format('woff'),
+         url('../fonts/EraserRegular-webfont.ttf') format('truetype');
 }
 
 #section2 {
+    height: 750px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background: url(../img/bricks.jpg);
+    background-size: cover;
+}
+
+#section2 .clapper {
+    height: 209px;
+    width: 640px;
+    background-image: url(../img/clapper.png);
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+#section2 .board {
+    height: 450px;
+    width: 600px;
+    background: url(../img/board.png);
+    filter: drop-shadow(5px 5px 5px #222);
+    font-family: eraserregular, sans-serif;
+    color: white;
+    text-transform: uppercase;
+}
+
+#section2 .board p {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#section2 .board p:first-of-type {
+    margin-top: 60px;
 }
 
 #section2 input[type="email"] {
-    margin-left: 20px;
+    margin: 20px 0 50px 90px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#section2 button {
+    padding: 5px;
+    font-family: eraserregular, sans-serif;
+    color: darkorange;
+    background-color: transparent;
+    border: 1px solid darkorange;
+    border-radius: 5px;
+}
+
+#section2 ul {
+    list-style-type: none;
+    font-size: 0.8rem;
+}
+
+#section2 div, ul, li {
+    border: none;
 }
 

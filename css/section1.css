@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'eraserregular';
-    src: url('../fonts/EraserRegular-webfont.woff') format('woff'),
-    url('../fonts/EraserRegular-webfont.ttf') format('truetype');
-}
-
 #section1{
     display: flex;
     min-height: 900px;

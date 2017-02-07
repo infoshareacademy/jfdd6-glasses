@@ -39,8 +39,6 @@
     height: 3.5rem;                 /* DETERMINUJE WYSOKOŚĆ CAŁEGO HEADERA I NAVBARA */
 }
 
-/* Póki co, wystające logo zrobione w ten sposób, że obraz wychodzi ze swojego rodzica. Jeżeli to okaże się
-niepoprawne metodycznie, to rozbić nav-bar na nav-bar-logo i nav-bar-menu*/
 .logo {
     /*background-color: magenta;      !* temporary *!*/
     display: block;                 /* ISSUE: bez tego <img> nie wypełnia poprawnie <a> */

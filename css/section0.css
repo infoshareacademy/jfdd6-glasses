@@ -1,34 +1,40 @@
 
-#section0 {
+.full-width {
     background: url(../img/movie-918655_1280.jpg);
-    height: 100vh;
     background-size: cover;
-    font-family: 'Varela Round', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .teaser {
-    position: relative;
-    color: white;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 800px;
-    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 950px;
+    background-color: rgba(33, 33, 33, 0.7);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
-.welcome a {
-    text-decoration: none;
-    color: #8c6640;
+.teaser img {
+    width: 548px;
+    height: 193px;
+    padding: 20px;
+    padding-bottom: 50px;
 }
 
 .main_p {
-    font-size: 2rem;
-    text-transform: uppercase;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.7rem;
+    color: white;
+    margin: -5px;
 }
 
 .sec_p {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color: #DC810E;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 3px;
 }

@@ -1,21 +1,18 @@
-main {
-    margin-top: 50px;
-}
 
 #section0 {
     background: url(../img/movie-918655_1280.jpg);
     height: 100vh;
     background-size: cover;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .welcome {
     position: relative;
-    color: #8c6640;
+    color: white;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 500px;
+    max-width: 800px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 20px;
@@ -32,6 +29,5 @@ main {
 }
 
 .sec_p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
-

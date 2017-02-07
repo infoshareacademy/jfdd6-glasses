@@ -6,7 +6,7 @@
     font-family: 'Varela Round', sans-serif;
 }
 
-.welcome {
+.teaser {
     position: relative;
     color: white;
     margin: 0 auto;
@@ -30,4 +30,5 @@
 
 .sec_p {
     font-size: 1.5rem;
+    color: #DC810E;
 }

@@ -1,0 +1,23 @@
+#section3 {
+    background-color: #222222;
+}
+.cont_sec_3 {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    width: 1000px;
+}
+
+
+
+.person {
+    display: flex;
+    flex-direction: column;
+}
+
+.person img {
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #222222;
+}
+

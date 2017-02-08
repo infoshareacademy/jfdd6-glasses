@@ -6,8 +6,7 @@
 .logo,
 .menu,
 .menu-button,
-.menu a,
-.menu li:hover a {
+.menu-button-link {
     box-sizing: border-box;
     margin: 0;
     padding: 0;

@@ -5,7 +5,7 @@
 }
 
 #section2 {
-    height: 750px;
+    //height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;

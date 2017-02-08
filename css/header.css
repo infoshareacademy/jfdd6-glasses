@@ -1,6 +1,5 @@
 /* Ostylowanie zasadnicze, wspolne dla wielu elementów --------------------------------------------------------------*/
 
-
 .header,
 .nav-bar,
 .logo-container,
@@ -13,22 +12,19 @@
     margin: 0;
     padding: 0;
     border: none;
-    /*border: 1px solid yellow;    !* temporary *!*/
 }
 
 /* Ostylowanie poszczególnych elementów -----------------------------------------------------------------------------*/
 /* Kontenery główne nagłówka i paska nawigacji */
 .header {
-    /*background-color: silver;       !* temporary *!*/
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:#383838;
+    background-color: white;
     z-index: 99;
 }
 
 .nav-bar {
-    /*background-color: darkturquoise;       !* temporary *!*/
     display: flex;
     justify-content: space-between;
     width: 80%;
@@ -37,15 +33,13 @@
 
 /* Logo i pasek/przyciski menu */
 .logo-container {
-    /*background-color: yellow;       !* temporary *!*/
     height: 3.5rem;                 /* DETERMINUJE WYSOKOŚĆ CAŁEGO HEADERA I NAVBARA */
 }
 
 .logo {
-    /*background-color: magenta;      !* temporary *!*/
     display: block;                 /* ISSUE: bez tego <img> nie wypełnia poprawnie <a> */
-    background-color: #383838;
-    height: 5rem;                   /* ISSUE: działa, ale obraz wychodzi poza logo-container */
+    background-color: white;
+    height: 7rem;                   /* ISSUE: działa, ale obraz wychodzi poza logo-container */
     border-bottom-left-radius: 0.2rem;
     border-bottom-right-radius: 0.2rem;
 }
@@ -60,21 +54,19 @@
 }
 
 .menu-button {
-    /*background-color: royalblue;       !* temporary *!*/
     padding: 0 1.5rem;
 }
 
-.menu a {
-    /*background-color: cornflowerblue;       !* temporary *!*/
+.menu-button-link, .menu-button-link:link, .menu-button-link:visited, .menu-button-link:active {
     text-decoration: none;
-    color: white;
+    color: #4d4d4d;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
 
-.menu .menu-button:hover a {
-    border-bottom: 2px solid white;
+.menu-button-link:hover {
+    border-bottom: 2px solid #4d4d4d;
 }
 
 

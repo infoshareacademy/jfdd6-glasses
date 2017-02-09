@@ -1,79 +1,117 @@
-/* Ostylowanie zasadnicze, wspolne dla wielu elementów --------------------------------------------------------------*/
-.header,
-.nav-bar,
-.logo-container,
-.logo,
-.menu,
-.menu-button,
-.menu a,
-.menu li:hover a {
+/* -------------------------------------------------------------- */
+* {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: none;
-    /*border: 1px solid yellow;    !* temporary *!*/
 }
 
-/* Ostylowanie poszczególnych elementów -----------------------------------------------------------------------------*/
-/* Kontenery główne nagłówka i paska nawigacji */
 .header {
-    /*background-color: silver;       !* temporary *!*/
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
-    background-color:#383838;
+    height: 4rem;           /* This dimension is crucial for entire menu */
+    padding: 0;
+    margin: 0;
     z-index: 99;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .nav-bar {
-    /*background-color: darkturquoise;       !* temporary *!*/
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
-/* Logo i pasek/przyciski menu */
+/* -------------------------------------------------------------- */
 .logo-container {
-    /*background-color: yellow;       !* temporary *!*/
-    height: 3.5rem;                 /* DETERMINUJE WYSOKOŚĆ CAŁEGO HEADERA I NAVBARA */
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .logo {
-    /*background-color: magenta;      !* temporary *!*/
-    display: block;                 /* ISSUE: bez tego <img> nie wypełnia poprawnie <a> */
-    background-color: #383838;
-    height: 5rem;                   /* ISSUE: działa, ale obraz wychodzi poza logo-container */
-    border-bottom-left-radius: 0.2rem;
-    border-bottom-right-radius: 0.2rem;
+    height: 7rem;             /* This dimension is crucial for the protruding logo picture */
+    padding: 0;
+    margin: 0;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    box-shadow: 9px 9px 20px 3px rgba(0,0,0,0.75);
+    transition: box-shadow 0.1s linear;
 }
 
+/* -------------------------------------------------------------- */
 .menu {
-    /*background-color: greenyellow;       !* temporary *!*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
-    /*width: 45%;                     !* wyłączam, bo dzieci wymiarują i lepiej się zachowuje przy zmianie rozmiaru przeglądarki *!*/
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .menu-button {
-    /*background-color: royalblue;       !* temporary *!*/
-    padding: 0 1.5rem;
+    /*width: 33.3333%;*/
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
-.menu a {
-    /*background-color: cornflowerblue;       !* temporary *!*/
-    text-decoration: none;
-    color: white;
+.menu-button-link {
+    width: 12rem;
     font-weight: bold;
-    text-transform: uppercase;
+    color: #222222;
     letter-spacing: 0.2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #fff;
+    transition: color 1s linear;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.menu .menu-button:hover a {
-    border-bottom: 2px solid white;
+.menu-button-link p {
+    margin: 0;
+    padding: 0;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 0.2rem;
+    font-family: "Varela Round", sans-serif;
+    font-size: 1.2rem;
+    transition: border-color 0.8s;
 }
 
+.menu-button-link:hover p {
+    border-bottom: 3px solid #222222;
+}
 
-/* tbc */
+.logo:hover {
+    box-shadow: none;
+}
+
+.logo-container:active .logo {
+    box-shadow: inset 3px 3px 7px 0 rgba(0,0,0,1);
+}

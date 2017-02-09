@@ -12,8 +12,6 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='http://fonts.googleapis.com/css?family=Anton&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
-
 </head>
 
 <body>
@@ -24,15 +22,26 @@
             <img class="logo" src="img/logo.svg" alt="project logo">
         </a>
         <ul class="menu">
-            <li class="menu-button"><a href="#section1">projekt</a></li>
-            <li class="menu-button"><a href="#section2">premiera</a></li>
-            <li class="menu-button"><a href="#section3">zespół</a></li>
+            <li class="menu-button">
+                <a class="menu-button-link" href="#section1">
+                    <p>projekt</p>
+                </a>
+            </li>
+            <li class="menu-button">
+                <a class="menu-button-link" href="#section2">
+                    <p>premiera</p>
+                </a>
+            </li>
+            <li class="menu-button">
+                <a class="menu-button-link" href="#section3">
+                    <p>zespół</p>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 
-<!-- Główna zawartość strony, każda sekcja to inne tło, w każdej sekcji
-oczywiście divy i inne bajery z tym, co potrzebne:-->
+<!-- Main Page Content -->
 <main>
 
     <section id="section0" class="full-width">
@@ -58,31 +67,30 @@ oczywiście divy i inne bajery z tym, co potrzebne:-->
             <div class="section1-container">
                 <a href="" class="section1-link">
                     <div class="section1-items s1items1">
-                        <h2>naglowek</h2>
+                        <h2>Poznaj sąsiadów</h2>
                         <img src="img/iconmonstr-television-5.svg" class="img_section1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat sem, volutpat eu imperdiet a, accumsan iaculis justo. Duis vulputate finibus lectus in tristique. Donec sagittis pellentesque nibh ut auctor.</p>
+                        <p>Zintegruj się z lokalną społecznością. Będziesz zaskoczony jak wiele osób takich jak Ty mieszka w pobliżu</p>
                     </div>
                 </a>
                 <a href="" class="section1-link">
                     <div class="section1-items s1items2">
-                        <h2>naglowek</h2>
+                        <h2>Nadrób zaległości filmowe</h2>
                         <img src="img/iconmonstr-television-6.svg" class="img_section1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat sem, volutpat eu imperdiet a, accumsan iaculis justo. Duis vulputate finibus lectus in tristique. Donec sagittis pellentesque nibh ut auctor.</p>
+                        <p>Przegapiłeś niedawny film, który wyszedł już z kina? Nigdy nie widziałeś klasyka sprzed lat? Obejrzyj go z sąsiadem</p>
                     </div>
                 </a>
                 <a href="" class="section1-link">
                     <div class="section1-items s1items3">
-                        <h2>naglowek</h2>
+                        <h2>Podyskutuj o filmach</h2>
                         <img src="img/iconmonstr-video-camera-12.svg" class="img_section1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat sem, volutpat eu imperdiet a, accumsan iaculis justo. Duis vulputate finibus lectus in tristique. Donec sagittis pellentesque nibh ut auctor.</p>
+                        <p>Najlepiej tuż po seansie. Ale możesz też pogadać przez nasz wbudowany komunikator i umówić się na następne spotkanie</p>
                     </div>
                 </a>
                 <a href="" class="section1-link">
                     <div class="section1-items s1items4">
-                        <h2>naglowek</h2>
+                        <h2>Stwórz własną bibliotekę filmów</h2>
                         <img src="img/iconmonstr-user-24.svg" class="img_section1">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat sem, volutpat eu imperdiet a, accumsan iaculis justo. Duis vulputate finibus lectus in tristique. Donec sagittis pellentesque nibh ut auctor.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat sem, volutpat eu imperdiet a, accumsan iaculis justo. Duis vulputate finibus lectus in tristique. Donec sagittis pellentesque nibh ut auctor.</p>
+                        <p>Uporządkuj swoje filmy i seriale. Pokaż sąsiadom swoją bibliotekę i daj znać czego szukasz</p>
                     </div>
                 </a>
             </div>
@@ -96,11 +104,11 @@ oczywiście divy i inne bajery z tym, co potrzebne:-->
         <div class="board">
             <p>Zainteresowany? Zainteresowana?</p>
             <p>Damy Wam znać o starcie prosto na skrzynkę!</p>
-            <form action="" method="post">
+            <form action="" method="post" class="form">
                 <input type="email" name="email" placeholder="Podaj swój adres e-mail">
-                <button type="submit">Zawiadomcie mnie</button>
+                <button type="submit" class="form-button">Zawiadomcie mnie</button>
             </form>
-            <ul>
+            <ul class="safeguard">
                 <li>&#8226; Wyślemy tylko jednego maila z datą uruchomienia Klatki.</li>
                 <li>&#8226; Wasze adresy mailowe są przechowywane w bezpieczny sposób.</li>
             </ul>
@@ -129,7 +137,7 @@ oczywiście divy i inne bajery z tym, co potrzebne:-->
                 <a href="#"><p class="name">Homepage</p></a>
             </div>
             <div class="person">
-                <img src="img/adam.jpg" alt="Adam" height="200px">
+                <img src="img/michal.jpg" alt="Adam" height="200px">
                 <p>to jest</p>
                 <p class="name">Michał</p>
                 <p class="surname">Trocha</p>

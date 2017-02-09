@@ -1,3 +1,6 @@
+#section0 a {
+    text-decoration: none;
+}
 
 .full-width {
     background: url(../img/movie-918655_1280.jpg);
@@ -17,6 +20,7 @@
     text-align: center;
     padding: 10px;
 }
+
 
 .teaser img {
     width: 548px;

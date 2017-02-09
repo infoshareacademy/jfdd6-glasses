@@ -52,6 +52,10 @@
     letter-spacing: 2px;
 }
 
+.social_media {
+    padding-bottom: 10px;
+}
+
 .social_media img {
     width: 50px;
     height: 50px;

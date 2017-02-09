@@ -9,6 +9,10 @@
 
 /* ostylowanie strony */
 
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -41,56 +45,3 @@ html, body {
     min-height: 90vh;
     width: 87%;
 }
-
-
-/*!* ----NAWIGACJA---- *!*/
-/*header {*/
-    /*!*display: block;*!*/
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*width: 100%;*/
-    /*background-color:#383838;*/
-/*}*/
-
-/*#logo {*/
-    /*!*display: block;*!*/
-    /*float: left;*/
-/*}*/
-
-/*#logo img {*/
-    /*!*max-width: 5vw;*!*/
-    /*width: 75px;*/
-/*}*/
-
-/*nav {*/
- /*!*nie wiem co tu, chyba nic nie potrzeba*!*/
-/*}*/
-
-/*nav ul {*/
-    /*list-style-type: none;*/
-    /*float: right;*/
-/*}*/
-
-/*nav li {*/
-    /*width: 150px;*/
-    /*float: left;*/
-    /*text-align: center;*/
-/*}*/
-
-/*li > a {*/
-    /*text-decoration: none;*/
-    /*color: white;*/
-    /*display: block;*/
-    /*padding: 10px 10px;*/
-/*}*/
-
-/*nav li:hover a{*/
-    /*background-color: #a2a2a2;*/
-/*}*/
-
-
-/*  ----SEKCJE---- */
-
-/*main {*/
-    /*margin-top: 50px;*/
-/*}*/

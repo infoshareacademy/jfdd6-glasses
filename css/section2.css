@@ -5,6 +5,7 @@
 
 
 #section2 {
+    min-height: 750px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +15,7 @@
 }
 
 #section2 .clapper {
-    height: 209px;
+    height: 206px;
     width: 640px;
     background-image: url(../img/clapper.png);
     filter: drop-shadow(5px 5px 5px #222);
@@ -63,9 +64,5 @@
     list-style-type: none;
     font-size: 0.8rem;
     line-height: 1.5;
-}
-
-#section2 div, ul, li {
-    border: none;
 }
 

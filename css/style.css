@@ -4,14 +4,14 @@
 @import "section1.css";
 @import "section2.css";
 @import "section3.css";
-@import "footer.css";
+/*@import "footer.css";*/
 
 
 /* ostylowanie strony */
-
-* {
-    box-sizing: border-box;
-}
+/*box-sizing wyłączone, bo przeszkadzało przy target*/
+/** {*/
+    /*box-sizing: border-box;*/
+/*}*/
 
 html, body {
     margin: 0;
@@ -20,9 +20,11 @@ html, body {
 
 /*usunięcie wchodzenia sekcji pod nagłówek*/
 :target {
-    border-top: 65px solid transparent;
+    /*border-top: 65px solid transparent;*/
+    padding-top: 65px;
     margin-top: -65px;
-    background-clip: padding-box;
+    padding-bottom: 65px;
+    background-clip: content-box;
 }
 
 .tape {

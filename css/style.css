@@ -7,24 +7,16 @@
 /*@import "footer.css";*/
 
 
-/* ostylowanie strony */
-/*box-sizing wyłączone, bo przeszkadzało przy target*/
-/** {*/
-    /*box-sizing: border-box;*/
-/*}*/
-
 html, body {
     margin: 0;
     padding: 0;
 }
 
-/*usunięcie wchodzenia sekcji pod nagłówek*/
-:target {
-    /*border-top: 65px solid transparent;*/
-    padding-top: 65px;
-    margin-top: -65px;
-    padding-bottom: 65px;
-    background-clip: content-box;
+a.anchor {
+    display: block;
+    position: relative;
+    top: -4rem;
+    visibility: hidden;
 }
 
 .tape {
@@ -38,7 +30,7 @@ html, body {
     background-size: contain;
  }
 
-.section_cont {
+.film-frame {
     display: flex;
     justify-content: center;
     align-items: center;

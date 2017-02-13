@@ -1,0 +1,93 @@
+//@mixin screen_mobile {
+//  @media only screen and (max-width: 767px) {
+//    @content;
+//  }
+//}
+
+@mixin tablets {
+  @media only screen and (min-width : 768px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width : 992px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width : 1280px) {
+    @content;
+  }
+}
+
+#section0 a {
+  text-decoration: none;
+}
+
+.full-width {
+  background: url(../img/movie-918655_1280.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teaser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(33, 33, 33, 0.7);
+  text-align: center;
+  padding: 10px;
+  @include medium {
+    width: 80%;
+  }
+}
+
+
+.teaser img {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  padding-bottom: 3%;
+  @include medium {
+    width: 450px;
+    padding: 15px;
+    padding-bottom: 3%;
+  }
+  @include large {
+    width: 548px;
+    padding: 20px;
+    padding-bottom: 5%;
+  }
+  }
+
+.main_p {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin: -5px;
+  @include medium {
+    font-size: 1.5rem;
+  }
+  @include large {
+    font-size: 1.7rem;
+  }
+}
+
+.sec_p {
+  font-size: 1.2rem;
+  color: #DC810E;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+  @include medium {
+    font-size: 1.5rem;
+  }
+  @include large {
+    font-size: 1.9rem;
+  }
+}

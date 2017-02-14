@@ -1,7 +1,7 @@
-#section3 {
+.section3 {
   background-color: #222222;
   flex-direction: column; }
-  #section3 a {
+  .section3 a {
     text-decoration: none; }
 
 .team_title {
@@ -10,10 +10,11 @@
   letter-spacing: 4px;
   font-size: 2.2rem;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+  line-height: 0.2; }
 
 .team_sub_title {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-transform: lowercase; }
 
 .container_section_3 {

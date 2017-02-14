@@ -3,7 +3,7 @@
 /*@import "section0.css";*/
 @import "section0_res.css";
 @import "section1.css";
-@import "section2.css";
+@import "section2_res.css";
 /*@import "section3.css";*/
 @import "section3_res.css";
 
@@ -56,7 +56,7 @@ body {
   align-items: center;
   border-radius: 25px;
   margin: 30px 120px 0;
-  min-height: 90vh;
+  min-height: 80vh;
   width: 85%;
 }
 

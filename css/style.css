@@ -6,7 +6,6 @@
 @import "section2.css";
 /*@import "section3.css";*/
 @import "section3_res.css";
-/*@import "footer.css";*/
 
 html,
 body {
@@ -17,7 +16,12 @@ body {
 .anchor {
   padding-top: 4rem;
   margin-top: -4rem;
-  width: 100%;
+}
+
+.main-margin {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .tape {

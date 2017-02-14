@@ -13,7 +13,6 @@
 .section3 {
   background-color: #222222;
   flex-direction: column;
-
   a {
     text-decoration: none;
   }
@@ -26,12 +25,13 @@
   font-size: 2.2rem;
   text-transform: uppercase;
   text-align: center;
-  line-height: 0.2;
+  line-height: 0.9;
 }
 
 .team_sub_title {
   font-size: 1.5rem;
   text-transform: lowercase;
+  margin-top: -10px;
 }
 
 .container_section_3 {
@@ -40,7 +40,7 @@
   justify-content: space-around;
   width: 100%;
   @include large {
-    width: 1000px;
+    max-width: 1000px;
   }
 }
 
@@ -54,28 +54,26 @@
 }
 
 .person>img {
-  max-height: 150px;
+  max-height: 130px;
   border-radius: 50%;
   box-shadow: 5px 5px 5px black;
   @include medium {
-    max-height: 180px;
+    max-height: 150px;
   }
 }
 
 .name {
   font-size: 2.2rem;
   letter-spacing: 4px;
-  margin: 0px;
+  line-height: 0.7;
+  margin: 0;
   color: #DC810E;
   text-transform: uppercase;
 }
 
 .homepage {
+  @extend .name;
   font-size: 1.8rem;
-  letter-spacing: 4px;
-  margin: 0px;
-  color: #DC810E;
-  text-transform: uppercase;
 }
 
 .surname {
@@ -85,6 +83,7 @@
 
 .social_media {
   padding-bottom: 10px;
+  margin-top: -13px;
 }
 
 .social_media img {

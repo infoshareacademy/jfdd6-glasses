@@ -14,11 +14,10 @@ body {
   padding: 0;
 }
 
-a.anchor {
-  display: block;
-  position: relative;
-  top: -4rem;
-  visibility: hidden;
+.anchor {
+  padding-top: 4rem;
+  margin-top: -4rem;
+  width: 100%;
 }
 
 .tape {

@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'KGLifeisMessy';
+  src: url('../fonts/KGLifeisMessy.ttf') format('truetype');
+}
+
+.section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/bricks.jpg);
+  background-size: cover;
+}
+
+.clapperboard {
+  width: 488px;
+  height: 500px;
+  background: grey url(../img/clapperboard.png);
+  filter: drop-shadow(5px 5px 5px #222);
+  font-family: 'KGLifeisMessy', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+    &:first-of-type {
+      margin-top: 190px;
+    }
+  }
+}
+
+.enrollment-form {
+  height: 35px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  input[type="email"] {
+    padding: 5px;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      border: 3px solid darkorange;
+    }
+  }
+}
+
+.enrollment-form-button {
+  padding: 4px 5px 7px;
+  font-family: 'KGLifeisMessy', sans-serif;
+  color: darkorange;
+  background-color: transparent;
+  border: 1px solid darkorange;
+  border-radius: 5px;
+  &:active {
+    outline: none;
+    border: 3px solid darkorange;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.safeguard {
+  list-style-type: none;
+  font-size: 0.65rem;
+  line-height: 1.5;
+}
+

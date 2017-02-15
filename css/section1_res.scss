@@ -26,7 +26,6 @@
   max-width: 100%;
   background-color: #222222;
   margin: 5px;
-
   display: flex;
   flex-direction: column;
 }
@@ -61,11 +60,19 @@
   border: 3px solid darkgrey;
   text-align: center;
   padding: 3px;
+  position: relative;
 }
 
 .star{
   height: 5%;
   text-align: center;
-  background-color: darkorange;
+  background-color: #ff0000;
   border-color: #222222;
+}
+
+.section1-img {
+  width: 25%;
+  bottom: 2%;
+  left: 38%;
+  position: absolute;
 }

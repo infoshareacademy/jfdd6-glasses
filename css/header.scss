@@ -1,85 +1,132 @@
-@mixin large {
+@mixin desktop {
   @media (min-width: 768px) {
     @content;
   }
 }
 
 $headerBgColorMain: #ffffff;
-$headerBgBtnActiveColor:#222222;
+$headerBgBtnActiveColor: #222222;
+$contrastColor: #DC810E;
 
 .header {
   align-items: stretch;
   background-color: $headerBgColorMain;
-  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.75);
   display: flex;
   flex-wrap: wrap;
   height: 4rem; /* This dimension is crucial for entire menu */
   justify-content: flex-start;
   position: fixed;
-  top: 0px;
+  top: 0;
   width: 100%;
   z-index: 99;
 
   .nav {
-    align-items: stretch;
-    background-color: $headerBgColorMain;
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-between;
     width: 90%;
+    background-color: $headerBgColorMain;
 
-    .logo-container {
-      align-items: flex-start;
-      background-color: $headerBgColorMain;
+    .logo--mobile {
       display: flex;
-      justify-content: center;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .logo--desktop {
+      display: none;
+
+      @include desktop {
+        display: flex;
+      }
+    }
+
+    .logo {
       position: relative;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: $headerBgColorMain;
 
-      .logo {
-        background-color: $headerBgColorMain;
+      .logo__img {
+        height: 4rem;
         border-bottom-right-radius: 0.4rem;
-        height: 4rem; /* This dimension is crucial for the protruding logo picture */
+        background-color: $headerBgColorMain;
 
-        @include large {
+        @include desktop {
           margin: 0;
           padding: 0;
-          transition: box-shadow 0.1s linear;
           height: 7rem;
+          transition: box-shadow 0.1s linear;
+
+          .logo--mobile {
+            display: none;
+          }
+
+          .logo--desktop {
+            display: flex;
+          }
         }
 
         &:hover {
-          box-shadow: none;
-        }
-      }
-
-      &:active .logo {
-        /*box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);*/
-        cursor: default;
-        @include large {
-          box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
-          cursor: context-menu;
+          @include desktop {
+            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.75);
+          }
         }
       }
     }
 
-    .logo-container-mobile {
+    .btn {
+      /* nothing special so far */
 
+      @include desktop {
+        &:active {
+          /* nothing special so far */
+        }
+      }
     }
 
-    .menuToggle {
+    .btn--logo {
+      /* no button logo for mobile */
+      &:active {
+        @include desktop {
+          .logo__img {
+            box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
+          }
+        }
+      }
+    }
+
+    .menu--mobile {
+      display: block;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    .menu--desktop {
+      display: none;
+
+      @include desktop {
+        display: flex;
+      }
+    }
+
+    .side-menu {
       display: block;
       position: fixed;
-
-      @include large {
-        display: none;
-        transition: color 0.3s ease;
-      };
-
       top: 15px;
       right: 3px;
       z-index: 0;
+      @include desktop {
+        display: none;
+      }
 
-      .invisible-checkbox {
+      .side-menu__checkbox {
         display: block;
         width: 40px;
         height: 40px;
@@ -91,30 +138,29 @@ $headerBgBtnActiveColor:#222222;
         z-index: 2;
 
         &:checked ~ .first-bar {
-          transform: translate(0px, 6px);
+          transform: translate(0px, 4.5px);
           background: #4d4d4d;
         }
 
         &:checked ~ .second-bar {
-          transform: translate(0, 2px);
+          transform: translate(0, 1.5px);
           background: #4d4d4d;
         }
 
         &:checked ~ .third-bar {
-          transform: translate(0, -2px);
+          transform: translate(0, -1.5px);
           background: #4d4d4d;
         }
 
         &:checked ~ .fourth-bar {
-          transform: translate(0, -6px);
+          transform: translate(0, -4.5px);
           background: #4d4d4d;
         }
 
         &:checked ~ .menu-list {
-          transform: translate(0,0);
+          transform: translate(0, 0);
           opacity: 1;
         }
-
       }
 
       .bar {
@@ -122,19 +168,16 @@ $headerBgBtnActiveColor:#222222;
         width: 33px;
         height: 4px;
         margin-bottom: 4px;
-        margin-left: 45px;
-        /*position: relative;*/
-        background: black;
+        margin-left: 68px;
+        background: $headerBgBtnActiveColor;
         z-index: 1;
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        color 1s linear;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 1s linear;
       }
 
       .menu-list {
-        /*border: 1px solid black;*/
         margin: 20px -4px 0 0;
-        padding: 0 10px 0 10px;
-        background-color: white;
+        padding: 0 0 0 0;
+        background-color: $headerBgColorMain;
         border-bottom-left-radius: 0.4rem;
         display: block;
         list-style-type: none;
@@ -144,92 +187,82 @@ $headerBgBtnActiveColor:#222222;
         a {
           font-family: "Varela Round", sans-serif;
           text-decoration: none;
-          color: black;
+          color: $headerBgBtnActiveColor;
 
-          li {
-            padding: 7px 0;
+          p {
+            padding: 14px 10px;
+            margin: 0;
             font-size: 22px;
             text-align: right;
-            /*background-color: white;;*/
-            transition: background-color 0.5s ease, color 0.5s ease;
+            text-transform: uppercase;
           }
 
           &:hover {
-            color: #DC810E;
-          }
-
-          &:active li {
-            background-color: black;
+            color: $contrastColor;
+            p {
+              background-color: $headerBgBtnActiveColor;
+            }
           }
         }
       }
-
     }
 
-    .menu {
-      align-items: stretch;
-      background-color: $headerBgColorMain;
-      display: none;
-      @include large {
-        display: flex;
-        transition: color 0.3s ease;
-      }
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      .menu-button {
+    .top-menu {
+      // only desktops
+      @include desktop {
         align-items: stretch;
         background-color: $headerBgColorMain;
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
 
-        .menu-button-link {
-          align-items: center;
+        .menu__btn {
+          align-items: stretch;
           background-color: $headerBgColorMain;
-          color: $headerBgBtnActiveColor;
           display: flex;
-          font-weight: bold;
+          flex-wrap: wrap;
           justify-content: center;
-          letter-spacing: 0.2rem;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: color 1s linear;
-          width: 11rem;
 
-          p {
-            border-radius: 0.2rem;
-            border-bottom: 3px solid #fff;
-            border-top: 3px solid #fff;
-            font-family: "Varela Round", sans-serif;
-            font-size: 1.2rem;
-            margin: 0;
-            padding: 0;
-            transition: border-color 0.8s;
-          }
-
-          &:hover {
-            //border-bottom: 3px solid #222222;
-            background-color: $headerBgBtnActiveColor;
+          .menu__link {
+            align-items: center;
+            background-color: $headerBgColorMain;
+            color: $headerBgBtnActiveColor;
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            letter-spacing: 0.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 11rem;
 
             p {
-              color: white;
+              font-family: "Varela Round", sans-serif;
+              font-size: 1.2rem;
+              margin: 0;
+              padding: 0;
             }
-          }
 
-          &:active {
-            p {
-              color: #DC810E;
+            &:hover {
+              background-color: $headerBgBtnActiveColor;
+              transition: background-color 0.4s ease-in-out;
+
+              p {
+                color: $headerBgColorMain;
+              }
+            }
+
+            &:active {
+              p {
+                color: $contrastColor;
+                transition: color 0.3s ease;
+              }
             }
           }
+        }
+      }
     }
-   }
-  }
-
- } /* End of .nav  */
+  } /* End of .nav  */
 } /* End of .header */
 
 

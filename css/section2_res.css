@@ -5,23 +5,44 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../img/bricks.jpg);
+  background-image: url(../img/bricks.jpg);
   background-size: cover; }
 
 .clapperboard {
-  width: 488px;
-  height: 500px;
-  background: grey url(../img/clapperboard.png);
-  filter: drop-shadow(5px 5px 5px #222);
   font-family: 'KGLifeisMessy', sans-serif;
   color: white;
   text-transform: uppercase; }
-  .clapperboard p {
-    font-size: 1.2rem;
-    text-align: center; }
-    .clapperboard p:first-of-type {
-      margin-top: 190px; }
 
+.safeguard {
+  font-size: 0.65rem;
+  line-height: 1.5;
+  text-align: left; }
+
+@media screen and (max-width: 992px) {
+  .section2 {
+    background-image: none;
+    background-color: #222; }
+
+  .clapperboard {
+    margin-bottom: .8em;
+    text-align: center; }
+
+  .safeguard {
+    margin-left: 4%; } }
+@media screen and (min-width: 993px) {
+  .clapperboard {
+    width: 488px;
+    height: 500px;
+    background: grey url(../img/clapperboard.png);
+    filter: drop-shadow(5px 5px 5px #222); }
+    .clapperboard > p {
+      font-size: 1.2rem;
+      text-align: center; }
+      .clapperboard > p:first-of-type {
+        margin-top: 190px; }
+
+  .safeguard {
+    margin-left: 45px; } }
 .enrollment-form {
   height: 35px;
   margin-top: 30px;
@@ -36,6 +57,7 @@
 
 .enrollment-form-button {
   padding: 4px 5px 7px;
+  margin-top: 6px;
   font-family: 'KGLifeisMessy', sans-serif;
   color: darkorange;
   background-color: transparent;
@@ -46,10 +68,5 @@
     border: 3px solid darkorange; }
   .enrollment-form-button:focus {
     outline: none; }
-
-.safeguard {
-  list-style-type: none;
-  font-size: 0.65rem;
-  line-height: 1.5; }
 
 /*# sourceMappingURL=section2_res.css.map */

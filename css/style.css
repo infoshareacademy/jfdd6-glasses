@@ -60,6 +60,12 @@ body {
   width: 85%;
 }
 
+@media only screen and (max-width: 992px) {
+  .film-frame {
+    min-height: 60vh;
+  }
+}
+
 @media only screen and (min-width: 1280px) {
   .film-frame {
     width: 87%;

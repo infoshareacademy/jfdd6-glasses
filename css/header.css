@@ -28,13 +28,14 @@
       .header .nav .logo-container .logo {
         background-color: #ffffff;
         border-bottom-right-radius: 0.4rem;
-        height: 7rem;
+        height: 4rem;
         /* This dimension is crucial for the protruding logo picture */ }
         @media (min-width: 768px) {
           .header .nav .logo-container .logo {
             margin: 0;
             padding: 0;
-            transition: box-shadow 0.1s linear; } }
+            transition: box-shadow 0.1s linear;
+            height: 7rem; } }
         .header .nav .logo-container .logo:hover {
           box-shadow: none; }
       .header .nav .logo-container:active .logo {

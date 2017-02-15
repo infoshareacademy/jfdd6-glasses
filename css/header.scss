@@ -38,12 +38,13 @@ $headerBgBtnActiveColor:#222222;
       .logo {
         background-color: $headerBgColorMain;
         border-bottom-right-radius: 0.4rem;
-        height: 7rem; /* This dimension is crucial for the protruding logo picture */
+        height: 4rem; /* This dimension is crucial for the protruding logo picture */
 
         @include large {
           margin: 0;
           padding: 0;
           transition: box-shadow 0.1s linear;
+          height: 7rem;
         }
 
         &:hover {
@@ -59,6 +60,10 @@ $headerBgBtnActiveColor:#222222;
           cursor: context-menu;
         }
       }
+    }
+
+    .logo-container-mobile {
+
     }
 
     .menuToggle {
@@ -223,6 +228,7 @@ $headerBgBtnActiveColor:#222222;
     }
    }
   }
+
  } /* End of .nav  */
 } /* End of .header */
 

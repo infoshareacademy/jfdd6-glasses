@@ -1,9 +1,11 @@
+@mixin large {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
 $headerBgColorMain: #ffffff;
 $headerBgBtnActiveColor:#222222;
-
-.html {
-
-}
 
 .header {
   align-items: stretch;
@@ -17,230 +19,212 @@ $headerBgBtnActiveColor:#222222;
   top: 0px;
   width: 100%;
   z-index: 99;
-}
 
-.nav {
-  align-items: stretch;
-  background-color: $headerBgColorMain;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 90%;
-}
-
-.logo-container {
-  align-items: flex-start;
-  background-color: $headerBgColorMain;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.logo {
-  background-color: $headerBgColorMain;
-  border-bottom-right-radius: 0.4rem;
-  height: 7rem; /* This dimension is crucial for the protruding logo picture */
-}
-
-/* -------------------------------------------------------------- */
-.menu {
-  align-items: stretch;
-  background-color: $headerBgColorMain;
-  /*display: flex;*/
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu-button {
-  align-items: stretch;
-  background-color: $headerBgColorMain;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.menu-button-link {
-  align-items: center;
-  background-color: $headerBgColorMain;
-  color: $headerBgBtnActiveColor;
-  display: flex;
-  font-weight: bold;
-  justify-content: center;
-  letter-spacing: 0.2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 1s linear;
-  width: 11rem;
-
-  p {
-    border-radius: 0.2rem;
-    border-bottom: 3px solid #fff;
-    border-top: 3px solid #fff;
-    font-family: "Varela Round", sans-serif;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
-    transition: border-color 0.8s;
-  }
-
-  &:hover {
-    //border-bottom: 3px solid #222222;
-    background-color: $headerBgBtnActiveColor;
-
-    p {
-      color: white;
-    }
-  }
-
-  &:active {
-    p {
-      color: #DC810E;
-    }
-  }
-}
-
-
-
-
-
-.logo:hover {
-  box-shadow: none;
-}
-
-.logo-container:active .logo {
-  /*box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);*/
-  cursor: default;
-}
-
-/*---------------------------*/
-/*---------------------------*/
-.menuToggle {
-  display: block;
-  position: fixed;
-  top: 15px;
-  right: 3px;
-  z-index: 0;
-}
-
-.invisible-checkbox {
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 28px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-}
-
-/* Bars behaviour when checkbox checked */
-.invisible-checkbox:checked ~ .first-bar {
-  transform: translate(0px, 6px);
-  background: #4d4d4d;
-}
-
-.invisible-checkbox:checked ~ .second-bar {
-  transform: translate(0, 2px);
-  background: #4d4d4d;
-}
-
-.invisible-checkbox:checked ~ .third-bar {
-  transform: translate(0, -2px);
-  background: #4d4d4d;
-}
-
-.invisible-checkbox:checked ~ .fourth-bar {
-  transform: translate(0, -6px);
-  background: #4d4d4d;
-}
-
-/* Menu slider */
-.invisible-checkbox:checked ~ .menu-list {
-  transform: translate(0,0);
-  opacity: 1;
-}
-
-/* Menu-toggle button bars */
-.menuToggle .bar {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 4px;
-  margin-left: 45px;
-  /*position: relative;*/
-  background: black;
-  z-index: 1;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-  color 1s linear;
-}
-
-.menu-list {
-  /*border: 1px solid black;*/
-  display: block;
-  list-style-type: none;
-  transform: translate(103%, 0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.menu-list a {
-  font-family: "Varela Round", sans-serif;
-  text-decoration: none;
-  color: black;
-}
-
-.menu-list a:hover {
-  color: #DC810E;
-}
-
-.menu-list a:active li {
-  background-color: black;
-}
-
-.menuToggle ul {
-  margin: 20px -4px 0 0;
-  padding: 0 10px 0 10px;
-  background-color: white;
-  border-bottom-left-radius: 0.4rem;
-}
-
-.menu-list a li {
-  padding: 7px 0;
-  font-size: 22px;
-  text-align: right;
-  /*background-color: white;;*/
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-@media (min-width: 768px) {
-  .menu {
+  .nav {
+    align-items: stretch;
+    background-color: $headerBgColorMain;
     display: flex;
-    transition: color 0.3s ease;
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
 
-  .menuToggle {
-    display: none;
-    transition: color 0.3s ease;
-  }
+    .logo-container {
+      align-items: flex-start;
+      background-color: $headerBgColorMain;
+      display: flex;
+      justify-content: center;
+      position: relative;
 
-  .logo {
-    /*background-color: #fff;*/
-    /*border-radius: 0.4rem;*/
-    /*box-shadow: 9px 9px 20px 3px rgba(0, 0, 0, 0.75);*/
-    /*height: 7rem; !* This dimension is crucial for the protruding logo picture *!*/
-    margin: 0;
-    padding: 0;
-    transition: box-shadow 0.1s linear;
-  }
+      .logo {
+        background-color: $headerBgColorMain;
+        border-bottom-right-radius: 0.4rem;
+        height: 7rem; /* This dimension is crucial for the protruding logo picture */
 
-  .logo-container:active .logo {
-    box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
-    cursor: context-menu;
+        @include large {
+          margin: 0;
+          padding: 0;
+          transition: box-shadow 0.1s linear;
+        }
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      &:active .logo {
+        /*box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);*/
+        cursor: default;
+        @include large {
+          box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
+          cursor: context-menu;
+        }
+      }
+    }
+
+    .menuToggle {
+      display: block;
+      position: fixed;
+
+      @include large {
+        display: none;
+        transition: color 0.3s ease;
+      };
+
+      top: 15px;
+      right: 3px;
+      z-index: 0;
+
+      .invisible-checkbox {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 28px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+
+        &:checked ~ .first-bar {
+          transform: translate(0px, 6px);
+          background: #4d4d4d;
+        }
+
+        &:checked ~ .second-bar {
+          transform: translate(0, 2px);
+          background: #4d4d4d;
+        }
+
+        &:checked ~ .third-bar {
+          transform: translate(0, -2px);
+          background: #4d4d4d;
+        }
+
+        &:checked ~ .fourth-bar {
+          transform: translate(0, -6px);
+          background: #4d4d4d;
+        }
+
+        &:checked ~ .menu-list {
+          transform: translate(0,0);
+          opacity: 1;
+        }
+
+      }
+
+      .bar {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 4px;
+        margin-left: 45px;
+        /*position: relative;*/
+        background: black;
+        z-index: 1;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        color 1s linear;
+      }
+
+      .menu-list {
+        /*border: 1px solid black;*/
+        margin: 20px -4px 0 0;
+        padding: 0 10px 0 10px;
+        background-color: white;
+        border-bottom-left-radius: 0.4rem;
+        display: block;
+        list-style-type: none;
+        transform: translate(103%, 0);
+        transition: transform 0.5s ease-in-out;
+
+        a {
+          font-family: "Varela Round", sans-serif;
+          text-decoration: none;
+          color: black;
+
+          li {
+            padding: 7px 0;
+            font-size: 22px;
+            text-align: right;
+            /*background-color: white;;*/
+            transition: background-color 0.5s ease, color 0.5s ease;
+          }
+
+          &:hover {
+            color: #DC810E;
+          }
+
+          &:active li {
+            background-color: black;
+          }
+        }
+      }
+
+    }
+
+    .menu {
+      align-items: stretch;
+      background-color: $headerBgColorMain;
+      display: none;
+      @include large {
+        display: flex;
+        transition: color 0.3s ease;
+      }
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      .menu-button {
+        align-items: stretch;
+        background-color: $headerBgColorMain;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .menu-button-link {
+          align-items: center;
+          background-color: $headerBgColorMain;
+          color: $headerBgBtnActiveColor;
+          display: flex;
+          font-weight: bold;
+          justify-content: center;
+          letter-spacing: 0.2rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color 1s linear;
+          width: 11rem;
+
+          p {
+            border-radius: 0.2rem;
+            border-bottom: 3px solid #fff;
+            border-top: 3px solid #fff;
+            font-family: "Varela Round", sans-serif;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            transition: border-color 0.8s;
+          }
+
+          &:hover {
+            //border-bottom: 3px solid #222222;
+            background-color: $headerBgBtnActiveColor;
+
+            p {
+              color: white;
+            }
+          }
+
+          &:active {
+            p {
+              color: #DC810E;
+            }
+          }
+    }
+   }
   }
-}
+ } /* End of .nav  */
+} /* End of .header */
+
 
 

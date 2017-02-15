@@ -10,188 +10,156 @@
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 99; }
-
-.nav {
-  align-items: stretch;
-  background-color: #ffffff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 90%; }
-
-.logo-container {
-  align-items: flex-start;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  position: relative; }
-
-.logo {
-  background-color: #ffffff;
-  border-bottom-right-radius: 0.4rem;
-  height: 7rem;
-  /* This dimension is crucial for the protruding logo picture */ }
-
-/* -------------------------------------------------------------- */
-.menu {
-  align-items: stretch;
-  background-color: #ffffff;
-  /*display: flex;*/
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.menu-button {
-  align-items: stretch;
-  background-color: #ffffff;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.menu-button-link {
-  align-items: center;
-  background-color: #ffffff;
-  color: #222222;
-  display: flex;
-  font-weight: bold;
-  justify-content: center;
-  letter-spacing: 0.2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 1s linear;
-  width: 11rem; }
-  .menu-button-link p {
-    border-radius: 0.2rem;
-    border-bottom: 3px solid #fff;
-    border-top: 3px solid #fff;
-    font-family: "Varela Round", sans-serif;
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0;
-    transition: border-color 0.8s; }
-  .menu-button-link:hover {
-    background-color: #222222; }
-    .menu-button-link:hover p {
-      color: white; }
-  .menu-button-link:active p {
-    color: #DC810E; }
-
-.logo:hover {
-  box-shadow: none; }
-
-.logo-container:active .logo {
-  /*box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);*/
-  cursor: default; }
-
-/*---------------------------*/
-/*---------------------------*/
-.menuToggle {
-  display: block;
-  position: fixed;
-  top: 15px;
-  right: 3px;
-  z-index: 0; }
-
-.invisible-checkbox {
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 28px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2; }
-
-/* Bars behaviour when checkbox checked */
-.invisible-checkbox:checked ~ .first-bar {
-  transform: translate(0px, 6px);
-  background: #4d4d4d; }
-
-.invisible-checkbox:checked ~ .second-bar {
-  transform: translate(0, 2px);
-  background: #4d4d4d; }
-
-.invisible-checkbox:checked ~ .third-bar {
-  transform: translate(0, -2px);
-  background: #4d4d4d; }
-
-.invisible-checkbox:checked ~ .fourth-bar {
-  transform: translate(0, -6px);
-  background: #4d4d4d; }
-
-/* Menu slider */
-.invisible-checkbox:checked ~ .menu-list {
-  transform: translate(0, 0);
-  opacity: 1; }
-
-/* Menu-toggle button bars */
-.menuToggle .bar {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 4px;
-  margin-left: 45px;
-  /*position: relative;*/
-  background: black;
-  z-index: 1;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 1s linear; }
-
-.menu-list {
-  /*border: 1px solid black;*/
-  display: block;
-  list-style-type: none;
-  transform: translate(103%, 0);
-  transition: transform 0.5s ease-in-out; }
-
-.menu-list a {
-  font-family: "Varela Round", sans-serif;
-  text-decoration: none;
-  color: black; }
-
-.menu-list a:hover {
-  color: #DC810E; }
-
-.menu-list a:active li {
-  background-color: black; }
-
-.menuToggle ul {
-  margin: 20px -4px 0 0;
-  padding: 0 10px 0 10px;
-  background-color: white;
-  border-bottom-left-radius: 0.4rem; }
-
-.menu-list a li {
-  padding: 7px 0;
-  font-size: 22px;
-  text-align: right;
-  /*background-color: white;;*/
-  transition: background-color 0.5s ease, color 0.5s ease; }
-
-@media (min-width: 768px) {
-  .menu {
+  z-index: 99;
+  /* End of .nav  */ }
+  .header .nav {
+    align-items: stretch;
+    background-color: #ffffff;
     display: flex;
-    transition: color 0.3s ease; }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%; }
+    .header .nav .logo-container {
+      align-items: flex-start;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      position: relative; }
+      .header .nav .logo-container .logo {
+        background-color: #ffffff;
+        border-bottom-right-radius: 0.4rem;
+        height: 7rem;
+        /* This dimension is crucial for the protruding logo picture */ }
+        @media (min-width: 768px) {
+          .header .nav .logo-container .logo {
+            margin: 0;
+            padding: 0;
+            transition: box-shadow 0.1s linear; } }
+        .header .nav .logo-container .logo:hover {
+          box-shadow: none; }
+      .header .nav .logo-container:active .logo {
+        /*box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);*/
+        cursor: default; }
+        @media (min-width: 768px) {
+          .header .nav .logo-container:active .logo {
+            box-shadow: inset 3px 3px 7px 0 black;
+            cursor: context-menu; } }
+    .header .nav .menuToggle {
+      display: block;
+      position: fixed;
+      top: 15px;
+      right: 3px;
+      z-index: 0; }
+      @media (min-width: 768px) {
+        .header .nav .menuToggle {
+          display: none;
+          transition: color 0.3s ease; } }
+      .header .nav .menuToggle .invisible-checkbox {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        right: 28px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2; }
+        .header .nav .menuToggle .invisible-checkbox:checked ~ .first-bar {
+          transform: translate(0px, 6px);
+          background: #4d4d4d; }
+        .header .nav .menuToggle .invisible-checkbox:checked ~ .second-bar {
+          transform: translate(0, 2px);
+          background: #4d4d4d; }
+        .header .nav .menuToggle .invisible-checkbox:checked ~ .third-bar {
+          transform: translate(0, -2px);
+          background: #4d4d4d; }
+        .header .nav .menuToggle .invisible-checkbox:checked ~ .fourth-bar {
+          transform: translate(0, -6px);
+          background: #4d4d4d; }
+        .header .nav .menuToggle .invisible-checkbox:checked ~ .menu-list {
+          transform: translate(0, 0);
+          opacity: 1; }
+      .header .nav .menuToggle .bar {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 4px;
+        margin-left: 45px;
+        /*position: relative;*/
+        background: black;
+        z-index: 1;
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 1s linear; }
+      .header .nav .menuToggle .menu-list {
+        /*border: 1px solid black;*/
+        margin: 20px -4px 0 0;
+        padding: 0 10px 0 10px;
+        background-color: white;
+        border-bottom-left-radius: 0.4rem;
+        display: block;
+        list-style-type: none;
+        transform: translate(103%, 0);
+        transition: transform 0.5s ease-in-out; }
+        .header .nav .menuToggle .menu-list a {
+          font-family: "Varela Round", sans-serif;
+          text-decoration: none;
+          color: black; }
+          .header .nav .menuToggle .menu-list a li {
+            padding: 7px 0;
+            font-size: 22px;
+            text-align: right;
+            /*background-color: white;;*/
+            transition: background-color 0.5s ease, color 0.5s ease; }
+          .header .nav .menuToggle .menu-list a:hover {
+            color: #DC810E; }
+          .header .nav .menuToggle .menu-list a:active li {
+            background-color: black; }
+    .header .nav .menu {
+      align-items: stretch;
+      background-color: #ffffff;
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      @media (min-width: 768px) {
+        .header .nav .menu {
+          display: flex;
+          transition: color 0.3s ease; } }
+      .header .nav .menu .menu-button {
+        align-items: stretch;
+        background-color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; }
+        .header .nav .menu .menu-button .menu-button-link {
+          align-items: center;
+          background-color: #ffffff;
+          color: #222222;
+          display: flex;
+          font-weight: bold;
+          justify-content: center;
+          letter-spacing: 0.2rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          transition: color 1s linear;
+          width: 11rem; }
+          .header .nav .menu .menu-button .menu-button-link p {
+            border-radius: 0.2rem;
+            border-bottom: 3px solid #fff;
+            border-top: 3px solid #fff;
+            font-family: "Varela Round", sans-serif;
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 0;
+            transition: border-color 0.8s; }
+          .header .nav .menu .menu-button .menu-button-link:hover {
+            background-color: #222222; }
+            .header .nav .menu .menu-button .menu-button-link:hover p {
+              color: white; }
+          .header .nav .menu .menu-button .menu-button-link:active p {
+            color: #DC810E; }
 
-  .menuToggle {
-    display: none;
-    transition: color 0.3s ease; }
-
-  .logo {
-    /*background-color: #fff;*/
-    /*border-radius: 0.4rem;*/
-    /*box-shadow: 9px 9px 20px 3px rgba(0, 0, 0, 0.75);*/
-    /*height: 7rem; !* This dimension is crucial for the protruding logo picture *!*/
-    margin: 0;
-    padding: 0;
-    transition: box-shadow 0.1s linear; }
-
-  .logo-container:active .logo {
-    box-shadow: inset 3px 3px 7px 0 black;
-    cursor: context-menu; } }
+/* End of .header */
 
 /*# sourceMappingURL=header.css.map */

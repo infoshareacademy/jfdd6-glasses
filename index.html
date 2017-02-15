@@ -28,16 +28,37 @@
 </head>
 
 <body>
-<!-- Navigation -->
 <header class="header">
-  <nav class="nav-bar">
+  <nav class="nav">
     <a href="#"
        class="logo-container">
       <img class="logo"
            src="img/logo.svg"
            alt="project logo">
     </a>
-
+    <!-- Menu for mobiles -->
+    <div class="menuToggle">
+      <input class="invisible-checkbox" type="checkbox"/>
+      <span class="first-bar bar"></span>
+      <span class="second-bar bar"></span>
+      <span class="third-bar bar"></span>
+      <span class="fourth-bar bar"></span>
+      <ul class="menu-list">
+        <a href="#">
+          <li>główna</li>
+        </a>
+        <a href="#projekt">
+          <li>projekt</li>
+        </a>
+        <a href="#premiera">
+          <li>premiera</li>
+        </a>
+        <a href="#zespol">
+          <li>zespół</li>
+        </a>
+      </ul>
+    </div>
+    <!-- Menu for other devices -->
     <ul class="menu">
       <li class="menu-button">
         <a class="menu-button-link"
@@ -45,14 +66,12 @@
           <p>projekt</p>
         </a>
       </li>
-
       <li class="menu-button">
         <a class="menu-button-link"
            href="#premiera">
           <p>premiera</p>
         </a>
       </li>
-
       <li class="menu-button">
         <a class="menu-button-link"
            href="#zespol">
@@ -60,8 +79,8 @@
         </a>
       </li>
     </ul>
-  </nav>
-</header> <!-- End of navigation -->
+  </nav> <!--End of .nav-->
+</header> <!-- End of .header -->
 
 <!-- Main Page Content -->
 <main class="main-margin">

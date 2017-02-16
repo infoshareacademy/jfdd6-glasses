@@ -1,60 +1,86 @@
 .header {
   align-items: stretch;
   background-color: #ffffff;
-  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.75);
   display: flex;
   flex-wrap: wrap;
   height: 4rem;
   /* This dimension is crucial for entire menu */
   justify-content: flex-start;
   position: fixed;
-  top: 0px;
+  top: 0;
   width: 100%;
   z-index: 99;
   /* End of .nav  */ }
   .header .nav {
-    align-items: stretch;
-    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
     justify-content: space-between;
-    width: 90%; }
-    .header .nav .logo-container {
+    width: 90%;
+    background-color: #ffffff; }
+    .header .nav .logo--mobile {
+      display: flex; }
+      @media (min-width: 768px) {
+        .header .nav .logo--mobile {
+          display: none; } }
+    .header .nav .logo--desktop {
+      display: none; }
+      @media (min-width: 768px) {
+        .header .nav .logo--desktop {
+          display: flex; } }
+    .header .nav .logo {
+      position: relative;
       align-items: flex-start;
-      background-color: #ffffff;
-      display: flex;
       justify-content: center;
-      position: relative; }
-      .header .nav .logo-container .logo {
-        background-color: #ffffff;
+      background-color: #ffffff; }
+      .header .nav .logo .logo__img {
+        height: 4rem;
         border-bottom-right-radius: 0.4rem;
-        height: 7rem;
-        /* This dimension is crucial for the protruding logo picture */ }
+        background-color: #ffffff; }
         @media (min-width: 768px) {
-          .header .nav .logo-container .logo {
+          .header .nav .logo .logo__img {
             margin: 0;
             padding: 0;
-            transition: box-shadow 0.1s linear; } }
-        .header .nav .logo-container .logo:hover {
-          box-shadow: none; }
-      .header .nav .logo-container:active .logo {
-        /*box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);*/
-        cursor: default; }
+            height: 7rem;
+            transition: box-shadow 0.1s linear; }
+            .header .nav .logo .logo__img .logo--mobile {
+              display: none; }
+            .header .nav .logo .logo__img .logo--desktop {
+              display: flex; } }
         @media (min-width: 768px) {
-          .header .nav .logo-container:active .logo {
-            box-shadow: inset 3px 3px 7px 0 black;
-            cursor: context-menu; } }
-    .header .nav .menuToggle {
+          .header .nav .logo .logo__img:hover {
+            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.75); } }
+    .header .nav .btn {
+      /* nothing special so far */ }
+      @media (min-width: 768px) {
+        .header .nav .btn:active {
+          /* nothing special so far */ } }
+    .header .nav .btn--logo {
+      /* no button logo for mobile */ }
+      @media (min-width: 768px) {
+        .header .nav .btn--logo:active .logo__img {
+          box-shadow: inset 3px 3px 7px 0 black; } }
+    .header .nav .menu--mobile {
+      display: block; }
+      @media (min-width: 768px) {
+        .header .nav .menu--mobile {
+          display: none; } }
+    .header .nav .menu--desktop {
+      display: none; }
+      @media (min-width: 768px) {
+        .header .nav .menu--desktop {
+          display: flex; } }
+    .header .nav .side-menu {
       display: block;
       position: fixed;
       top: 15px;
       right: 3px;
       z-index: 0; }
       @media (min-width: 768px) {
-        .header .nav .menuToggle {
-          display: none;
-          transition: color 0.3s ease; } }
-      .header .nav .menuToggle .invisible-checkbox {
+        .header .nav .side-menu {
+          display: none; } }
+      .header .nav .side-menu .side-menu__checkbox {
         display: block;
         width: 40px;
         height: 40px;
@@ -64,101 +90,91 @@
         cursor: pointer;
         opacity: 0;
         z-index: 2; }
-        .header .nav .menuToggle .invisible-checkbox:checked ~ .first-bar {
-          transform: translate(0px, 6px);
+        .header .nav .side-menu .side-menu__checkbox:checked ~ .first-bar {
+          transform: translate(0px, 4.5px);
           background: #4d4d4d; }
-        .header .nav .menuToggle .invisible-checkbox:checked ~ .second-bar {
-          transform: translate(0, 2px);
+        .header .nav .side-menu .side-menu__checkbox:checked ~ .second-bar {
+          transform: translate(0, 1.5px);
           background: #4d4d4d; }
-        .header .nav .menuToggle .invisible-checkbox:checked ~ .third-bar {
-          transform: translate(0, -2px);
+        .header .nav .side-menu .side-menu__checkbox:checked ~ .third-bar {
+          transform: translate(0, -1.5px);
           background: #4d4d4d; }
-        .header .nav .menuToggle .invisible-checkbox:checked ~ .fourth-bar {
-          transform: translate(0, -6px);
+        .header .nav .side-menu .side-menu__checkbox:checked ~ .fourth-bar {
+          transform: translate(0, -4.5px);
           background: #4d4d4d; }
-        .header .nav .menuToggle .invisible-checkbox:checked ~ .menu-list {
+        .header .nav .side-menu .side-menu__checkbox:checked ~ .menu-list {
           transform: translate(0, 0);
           opacity: 1; }
-      .header .nav .menuToggle .bar {
+      .header .nav .side-menu .bar {
         display: block;
         width: 33px;
         height: 4px;
         margin-bottom: 4px;
-        margin-left: 45px;
-        /*position: relative;*/
-        background: black;
+        margin-left: 68px;
+        background: #222222;
         z-index: 1;
         transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 1s linear; }
-      .header .nav .menuToggle .menu-list {
-        /*border: 1px solid black;*/
+      .header .nav .side-menu .menu-list {
         margin: 20px -4px 0 0;
-        padding: 0 10px 0 10px;
-        background-color: white;
+        padding: 0 0 0 0;
+        background-color: #ffffff;
         border-bottom-left-radius: 0.4rem;
         display: block;
         list-style-type: none;
         transform: translate(103%, 0);
         transition: transform 0.5s ease-in-out; }
-        .header .nav .menuToggle .menu-list a {
+        .header .nav .side-menu .menu-list a {
           font-family: "Varela Round", sans-serif;
           text-decoration: none;
-          color: black; }
-          .header .nav .menuToggle .menu-list a li {
-            padding: 7px 0;
+          color: #222222; }
+          .header .nav .side-menu .menu-list a p {
+            padding: 14px 10px;
+            margin: 0;
             font-size: 22px;
             text-align: right;
-            /*background-color: white;;*/
-            transition: background-color 0.5s ease, color 0.5s ease; }
-          .header .nav .menuToggle .menu-list a:hover {
+            text-transform: uppercase; }
+          .header .nav .side-menu .menu-list a:hover {
             color: #DC810E; }
-          .header .nav .menuToggle .menu-list a:active li {
-            background-color: black; }
-    .header .nav .menu {
-      align-items: stretch;
-      background-color: #ffffff;
-      display: none;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-      @media (min-width: 768px) {
-        .header .nav .menu {
-          display: flex;
-          transition: color 0.3s ease; } }
-      .header .nav .menu .menu-button {
+            .header .nav .side-menu .menu-list a:hover p {
+              background-color: #222222; }
+    @media (min-width: 768px) {
+      .header .nav .top-menu {
         align-items: stretch;
         background-color: #ffffff;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; }
-        .header .nav .menu .menu-button .menu-button-link {
-          align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0; }
+        .header .nav .top-menu .menu__btn {
+          align-items: stretch;
           background-color: #ffffff;
-          color: #222222;
           display: flex;
-          font-weight: bold;
-          justify-content: center;
-          letter-spacing: 0.2rem;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: color 1s linear;
-          width: 11rem; }
-          .header .nav .menu .menu-button .menu-button-link p {
-            border-radius: 0.2rem;
-            border-bottom: 3px solid #fff;
-            border-top: 3px solid #fff;
-            font-family: "Varela Round", sans-serif;
-            font-size: 1.2rem;
-            margin: 0;
-            padding: 0;
-            transition: border-color 0.8s; }
-          .header .nav .menu .menu-button .menu-button-link:hover {
-            background-color: #222222; }
-            .header .nav .menu .menu-button .menu-button-link:hover p {
-              color: white; }
-          .header .nav .menu .menu-button .menu-button-link:active p {
-            color: #DC810E; }
+          flex-wrap: wrap;
+          justify-content: center; }
+          .header .nav .top-menu .menu__btn .menu__link {
+            align-items: center;
+            background-color: #ffffff;
+            color: #222222;
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            letter-spacing: 0.2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 11rem; }
+            .header .nav .top-menu .menu__btn .menu__link p {
+              font-family: "Varela Round", sans-serif;
+              font-size: 1.2rem;
+              margin: 0;
+              padding: 0; }
+            .header .nav .top-menu .menu__btn .menu__link:hover {
+              background-color: #222222;
+              transition: background-color 0.4s ease-in-out; }
+              .header .nav .top-menu .menu__btn .menu__link:hover p {
+                color: #ffffff; }
+            .header .nav .top-menu .menu__btn .menu__link:active p {
+              color: #DC810E;
+              transition: color 0.3s ease; } }
 
 /* End of .header */
 

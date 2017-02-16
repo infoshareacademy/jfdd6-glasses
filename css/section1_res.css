@@ -1,0 +1,65 @@
+.section1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Varela Round', sans-serif;
+  background-color: black;
+  color: white; }
+
+.flex-container {
+  height: 600px;
+  background-color: #222222;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex; }
+
+@media screen and (max-width: 767px) {
+  .flex-item {
+    height: 80vh;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: #222222;
+    margin: 5px;
+    display: flex;
+    flex-direction: column; } }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .flex-item {
+    height: 60vh;
+    min-width: 42%;
+    max-width: 40%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #222222; } }
+@media screen and (min-width: 993px) {
+  .flex-item {
+    height: 400px;
+    min-width: 20%;
+    max-width: 22%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: #222222; } }
+.flex-item-content {
+  height: 45%;
+  border: 3px solid darkgrey;
+  text-align: center;
+  padding: 3px;
+  position: relative; }
+
+.star {
+  height: 5%;
+  text-align: center;
+  background-color: #ff0000;
+  border-color: #222222; }
+
+.section1-img {
+  width: 25%;
+  bottom: 2%;
+  left: 38%;
+  position: absolute; }
+
+/*# sourceMappingURL=section1_res.css.map */

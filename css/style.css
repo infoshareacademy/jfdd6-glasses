@@ -62,7 +62,7 @@ body {
 
 @media only screen and (max-width: 992px) {
   .film-frame {
-    min-height: 60vh;
+    /*min-height: 60vh;*/
   }
 }
 
@@ -70,4 +70,10 @@ body {
   .film-frame {
     width: 87%;
   }
+}
+
+footer {
+  height: 30px;
+  background-color: #4d4d4d;
+  width: 100%;
 }

@@ -71,3 +71,9 @@ body {
     width: 87%;
   }
 }
+
+footer {
+  height: 30px;
+  background-color: #4d4d4d;
+  width: 100%;
+}

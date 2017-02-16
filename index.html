@@ -30,50 +30,53 @@
 <body>
 <header class="header">
   <nav class="nav">
-    <a href="#"
-       class="logo-container">
-      <img class="logo"
-           src="img/logo.svg"
-           alt="project logo">
-    </a>
-    <!-- Menu for mobiles -->
-    <div class="menuToggle">
-      <input class="invisible-checkbox" type="checkbox"/>
+    <div class="logo logo--mobile">
+        <img class="logo__img"
+             src="img/logo.svg"
+             alt="project logo">
+      </div>
+    <a class="logo logo--desktop btn btn--logo"
+         href="#">
+        <img class="logo__img"
+             src="img/logo.svg"
+             alt="project logo">
+      </a>
+    <div class="side-menu menu--mobile">
+      <input class="side-menu__checkbox" type="checkbox"/>
       <span class="first-bar bar"></span>
       <span class="second-bar bar"></span>
       <span class="third-bar bar"></span>
       <span class="fourth-bar bar"></span>
-      <ul class="menu-list">
+      <div class="menu-list">
         <a href="#">
-          <li>główna</li>
+          <p>główna</p>
         </a>
         <a href="#projekt">
-          <li>projekt</li>
+          <p>projekt</p>
         </a>
         <a href="#premiera">
-          <li>premiera</li>
+          <p>premiera</p>
         </a>
         <a href="#zespol">
-          <li>zespół</li>
+          <p>zespół</p>
         </a>
-      </ul>
+      </div>
     </div>
-    <!-- Menu for other devices -->
-    <ul class="menu">
-      <li class="menu-button">
-        <a class="menu-button-link"
+    <ul class="top-menu menu--desktop">
+      <li class="menu__btn">
+        <a class="menu__link"
            href="#projekt">
           <p>projekt</p>
         </a>
       </li>
-      <li class="menu-button">
-        <a class="menu-button-link"
+      <li class="menu__btn">
+        <a class="menu__link"
            href="#premiera">
           <p>premiera</p>
         </a>
       </li>
-      <li class="menu-button">
-        <a class="menu-button-link"
+      <li class="menu__btn">
+        <a class="menu__link"
            href="#zespol">
           <p>zespół</p>
         </a>
@@ -81,7 +84,6 @@
     </ul>
   </nav> <!--End of .nav-->
 </header> <!-- End of .header -->
-
 <!-- Main Page Content -->
 <main class="main-margin">
 

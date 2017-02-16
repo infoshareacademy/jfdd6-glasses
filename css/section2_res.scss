@@ -8,116 +8,72 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/bricks.jpg);
-  background-size: cover;
+  background-color: #222;
 }
 
 .clapperboard {
-  color: white;
-}
-
-.safeguard {
-  font-size: 0.65rem;
-  line-height: 1.5;
-  text-align: left;
+  margin-top: .8em;
+  margin-bottom: .8em;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: #fff;
+  > p {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    &:first-of-type {
+    }
+  }
 }
 
 .enrollment-form {
   height: 35px;
-  margin-top: 30px;
-  margin-bottom: 50px;
   text-align: center;
   input[type="email"] {
     padding: 5px;
     border-radius: 5px;
     &:focus {
       outline: none;
-      border: 3px solid darkorange;
+      border: 3px solid #FF8C00;
     }
   }
 }
 
 .enrollment-form-button {
-  padding: 4px 5px 5px;
-  margin-top: 6px;
-  font-family: 'KGLifeisMessy', sans-serif;
-  color: darkorange;
+  padding: 5px 5px 4px;
+  font-family: 'Anton', sans-serif;
+  color: #FF8C00;
   background-color: transparent;
-  border: 1px solid darkorange;
+  border: 1px solid #FF8C00;
   border-radius: 5px;
   &:active {
     outline: none;
-    border: 3px solid darkorange;
+    border: 3px solid #FF8C00;
   }
   &:focus {
     outline: none;
   }
 }
 
-.hide, .visible-medium {
+.safeguard {
+  margin-left: 6%;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.visible-medium {
   display: none;
 }
 
-@media screen and (max-width: 992px) {
-  .section2 {
-    background-image: none;
-    background-color: #222;
-  }
-  .clapperboard {
-    margin-top: .8em;
-    margin-bottom: .8em;
-    text-align: center;
-    font-family: 'Varela Round', sans-serif;
-    > p {
-      text-transform: uppercase;
-      font-size: 1.6em;
-      &:last-of-type {
-        font-size: 2em;
-      }
-    }
-  }
-  .safeguard {
-    margin-left: 6%;
-    font-size: .9em;
-  }
-  .hide {
-    display: inline;
-  }
-  .visible-medium {
-    display: inline;
-  }
-  .enrollment-form {
-    margin-top: 8%;
-    margin-bottom: 12%;
-  }
-  .enrollment-form-button {
-    font-family: 'Anton', sans-serif;
-    letter-spacing: 2px;
-    margin-left: 4px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .visible-medium {
-    display: none;
-  }
-  .hide {
+@media screen and (max-width: 576px)  {
+  .invisible-large {
     font-size: 1em;
-  }
-  .clapperboard {
-    > p:first-of-type {
-      font-size: 1.4em;
-      margin-top: 0;
-    }
-    > p:last-of-type {
-      font-size: 1.4em;
-    }
   }
   .enrollment-form {
     margin-top: 15%;
     margin-bottom: 30%;
   }
   .enrollment-form-button {
+    letter-spacing: 2px;
     margin-top: 6%;
   }
   .safeguard {
@@ -125,23 +81,67 @@
   }
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
   .clapperboard {
-    width: 488px;
-    height: 500px;
+    > p {
+      font-size: 1.6em;
+      &:last-of-type {
+        font-size: 2em;
+      }
+    }
+  }
+  .safeguard {
+    font-size: .9em;
+  }
+  .visible-medium {
+    display: inline;
+  }
+   .enrollment-form {
+    margin-top: 8%;
+    margin-bottom: 12%;
+  }
+  .enrollment-form-button {
+    letter-spacing: 2px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .invisible-large {
+    display: none;
+  }
+  .section2 {
+    background-image: url(../img/bricks.jpg);
+    background-size: cover;
+  }
+  .clapperboard {
+    width: 640px;
+    height: 656px;
+    margin-top: 15px;
+    margin-bottom: 30px;
     background: url(../img/clapperboard.png);
     text-transform: uppercase;
     font-family: 'KGLifeisMessy', sans-serif;
     filter: drop-shadow(5px 5px 5px #222);
     > p {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       text-align: center;
       &:first-of-type {
-        margin-top: 190px;
+        margin-top: 250px;
       }
     }
   }
   .safeguard {
-    margin-left: 45px;
+    margin-left: 65px;
+    font-size: 0.8rem;
+  }
+  .enrollment-form {
+    margin: 50px 10px 70px;
+    font-size: 1.1em;
+  }
+  .enrollment-form-button {
+    margin-left: 4px;
+    font-family: 'KGLifeisMessy', sans-serif;
+    font-size: 1.1em;
   }
 }

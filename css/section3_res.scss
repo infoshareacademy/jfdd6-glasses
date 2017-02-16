@@ -28,14 +28,14 @@
   font-family: 'Anton', sans-serif;
   color: white;
   letter-spacing: 4px;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
   line-height: 1.5;
 }
 
 .team_sub_title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-transform: lowercase;
   margin-top: -10px;
 }
@@ -76,7 +76,7 @@
 }
 
 .name {
-  font-size: 2.2rem;
+  font-size: 2rem;
   letter-spacing: 4px;
   line-height: 0.7;
   margin: 0;
@@ -86,11 +86,11 @@
 
 .homepage {
   @extend .name;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .surname {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
 }
 
@@ -100,7 +100,64 @@
 }
 
 .social_media img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin: 7px;
+}
+
+/* AVATARS ANIMATION */
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container {
+  width: 130px;
+  height: 130px;
+  @include medium {
+    width: 150px;
+    height: 150px;
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    & > img {
+      max-height: 130px;
+      border-radius: 50%;
+      box-shadow: 5px 5px 5px black;
+      @include medium {
+        max-height: 150px;
+      }
+    }
+  }
+
+  .back {
+    transform: rotateY(180deg);
+    & > img {
+      max-height: 130px;
+      border-radius: 50%;
+      box-shadow: 5px 5px 5px black;
+      @include medium {
+        max-height: 150px;
+      }
+    }
+  }
 }

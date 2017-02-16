@@ -122,7 +122,7 @@
         display: block;
         list-style-type: none;
         transform: translate(103%, 0);
-        transition: transform 0.5s ease-in-out; }
+        transition: transform 0.3s ease-in-out; }
         .header .nav .side-menu .menu-list a {
           font-family: "Varela Round", sans-serif;
           text-decoration: none;
@@ -174,7 +174,7 @@
                 color: #ffffff; }
             .header .nav .top-menu .menu__btn .menu__link:active p {
               color: #DC810E;
-              transition: color 0.3s ease; } }
+              transition: color 0.1s linear; } }
 
 /* End of .header */
 

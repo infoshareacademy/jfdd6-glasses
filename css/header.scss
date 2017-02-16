@@ -182,7 +182,7 @@ $contrastColor: #DC810E;
         display: block;
         list-style-type: none;
         transform: translate(103%, 0);
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.3s ease-in-out;
 
         a {
           font-family: "Varela Round", sans-serif;
@@ -255,7 +255,7 @@ $contrastColor: #DC810E;
             &:active {
               p {
                 color: $contrastColor;
-                transition: color 0.3s ease;
+                transition: color 0.1s linear;
               }
             }
           }

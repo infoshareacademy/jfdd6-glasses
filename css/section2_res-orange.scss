@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: #FF8C00;
 }
 
 .clapperboard {
@@ -16,7 +16,7 @@
   margin-bottom: .8em;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
-  color: #fff;
+  color: #222;
   > p {
     text-transform: uppercase;
     font-size: 1.4em;
@@ -33,7 +33,7 @@
     border-radius: 5px;
     &:focus {
       outline: none;
-      border: 3px solid #FF8C00;
+      border: 2px solid #222;
     }
   }
 }
@@ -41,13 +41,13 @@
 .enrollment-form-button {
   padding: 5px 5px 4px;
   font-family: 'Anton', sans-serif;
-  color: #FF8C00;
+  color: #222;
   background-color: transparent;
-  border: 1px solid #FF8C00;
+  border: 1px solid #222;
   border-radius: 5px;
   &:active {
     outline: none;
-    border: 3px solid #FF8C00;
+    border: 2px solid #222;
   }
   &:focus {
     outline: none;
@@ -67,6 +67,10 @@
 @media screen and (max-width: 576px)  {
   .invisible-large {
     font-size: 1em;
+    color: #fff;
+  }
+  .clapperboard > p {
+    font-weight: bold;
   }
   .enrollment-form {
     margin-top: 15%;
@@ -82,9 +86,13 @@
 }
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
+  .invisible-large {
+    color: #fff;
+  }
   .clapperboard {
     > p {
       font-size: 1.6em;
+      font-weight: bold;
       &:last-of-type {
         font-size: 2em;
       }
@@ -122,6 +130,7 @@
     background: url(../img/clapperboard.png);
     text-transform: uppercase;
     font-family: 'KGLifeisMessy', sans-serif;
+    color: white;
     filter: drop-shadow(5px 5px 5px #222);
     > p {
       font-size: 1.6rem;
@@ -138,10 +147,18 @@
   .enrollment-form {
     margin: 50px 10px 70px;
     font-size: 1.1em;
+    &:focus {
+      border: 3px solid #FF8C00;
+    }
   }
   .enrollment-form-button {
     margin-left: 4px;
     font-family: 'KGLifeisMessy', sans-serif;
     font-size: 1.1em;
+    color: #FF8C00;
+    border: 1px solid #FF8C00;
+    &:active {
+      border: 3px solid #FF8C00;
+    }
   }
 }

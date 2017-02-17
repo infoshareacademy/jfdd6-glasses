@@ -50,6 +50,9 @@
     .person > img {
       max-height: 150px; } }
 
+.person-back {
+  background-color: #DC810E; }
+
 .name, .homepage {
   font-size: 2rem;
   letter-spacing: 4px;

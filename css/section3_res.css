@@ -70,8 +70,10 @@
 .flip-container {
   perspective: 1000px; }
 
-.rot {
-  transform: rotateY(180deg); }
+.rotation {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg); }
 
 .flip-container {
   width: 130px;

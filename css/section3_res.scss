@@ -16,6 +16,12 @@
   }
 }
 
+@mixin transform($args...) {
+  transform: $args;
+  -webkit-transform: $args;
+  -ms-transform: $args;
+}
+
 .section3 {
   background-color: #222222;
   flex-direction: column;
@@ -111,11 +117,9 @@
   perspective: 1000px;
 }
 
-//.flip-container:hover .flipper,
-//.flip-container.hover .flipper
-.rot
+.rotation
 {
-  transform: rotateY(180deg);
+  @include transform (rotateY(180deg));
 }
 
 .flip-container {
@@ -145,7 +149,6 @@
     & > img {
       max-height: 130px;
       border-radius: 50%;
-      //box-shadow: 5px 5px 5px black;
       @include medium {
         max-height: 150px;
       }

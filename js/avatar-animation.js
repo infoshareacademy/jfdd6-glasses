@@ -4,6 +4,6 @@ $(window).on('scroll', function () {
   var offset = p.offset().top;
   var scrollTop = $(window).scrollTop()
   if (scrollTop > (offset - window.outerHeight/2)) {
-    $( '.flipper' ).addClass("rot");
+    $( '.flipper' ).addClass("rotation");
   }
 });

@@ -52,6 +52,8 @@
   display: flex;
   align-items: center;
   justify-content: center; }
+  .flex-item-content p {
+    font-size: 1rem; }
 
 .star {
   min-height: 100px;
@@ -61,8 +63,5 @@
 
 .section1-img {
   max-width: 25%; }
-
-p {
-  font-size: 1rem; }
 
 /*# sourceMappingURL=section1_res.css.map */

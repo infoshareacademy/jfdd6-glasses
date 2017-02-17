@@ -34,7 +34,7 @@
     border-radius: 5px;
     &:focus {
       outline: none;
-      border: 2px solid #222;
+      border: 2px solid #ff9900;
     }
   }
 }
@@ -42,13 +42,13 @@
 .enrollment-form-button {
   padding: 6px 5px 4px;
   font-family: 'Anton', sans-serif;
-  color: #222;
-  background-color: transparent;
+  color: #fff;
+  background-color: #222;
   border: 1px solid #222;
   border-radius: 5px;
   &:active {
     outline: none;
-    border: 2px solid #222;
+    border: 2px solid #ff9900;
   }
   &:focus {
     outline: none;
@@ -66,6 +66,7 @@
   color: #fff;
   font-family: 'Anton', sans-serif;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .visible-medium {
@@ -77,6 +78,9 @@
 }
 
 @media screen and (max-width: 576px)  {
+  .invite {
+    font-size: 2rem;
+  }
   .clapperboard > p {
     font-weight: bold;
   }
@@ -98,7 +102,7 @@
     display: none;
   }
   .invite {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   .clapperboard {
     > p {

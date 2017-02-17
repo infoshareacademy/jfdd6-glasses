@@ -6,7 +6,8 @@ $(document).ready(function(){
   $('a[href^="#"]').on('click',function (event) {
     event.preventDefault();
 
-    var $target = $(this.hash);
+    var hash = this.hash;
+    var $target = $(hash);
     var $topOffset = 0;
 
     $('html, body').stop().animate(
@@ -14,7 +15,7 @@ $(document).ready(function(){
       900,
       'swing',
       function () {
-          window.location.hash = target;
+          window.location.hash = hash;
       });
   });
 });

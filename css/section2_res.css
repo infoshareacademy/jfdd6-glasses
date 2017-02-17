@@ -9,27 +9,28 @@
   background-color: #222; }
 
 .clapperboard {
-  margin-top: .8em;
-  margin-bottom: .8em;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
   text-align: center;
   font-family: 'Varela Round', sans-serif;
   color: #fff; }
   .clapperboard > p {
     text-transform: uppercase;
-    font-size: 1.4em; }
+    font-size: 1.4rem; }
 
 .enrollment-form {
   height: 35px;
   text-align: center; }
   .enrollment-form input[type="email"] {
     padding: 5px;
+    vertical-align: bottom;
     border-radius: 5px; }
     .enrollment-form input[type="email"]:focus {
       outline: none;
       border: 3px solid #FF8C00; }
 
 .enrollment-form-button {
-  padding: 5px 5px 4px;
+  padding: 6px 5px 4px;
   font-family: 'Anton', sans-serif;
   color: #FF8C00;
   background-color: transparent;
@@ -46,12 +47,19 @@
   line-height: 1.5;
   text-align: left; }
 
-.visible-medium {
+.invite {
+  font-size: 1.2rem;
+  color: #FF8C00;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px; }
+
+.visible-medium,
+.visible-small {
   display: none; }
 
 @media screen and (max-width: 576px) {
   .invisible-large {
-    font-size: 1em; }
+    font-size: 1rem; }
 
   .enrollment-form {
     margin-top: 15%;
@@ -62,15 +70,15 @@
     margin-top: 6%; }
 
   .safeguard {
-    font-size: .7em; } }
+    font-size: .7rem; } }
 @media screen and (min-width: 577px) and (max-width: 992px) {
   .clapperboard > p {
-    font-size: 1.6em; }
+    font-size: 1.6rem; }
     .clapperboard > p:last-of-type {
-      font-size: 2em; }
+      font-size: 2rem; }
 
   .safeguard {
-    font-size: .9em; }
+    font-size: .9rem; }
 
   .visible-medium {
     display: inline; }
@@ -82,7 +90,41 @@
   .enrollment-form-button {
     letter-spacing: 2px;
     margin-left: 4px; } }
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 993px) and (max-width: 1366px) {
+  .invisible-large {
+    display: none; }
+
+  .section2 {
+    background-image: url(../img/bricks.jpg);
+    background-size: cover; }
+
+  .clapperboard {
+    width: 488px;
+    height: 500px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background: url(../img/clapperboard_sm.png);
+    text-transform: uppercase;
+    font-family: 'KGLifeisMessy', sans-serif;
+    filter: drop-shadow(5px 5px 5px #222); }
+    .clapperboard > p {
+      font-size: 1.2rem;
+      text-align: center; }
+      .clapperboard > p:first-of-type {
+        margin-top: 190px; }
+
+  .safeguard {
+    margin-left: 45px;
+    font-size: 0.65rem; }
+
+  .enrollment-form {
+    margin-top: 30px;
+    margin-bottom: 50px; }
+
+  .enrollment-form-button {
+    margin-left: 4px;
+    font-family: 'KGLifeisMessy', sans-serif; } }
+@media screen and (min-width: 1367px) {
   .invisible-large {
     display: none; }
 
@@ -111,11 +153,11 @@
 
   .enrollment-form {
     margin: 50px 10px 70px;
-    font-size: 1.1em; }
+    font-size: 1.1rem; }
 
   .enrollment-form-button {
     margin-left: 4px;
     font-family: 'KGLifeisMessy', sans-serif;
-    font-size: 1.1em; } }
+    font-size: 1.1rem; } }
 
 /*# sourceMappingURL=section2_res.css.map */

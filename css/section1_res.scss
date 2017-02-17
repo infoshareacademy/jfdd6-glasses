@@ -66,13 +66,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  p {
+    font-size: 1rem;
+  }
 }
 
 //
 .star {
   min-height: 100px;
-  //  text-align: center;
-  //  background-color: #ff0000;
   border-color: #222222;
   align-items: center;
   background-color: darkorange;
@@ -80,10 +81,5 @@
 
 .section1-img {
   max-width: 25%;
-
-}
-
-p {
-  font-size: 1rem;
 }
 

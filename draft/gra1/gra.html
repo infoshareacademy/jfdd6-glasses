@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Gra</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    button {
+      margin-left: 200px;
+    }
+
+    #block {
+      position: relative;
+      margin-left: 200px;
+      margin-top: 100px;
+      width: 300px;
+      height: 500px;
+      background: lightgrey url(img/doors.png) no-repeat bottom;
+    }
+
+    .flats {
+      width: 30px;
+      height: 30px;
+      margin-left: 15px;
+      margin-top: 20px;
+      background-color: white;
+      border: 1px solid #666;
+      float: left;
+    }
+
+    .projector {
+      background-image: url(img/projkt-p.png);
+    }
+
+    .projector:active {
+      background-image: url(img/projkt-n.png);
+    }
+
+    .dog {
+      background-image: url(img/dog.png);
+    }
+
+    .plate {
+      position: absolute;
+      top: 150px;
+      left: -30px;
+      width: 300px;
+      height: 50px;
+      padding: 30px;
+      background-color: #444;
+      color: white;
+    }
+
+    .end,
+    .walk {
+      display: none;
+    }
+
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      color: #999;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .walk img {
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="block">
+  <div id="walk" class="plate walk">Wyprowadź psa, gra skończona. <img src="img/walking.png">
+    <div class="close">x</div>
+  </div>
+  <div id="end" class="plate end">
+    <div class="close">x</div>
+  </div>
+</div>
+
+<br>
+<button type="button" id="start-btn" onclick="startGame();">Zagraj</button>
+
+<script>
+
+  var i, text, projector, dog, score;
+
+  //wypełnienie bloku
+  var block = document.getElementById('block');
+  for (i = 0; i < 8; i++) {
+    var floor = "clear: left;";
+    for (var j = 0; j < 6; j++) {
+      var flat = document.createElement('div');
+      flat.setAttribute('style', floor);
+      floor = "";
+      flat.className = 'flats';
+      block.appendChild(flat);
+    }
+  }
+
+  //wybieranie okna
+  var blankFlats = document.getElementsByClassName('flats');
+
+  var screening = function(screen) {
+    var draw = Math.floor(Math.random() * 49);
+    blankFlats[draw].classList.add(screen);
+  };
+
+  //usuwanie obrazka
+  var clearing  = function(screen) {
+    var activeFlats = document.getElementsByClassName(screen)[0];
+    if (activeFlats) {
+      activeFlats.classList.remove(screen);
+    }
+  };
+
+  function startGame() {
+    var counter = 0;
+    score = 0;
+
+    projector = setInterval(function() {
+      clearing('projector');
+      screening('projector');
+
+      if (counter == 10) {
+        stopGame('end');
+      }
+      counter++;
+    }, 1000);
+
+    dog = setInterval(function() {
+      clearing('dog');
+      screening('dog');
+    }, 1250);
+
+  }
+
+  function stopGame(type) {
+    clearInterval(projector);
+    clearInterval(dog);
+    clearing('projector');
+    clearing('dog');
+    endOfGame();
+
+    if (type == 'end') {
+      endOfTime();
+    }
+    if (type == 'dog') {
+      walkTime();
+    }
+  }
+
+  function endOfGame() {
+    document.getElementById('start-btn').setAttribute('disabled', true);
+    for (i = 0; i < blankFlats.length; i++) {
+      blankFlats[i].style.backgroundColor = "#b3b3b3";
+    }
+  }
+
+  function startOfGame() {
+    document.getElementById('start-btn').removeAttribute('disabled');
+    for (i = 0; i < blankFlats.length; i++) {
+      blankFlats[i].style.backgroundColor = "";
+    }
+    text.parentNode.removeChild(text);
+  }
+
+  function endOfTime() {
+    var endPlate = document.getElementById('end');
+    endPlate.style.display = "block";
+    text = document.createTextNode("Gra skończona. Twój wynik to " + score + ".");
+    endPlate.appendChild(text);
+  }
+
+  function walkTime() {
+    document.getElementById('walk').style.display = "block";
+  }
+
+  document.onclick = function(shot) {
+    var hit = shot.target;
+
+    if (hit.className.match(/\bprojector\b/)) {
+      score++;
+    }
+    if (hit.className.match(/\bdog\b/)) {
+      stopGame('dog');
+    }
+  };
+
+  var lift = document.getElementsByClassName('close');
+    for (i in lift) {
+      lift[i].onclick = function() {
+        this.parentNode.style.display = "none";
+        startOfGame();
+      }
+    }
+
+</script>
+</body>
+</html>

@@ -123,6 +123,7 @@
       if (counter === 20) {
         clearInterval(intervalId);
         document.getElementById('info').innerHTML = 'GAME OVERRRRR';
+        document.getElementById('buttonStart').style.display = 'inline-block';
       }
 
       target.classList.toggle('hidden');
@@ -134,6 +135,7 @@
 
   function startGame() {
     document.getElementById('buttonStart').style.display = 'none';
+    document.getElementById('info').innerHTML = '';
     showTiles();
   }
 

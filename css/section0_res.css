@@ -23,21 +23,39 @@
     .teaser {
       width: 100%; } }
 
+.title, .sec_p {
+  font-size: 4rem;
+  color: #DC810E;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 5px;
+  padding: 40px; }
+  @media only screen and (min-width: 992px) {
+    .title, .sec_p {
+      font-size: 5rem;
+      padding: 40px;
+      letter-spacing: 8px; } }
+  @media only screen and (min-width: 1280px) {
+    .title, .sec_p {
+      font-size: 6rem; } }
+
 .teaser img {
-  width: 150px;
-  height: auto;
-  padding: 10px;
-  padding-bottom: 20px; }
+  display: none; }
+  @media only screen and (min-width: 441px) {
+    .teaser img {
+      display: inline-block;
+      width: 90px;
+      height: auto;
+      padding: 10px;
+      margin: 0 0 -25px -10px;
+      padding-bottom: 20px; } }
   @media only screen and (min-width: 992px) {
     .teaser img {
-      width: 220px;
-      padding: 15px;
-      padding-bottom: 3%; } }
+      width: 120px;
+      margin: 0 0 -30px -10px; } }
   @media only screen and (min-width: 1280px) {
     .teaser img {
-      width: 260px;
-      padding: 20px;
-      padding-bottom: 5%; } }
+      width: 150px;
+      margin: 0 0 -30px -10px; } }
 
 .main_p {
   font-family: 'Varela Round', sans-serif;
@@ -53,9 +71,8 @@
 
 .sec_p {
   font-size: 1.2rem;
-  color: #DC810E;
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  padding: 0; }
   @media only screen and (min-width: 992px) {
     .sec_p {
       font-size: 1.5rem; } }

@@ -31,13 +31,11 @@
   @media only screen and (min-width: 992px) {
     .teaser img {
       width: 450px;
-      padding: 15px;
-      padding-bottom: 3%; } }
+      padding: 15px 15px 10px; } }
   @media only screen and (min-width: 1280px) {
     .teaser img {
       width: 548px;
-      padding: 20px;
-      padding-bottom: 5%; } }
+      padding: 20px 20px 15px; } }
 
 .main_p {
   font-family: 'Varela Round', sans-serif;

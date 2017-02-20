@@ -171,7 +171,9 @@
     for (i = 0; i < blankFlats.length; i++) {
       blankFlats[i].style.backgroundColor = "";
     }
-    text.parentNode.removeChild(text);
+    if (text) {
+      text.parentNode.removeChild(text);
+    }
   }
 
   function endOfTime() {

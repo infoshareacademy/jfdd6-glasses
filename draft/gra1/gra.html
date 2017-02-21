@@ -131,7 +131,7 @@
       clearing('projector');
       screening('projector');
 
-      if (counter == 10) {
+      if (counter === 10) {
         stopGame('end');
       }
       counter++;
@@ -151,10 +151,10 @@
     clearing('dog');
     endOfGame();
 
-    if (type == 'end') {
+    if (type === 'end') {
       endOfTime();
     }
-    if (type == 'dog') {
+    if (type === 'dog') {
       walkTime();
     }
   }
@@ -199,12 +199,12 @@
   };
 
   var lift = document.getElementsByClassName('close');
-    for (i in lift) {
-      lift[i].onclick = function() {
-        this.parentNode.style.display = "none";
-        startOfGame();
-      }
+  for (i in lift) {
+    lift[i].onclick = function() {
+      this.parentNode.style.display = "none";
+      startOfGame();
     }
+  }
 
 </script>
 </body>

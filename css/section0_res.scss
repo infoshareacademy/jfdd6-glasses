@@ -1,5 +1,5 @@
 @mixin smartfone-big {
-  @media only screen and (min-width: 441px) {
+  @media only screen and (min-width: 479px) {
     @content;
   }
 }
@@ -43,7 +43,7 @@
   width: 100%;
   background-color: rgba(33, 33, 33, 0.7);
   text-align: center;
-  padding: 10px;
+  padding: 10px 30px;
   box-sizing: border-box;
   @include medium {
     width: 100%;
@@ -56,10 +56,12 @@
   font-family: 'Anton', sans-serif;
   letter-spacing: 5px;
   padding: 40px;
-
+  @include smartfone-big {
+    padding: 20px 40px 40px;
+  }
   @include medium {
     font-size: 5rem;
-    padding: 40px;
+    //padding: 20px 40px 40px;
     letter-spacing: 8px;
   }
   @include large {
@@ -104,7 +106,9 @@
   @extend .title;
   font-size: 1.2rem;
   letter-spacing: 2px;
-  padding: 0;
+  padding: .5rem 0 1.1rem;
+  //padding-top: .5rem;
+  //padding-bottom: 1.1rem;
   @include medium {
     font-size: 1.5rem;
   }

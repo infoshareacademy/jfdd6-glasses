@@ -1,10 +1,8 @@
 /* Import indywidualnych plików CSS */
 @import "header.css";
-/*@import "section0.css";*/
 @import "section0_res.css";
 @import "section1_res.css";
 @import "section2_res.css";
-/*@import "section3.css";*/
 @import "section3_res.css";
 
 html,
@@ -26,7 +24,7 @@ body {
   .main-margin {
     width: 90%;
     margin-left: 5%;
-    margin-right: 5%
+    margin-right: 5%;
   }
 }
 
@@ -34,7 +32,7 @@ body {
   .main-margin {
     width: 80%;
     margin-left: 10%;
-    margin-right: 10%
+    margin-right: 10%;
   }
 }
 
@@ -55,25 +53,37 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  margin: 30px 120px 0;
+  margin-top: 30px;
   min-height: 80vh;
   width: 85%;
 }
 
-@media only screen and (max-width: 992px) {
+.film-frame:last-of-type {
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 576px) {
   .film-frame {
-    min-height: 60vh;
+    width: 83%;
+    margin-top: 8px;
+  }
+  .film-frame:last-of-type {
+    margin-bottom: 15px;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 577px) and (max-width: 1199px) {
   .film-frame {
-    width: 87%;
+    width: 84%;
+    margin-top: 15px;
+  }
+  .film-frame:last-of-type {
+    margin-bottom: 30px;
   }
 }
 
-footer {
-  height: 30px;
-  background-color: #4d4d4d;
-  width: 100%;
-}
+/*footer {*/
+  /*height: 30px;*/
+  /*background-color: #4d4d4d;*/
+  /*width: 100%;*/
+/*}*/

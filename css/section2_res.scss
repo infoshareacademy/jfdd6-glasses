@@ -5,43 +5,146 @@
 
 .section2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/bricks.jpg);
-  background-size: cover;
+  background-color: #DC810E;
 }
 
 .clapperboard {
-  font-family: 'KGLifeisMessy', sans-serif;
-  color: white;
-  text-transform: uppercase;
+  margin-top: .8em;
+  margin-bottom: .8em;
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  color: #222;
+  > p {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    &:first-of-type {
+    }
+  }
+}
+
+.enrollment-form {
+  height: 35px;
+  text-align: center;
+  input[type="email"] {
+    padding: 5px;
+    vertical-align: bottom;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      border: 2px solid #fff;
+    }
+  }
+}
+
+.enrollment-form-button {
+  padding: 5px;
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+  background-color: #333;
+  border: 2px solid #333;
+  border-radius: 5px;
+  &:active,
+  &:focus {
+    outline: none;
+    border: 2px solid #fff;
+  }
 }
 
 .safeguard {
-  font-size: 0.65rem;
+  margin-left: 6%;
   line-height: 1.5;
   text-align: left;
 }
 
-@media screen and (max-width: 992px) {
-  .section2 {
-    background-image: none;
-    background-color: #222;
+.invite {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.visible-medium {
+  display: none;
+}
+
+.visible-small {
+  display: inline;
+}
+
+@media screen and (max-width: 576px)  {
+  .invite {
+    font-size: 2rem;
   }
-  .clapperboard {
-    margin-bottom: .8em;
-    text-align: center;
+  .clapperboard > p {
+    font-weight: bold;
+  }
+  .enrollment-form {
+    margin-top: 15%;
+    margin-bottom: 30%;
+  }
+  .enrollment-form-button {
+    letter-spacing: 2px;
+    margin-top: 6%;
   }
   .safeguard {
-    margin-left: 4%;
+    font-size: .7rem;
   }
 }
 
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .visible-small {
+    display: none;
+  }
+  .invite {
+    font-size: 2.2rem;
+  }
+  .clapperboard {
+    > p {
+      font-size: 1.6rem;
+      font-weight: bold;
+      &:last-of-type {
+        font-size: 2rem;
+      }
+    }
+  }
+  .safeguard {
+    font-size: .9rem;
+  }
+  .visible-medium {
+    display: inline;
+  }
+   .enrollment-form {
+    margin-top: 8%;
+    margin-bottom: 12%;
+  }
+  .enrollment-form-button {
+    letter-spacing: 2px;
+    margin-left: 4px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1366px) {
+  .invisible-large {
+    display: none;
+  }
+  .section2 {
+    background-image: url(../img/bricks.jpg);
+    background-size: cover;
+  }
   .clapperboard {
     width: 488px;
     height: 500px;
-    background: grey url(../img/clapperboard.png);
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background: url(../img/clapperboard_sm.png);
+    text-transform: uppercase;
+    font-family: 'KGLifeisMessy', sans-serif;
+    color: #fff;
     filter: drop-shadow(5px 5px 5px #222);
     > p {
       font-size: 1.2rem;
@@ -53,37 +156,75 @@
   }
   .safeguard {
     margin-left: 45px;
+    font-size: 0.65rem;
   }
-}
-
-.enrollment-form {
-  height: 35px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  text-align: center;
-  input[type="email"] {
-    padding: 5px;
-    border-radius: 5px;
+  .enrollment-form {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    input[type="email"]:focus {
+      border: 3px solid #FF8C00;
+    }
+  }
+  .enrollment-form-button {
+    margin-left: 4px;
+    font-family: 'KGLifeisMessy', sans-serif;
+    background-color: transparent;
+    color: #FF8C00;
+    border: 1px solid #FF8C00;
+    &:active,
     &:focus {
-      outline: none;
-      border: 3px solid darkorange;
+      border: 3px solid #FF8C00;
     }
   }
 }
 
-.enrollment-form-button {
-  padding: 4px 5px 7px;
-  margin-top: 6px;
-  font-family: 'KGLifeisMessy', sans-serif;
-  color: darkorange;
-  background-color: transparent;
-  border: 1px solid darkorange;
-  border-radius: 5px;
-  &:active {
-    outline: none;
-    border: 3px solid darkorange;
+@media screen and (min-width: 1367px) {
+  .invisible-large {
+    display: none;
   }
-  &:focus {
-    outline: none;
+  .section2 {
+    background-image: url(../img/bricks.jpg);
+    background-size: cover;
+  }
+  .clapperboard {
+    width: 640px;
+    height: 656px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    background: url(../img/clapperboard.png);
+    text-transform: uppercase;
+    font-family: 'KGLifeisMessy', sans-serif;
+    color: #fff;
+    filter: drop-shadow(5px 5px 5px #222);
+    > p {
+      font-size: 1.6rem;
+      text-align: center;
+      &:first-of-type {
+        margin-top: 250px;
+      }
+    }
+  }
+  .safeguard {
+    margin-left: 65px;
+    font-size: 0.8rem;
+  }
+  .enrollment-form {
+    margin: 50px 10px 70px;
+    font-size: 1.1rem;
+    input[type="email"]:focus {
+      border: 3px solid #FF8C00;
+    }
+  }
+  .enrollment-form-button {
+    margin-left: 4px;
+    font-family: 'KGLifeisMessy', sans-serif;
+    font-size: 1.1rem;
+    background-color: transparent;
+    color: #FF8C00;
+    border: 1px solid #FF8C00;
+    &:active,
+    &:focus {
+      border: 3px solid #FF8C00;
+    }
   }
 }

@@ -102,61 +102,70 @@
          class="anchor"></div>
     <section class="film-frame section1">
       <div class="flex-container">
-        <div class="flex-item">
+        <div class="left" id="slide-left" onclick="slideLeft()"><p class="slider-nav"> < </p></div>
+        <div class="right" id="slide-right" onclick="slideRight()"><p class="slider-nav"> > </p></div>
+        <div class="s1head-title"><h2>Dzięki naszej aplikacji będziesz mógł:</h2></div>
+        <div class="s1head">
+          <ul>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Poznać sąsiadów kinomaniaków</li>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Skorzystać z tablicy ogłoszeń</li>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Nadrobić zaległości filmowe</li>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Odkryć nowe filmy</li>
+          </ul>
+        </div>
+        <div class="flex-item" id="slide1">
           <div class="flex-item-content">
             <h2>Poznaj sąsiadów</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
-              <br>
-                <img src="./img/t.png" alt="" class="section1-img">
-              <br>grade grade grade
+              <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
             </span>
           </div>
           <div class="flex-item-content">
-            <p>Zintegruj się z lokalną społecznością. Będziesz zaskoczony, jak wiele osób takich jak Ty mieszka w
-              pobliżu.</p>
+            <p>Zintegruj się z lokalną społecznością. Będziesz zaskoczony jak wiele osób takich jak Ty mieszka w
+              pobliżu</p>
           </div>
         </div>
-        <div class="flex-item">
+        <div class="flex-item" id="slide2">
+          <div class="flex-item-content">
+            <h2>Zgłoś seans</h2>
+          </div>
+          <div class="flex-item-content star">
+            <span class="material-icons" style="font-size:25px">grade grade grade
+            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
+            </span>
+          </div>
+          <div class="flex-item-content">
+            <p>Ogłoś swój seans na naszej tablicy lub zobacz co proponują inni</p>
+          </div>
+        </div>
+        <div class="flex-item" id="slide3">
           <div class="flex-item-content">
             <h2>Nadrób zaległości filmowe</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>
-            grade grade grade</span>
+            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
+            </span>
           </div>
           <div class="flex-item-content">
             <p>Przegapiłeś niedawny film, który wyszedł już z kina? Nigdy nie widziałeś
-              klasyka sprzed lat? Obejrzyj go z sąsiadem.</p>
+              klasyka sprzed lat? Obejrzyj go z sąsiadem</p>
           </div>
         </div>
-        <div class="flex-item">
+        <div class="flex-item" id="slide4">
           <div class="flex-item-content">
-            <h2>Podyskutuj o filmach</h2>
+            <h2>Odkryj nowe filmy</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>
-            grade grade grade</span>
+            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
+            </span>
           </div>
           <div class="flex-item-content">
-            <p>Najlepiej tuż po seansie. Ale możesz też pogadać przez nasz wbudowany
-              komunikator i umówić się na następne spotkanie.</p>
-          </div>
-        </div>
-        <div class="flex-item">
-          <div class="flex-item-content">
-            <h2>Stwórz własną bibliotekę filmów</h2>
-          </div>
-          <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>
-            grade grade grade</span></div>
-          <div class="flex-item-content">
-            <p>Uporządkuj swoje filmy i seriale. Pokaż sąsiadom swoją bibliotekę i wskaż,
-              czego szukasz.</p>
+            <p>Nasza wyszukiwarka pozwoli Ci znaleźć filmy według twoich upodobań i podpowie co warto jeszcze zobaczyć
+            </p>
           </div>
         </div>
       </div>
@@ -166,15 +175,11 @@
          class="anchor"></div>
     <section class="film-frame section2">
       <p class="invite invisible-large">
-        <span class="material-icons">grade</span>
-        Zapisz się
-          <span class="visible-small">
-            <span class="material-icons">grade</span>
-            <br>
-            <span class="material-icons">grade</span>
-          </span>
-        na premierę
-        <span class="material-icons">grade</span>
+        <span class="material-icons"
+              style="">grade</span>
+        Zapisz się<br class="visible-small"> na premierę
+        <span class="material-icons"
+              style="">grade</span>
       </p>
       <div class="clapperboard">
         <p class="">Zainteresowany? Zainteresowana?</p>
@@ -320,5 +325,6 @@
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 <script src="js/website-scroll.js"></script>
 <script src="js/avatar-animation.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>

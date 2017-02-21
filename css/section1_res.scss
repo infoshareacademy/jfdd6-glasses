@@ -1,44 +1,75 @@
-.section1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Varela Round', sans-serif;
-  background-color: black;
-  color: white;
-  position: relative;
-  width: 100%;
+@media screen and (max-width: 565px) {
+  .section1 {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #222222;
+    color: white;
+    position: relative;
+    width: 100%;
+  }
 }
 
-.flex-container {
-  box-sizing: border-box;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  display: flex;
-  margin: 20px;
+@media screen and (min-width: 565px) {
+  .section1 {
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #222222;
+    color: white;
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .flex-container {
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 565px) {
+  .flex-container {
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 20px;
+  }
 }
 
 @media screen and (max-width: 565px) {
   .flex-item {
     min-width: 100%;
     max-width: 100%;
-    background-color: #222222;
-    margin-top: 5%;
+    background-color: #383838;
     display: flex;
     flex-direction: column;
     border-radius: 5%;
   }
 }
 
-@media screen and (min-width: 566px) and (max-width: 992px) {
+@media screen and (min-width: 565px) and (max-width: 992px) {
   .flex-item {
     width: 100%;
-    margin: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: row;
-    background-color: #222222;
+    background-color: #383838;
 
   }
 }
@@ -55,31 +86,135 @@
   }
 }
 
-.flex-item-content {
-  //min-height: 45%;
-  border: 3px solid darkgrey;
-  text-align: center;
-  padding: 0.5%;
-  background-color: #222222;
-  width: 100%;
-  min-height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  p {
-    font-size: 1rem;
+@media screen and (max-width: 565px) {
+  .flex-item-content {
+    min-height: 225px;
+    max-height: 225px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.5%;
+    background-color: #383838;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 565px) {
+  .flex-item-content {
+    //min-height: 45%;
+    text-align: center;
+    padding: 0.5%;
+    background-color: #383838;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 1rem;
+    }
   }
 }
 
 //
 .star {
   min-height: 100px;
-  border-color: #222222;
   align-items: center;
-  background-color: darkorange;
+  background-color: #DC810E;
+  position: relative;
 }
 
 .section1-img {
   max-width: 25%;
 }
 
+.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 25;
+  text-align: right;
+  visibility: visible;
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  z-index: 25;
+  visibility: visible;
+}
+
+.slider-nav {
+  vertical-align: middle;
+  display: table-cell;
+  height: 100vh;
+  font-size: 50px;
+  visibility: visible;
+}
+
+.slider-nav:hover {
+  color: #383838;
+  background-color: rgba(12, 12, 12, 0.16);
+  width: 50px;
+  font-size: 50px;
+  text-align: right;
+  visibility: visible;
+}
+
+@media screen and (min-width: 565px) {
+  .left,
+  .right,
+  .slider-nav {
+    visibility: hidden;
+    display: none;
+  }
+  .slide1 {
+    margin-left: 0;
+  }
+}
+
+.s1head-title {
+  width: 100%;
+  background-color: #DC810E;
+  padding: 0 10px;
+  margin: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
+  h2 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+}
+
+.s1head {
+  text-align: center;
+  margin: 0 auto;
+  li {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  ul {
+    background-color: #383838;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .s1head-title {
+    display: none;
+  }
+  .s1head {
+    display: none;
+  }
+}

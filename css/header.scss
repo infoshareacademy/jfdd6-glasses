@@ -77,16 +77,6 @@ $contrastColor: #DC810E;
       }
     }
 
-    .btn {
-      /* nothing special so far */
-
-      @include desktop {
-        &:active {
-          /* nothing special so far */
-        }
-      }
-    }
-
     .btn--logo {
       /* no button logo for mobile */
       &:active {
@@ -176,7 +166,6 @@ $contrastColor: #DC810E;
         margin: 20px -4px 0 0;
         padding: 0 0 0 0;
         background-color: $headerBgColorMain;
-        border-bottom-left-radius: 0.4rem;
         display: block;
         list-style-type: none;
         transform: translate(103%, 0);

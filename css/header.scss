@@ -53,13 +53,11 @@ $contrastColor: #DC810E;
 
       .logo__img {
         height: 4rem;
-        border-bottom-right-radius: 0.4rem;
         background-color: $headerBgColorMain;
 
         @include desktop {
           margin: 0;
           padding: 0;
-          height: 7rem;
           transition: box-shadow 0.1s linear;
 
           .logo--mobile {
@@ -73,7 +71,7 @@ $contrastColor: #DC810E;
 
         &:hover {
           @include desktop {
-            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.75);
+            box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75);
           }
         }
       }

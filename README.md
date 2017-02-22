@@ -6,9 +6,13 @@
 feature/issue_issue_name
 
 Example: feature/FD6GL-29_RWD_web_site_navigation
+Exception: In a case when branch is necessary, but is not connected with any specific jira task,
+           or such a task has already been burned, the name of branch should start with
+           "Other-" prefix (eg. Other-fixing_slider).           
 
 *** Commits:
 sub-task your comment
+Exception: See above. Start commit with "Other-" prefix.
 
 Example:
 FD6GL-35 Add side menu buttons.

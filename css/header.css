@@ -49,11 +49,6 @@
         @media (min-width: 768px) {
           .header .nav .logo .logo__img:hover {
             box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75); } }
-    .header .nav .btn {
-      /* nothing special so far */ }
-      @media (min-width: 768px) {
-        .header .nav .btn:active {
-          /* nothing special so far */ } }
     .header .nav .btn--logo {
       /* no button logo for mobile */ }
       @media (min-width: 768px) {
@@ -116,7 +111,6 @@
         margin: 20px -4px 0 0;
         padding: 0 0 0 0;
         background-color: #ffffff;
-        border-bottom-left-radius: 0.4rem;
         display: block;
         list-style-type: none;
         transform: translate(103%, 0);

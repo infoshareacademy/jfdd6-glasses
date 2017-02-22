@@ -18,17 +18,7 @@
     align-items: stretch;
     justify-content: space-between;
     width: 90%;
-    background-color: #ffffff;
-    /*    .btn--logo {
-          !* no button logo for mobile *!
-          &:active {
-            @include desktop {
-              .logo__img {
-                box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
-              }
-            }
-          }
-        }*/ }
+    background-color: #ffffff; }
     .header .nav .logo--mobile {
       display: flex; }
       @media (min-width: 768px) {
@@ -42,35 +32,34 @@
     .header .nav .logo {
       position: relative;
       align-items: flex-start;
-      justify-content: center;
-      background-color: #ffffff; }
+      justify-content: center; }
       .header .nav .logo .logo__img--positive {
-        display: none; }
+        display: block; }
       .header .nav .logo .logo__img--negative {
-        display: block;
-        background-color: blue; }
+        display: none; }
       @media (min-width: 768px) {
         .header .nav .logo:hover {
-          box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75); }
+          background-color: #222222;
+          transition: background-color 0.4s ease-in-out; }
           .header .nav .logo:hover .logo__img--positive {
             display: none; }
           .header .nav .logo:hover .logo__img--negative {
-            display: block;
-            background-color: green;
-            transition: background-color 0.4s ease-in-out; } }
+            display: block; } }
       .header .nav .logo .logo__img {
-        height: 4rem;
-        background-color: #ffffff; }
+        height: 4rem; }
         @media (min-width: 768px) {
           .header .nav .logo .logo__img {
             margin: 0;
-            padding: 0;
-            transition: box-shadow 0.1s linear;
-            background-color: none; }
+            padding: 0; }
             .header .nav .logo .logo__img .logo--mobile {
               display: none; }
             .header .nav .logo .logo__img .logo--desktop {
               display: flex; } }
+    .header .nav .btn--logo {
+      /* no button logo for mobile */ }
+      @media (min-width: 768px) {
+        .header .nav .btn--logo:active .logo__img {
+          transform: scale(0.98, 0.98); } }
     .header .nav .menu--mobile {
       display: block; }
       @media (min-width: 768px) {
@@ -182,8 +171,7 @@
               .header .nav .top-menu .menu__btn .menu__link:hover p {
                 color: #ffffff; }
             .header .nav .top-menu .menu__btn .menu__link:active p {
-              color: #DC810E;
-              transition: color 0.1s linear; } }
+              transform: scale(0.98, 0.98); } }
 
 /* End of .header */
 

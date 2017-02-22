@@ -121,9 +121,11 @@
   //ekran przed startem
 
   document.getElementById('see-game').addEventListener("click", seeGame);
+  document.getElementById('start-btn').setAttribute('disabled', true);
 
   function seeGame() {
-    document.getElementById('before-start').style.display = "none"
+    document.getElementById('before-start').style.display = "none";
+    document.getElementById('start-btn').disabled = false;
   }
 
 

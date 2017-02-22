@@ -78,12 +78,13 @@ $contrastColor: #DC810E;
 
       .logo__img {
         height: 4rem;
-        //background-color: $headerBgColorMain;
+        background-color: $headerBgColorMain;
 
         @include desktop {
           margin: 0;
           padding: 0;
           transition: box-shadow 0.1s linear;
+          background-color: none;
 
           .logo--mobile {
             display: none;

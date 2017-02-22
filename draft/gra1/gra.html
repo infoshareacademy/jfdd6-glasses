@@ -114,6 +114,9 @@
 
 <br>
 <button type="button" id="start-btn" onclick="startGame();">Zagraj</button>
+<div class="points-counter">
+  <p>Twoje punkty: <span id="points">...</span></p>
+</div>
 
 <script>
   //------------ ZMIANY ADAMA
@@ -233,6 +236,7 @@
 
     if (hit.className.match(/\bprojector\b/)) {
       score++;
+      document.getElementById('points').innerHTML = score;
     }
     if (hit.className.match(/\bdog\b/)) {
       stopGame('dog');

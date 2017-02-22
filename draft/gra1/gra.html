@@ -15,8 +15,9 @@
 
     #block {
       position: relative;
-      margin-left: 200px;
-      margin-top: 100px;
+      /*margin-left: 200px;*/
+      /*margin-top: 100px;*/
+      margin: 0 auto;
       width: 300px;
       height: 500px;
       background: lightgrey url(img/doors.png) no-repeat bottom;
@@ -46,18 +47,31 @@
 
     .plate {
       position: absolute;
-      top: 150px;
-      left: -30px;
-      width: 300px;
-      height: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      /*      top: 150px;
+            left: -30px;
+            width: 300px;
+            height: 50px;*/
+      margin: 0 auto;
       padding: 30px;
       background-color: #444;
       color: white;
+      text-align: center;
     }
 
     .end,
     .walk {
       display: none;
+    }
+
+    .before-start {
+      display: block;
+
+    }
+
+    #see-game {
+      cursor: pointer;
     }
 
     .close {
@@ -67,6 +81,7 @@
       color: #999;
       font-size: 1.2em;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .walk img {
@@ -77,7 +92,18 @@
 
 <body>
 
+
 <div id="block">
+  <div id="before-start" class="plate before-start">
+    <p>Dziękujemy za zapisanie się na newsletter! </p>
+    <p>Spróbuj zagrać w naszą grę [gadka gadka gadka]. Oto zasady: w oknach pojawiają się .... <br>
+      X jest warty 1 punkt<br>
+      Popcorn jest warty 3 punkty<br>
+      Uważaj na psa! Będzie chciał wyjść na spacer i przerwie seans!</p>
+    <p>Masz 15 sekund. Ile punktów uzbierasz?</p>
+
+    <p id="see-game">Zagraj!</p>
+  </div>
   <div id="walk" class="plate walk">Wyprowadź psa, gra skończona. <img src="img/walking.png">
     <div class="close">x</div>
   </div>
@@ -90,23 +116,34 @@
 <button type="button" id="start-btn" onclick="startGame();">Zagraj</button>
 
 <script>
+  //------------ ZMIANY ADAMA
 
+  //ekran przed startem
+
+  document.getElementById('see-game').addEventListener("click", seeGame);
+
+  function seeGame() {
+    document.getElementById('before-start').style.display = "none"
+  }
+
+
+  // ------------- SYLWIA -------------
   var i, projector, dog, score;
 
   //wypełnienie bloku
   var block = document.getElementById('block');
-/*
-  for (i = 0; i < 8; i++) {
-    var floor = "clear: left;";
-    for (var j = 0; j < 6; j++) {
-      var flat = document.createElement('div');
-      flat.setAttribute('style', floor);
-      floor = "";
-      flat.className = 'flats';
-      block.appendChild(flat);
-    }
-  }
-*/
+  /*
+   for (i = 0; i < 8; i++) {
+   var floor = "clear: left;";
+   for (var j = 0; j < 6; j++) {
+   var flat = document.createElement('div');
+   flat.setAttribute('style', floor);
+   floor = "";
+   flat.className = 'flats';
+   block.appendChild(flat);
+   }
+   }
+   */
   // jeżeli wypełniamy przestrzeń ograniczoną wymiarami, wystarczy taka funkcja:
   for (i = 0; i < 48; i++) {
     var flat = document.createElement('div');
@@ -117,13 +154,13 @@
   //wybieranie okna
   var blankFlats = document.getElementsByClassName('flats');
 
-  var screening = function(screen) {
+  var screening = function (screen) {
     var draw = Math.floor(Math.random() * 49);
     blankFlats[draw].classList.add(screen);
   };
 
   //usuwanie obrazka
-  var clearing  = function(screen) {
+  var clearing = function (screen) {
     var activeFlats = document.getElementsByClassName(screen)[0];
     if (activeFlats) {
       activeFlats.classList.remove(screen);
@@ -135,7 +172,7 @@
     score = 0;
     document.getElementById('start-btn').setAttribute('disabled', true);
 
-    projector = setInterval(function() {
+    projector = setInterval(function () {
       clearing('projector');
       screening('projector');
 
@@ -145,7 +182,7 @@
       counter++;
     }, 1000);
 
-    dog = setInterval(function() {
+    dog = setInterval(function () {
       clearing('dog');
       screening('dog');
     }, 1250);
@@ -189,7 +226,7 @@
     document.getElementById('walk').style.display = "block";
   }
 
-  document.onclick = function(shot) {
+  document.onclick = function (shot) {
     var hit = shot.target;
 
     if (hit.className.match(/\bprojector\b/)) {
@@ -202,7 +239,7 @@
 
   var lift = document.getElementsByClassName('close');
   for (i in lift) {
-    lift[i].onclick = function() {
+    lift[i].onclick = function () {
       this.parentNode.style.display = "none";
       startOfGame();
     }

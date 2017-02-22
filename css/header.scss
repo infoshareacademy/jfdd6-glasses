@@ -49,16 +49,38 @@ $contrastColor: #DC810E;
       position: relative;
       align-items: flex-start;
       justify-content: center;
-      background-color: $headerBgColorMain;
+
+      .logo__img--positive {
+        display: block;
+      }
+
+      .logo__img--negative {
+        display: none;
+      }
+
+      &:hover {
+        @include desktop {
+          //box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75);
+          background-color: $headerBgBtnActiveColor;
+          transition: background-color 0.4s ease-in-out;
+
+          .logo__img--positive {
+            display: none;
+          }
+
+          .logo__img--negative {
+            display: block;
+          }
+        }
+      }
 
       .logo__img {
         height: 4rem;
-        background-color: $headerBgColorMain;
 
         @include desktop {
           margin: 0;
           padding: 0;
-          transition: box-shadow 0.1s linear;
+          //transition: box-shadow 0.1s linear;
 
           .logo--mobile {
             display: none;
@@ -66,12 +88,6 @@ $contrastColor: #DC810E;
 
           .logo--desktop {
             display: flex;
-          }
-        }
-
-        &:hover {
-          @include desktop {
-            box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75);
           }
         }
       }
@@ -82,7 +98,8 @@ $contrastColor: #DC810E;
       &:active {
         @include desktop {
           .logo__img {
-            box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
+            //box-shadow: inset 3px 3px 7px 0 rgba(0, 0, 0, 1);
+            transform: scale(0.98, 0.98);
           }
         }
       }
@@ -241,8 +258,9 @@ $contrastColor: #DC810E;
 
             &:active {
               p {
-                color: $contrastColor;
-                transition: color 0.1s linear;
+                //color: $contrastColor;
+                //transition: color 0.1s linear;
+                transform: scale(0.98, 0.98);
               }
             }
           }

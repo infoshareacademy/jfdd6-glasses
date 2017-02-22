@@ -1,17 +1,23 @@
+@mixin smartfone-big {
+  @media only screen and (min-width: 479px) {
+    @content;
+  }
+}
+
 @mixin tablets {
-  @media only screen and (min-width : 768px) {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin medium {
-  @media only screen and (min-width : 992px) {
+  @media only screen and (min-width: 992px) {
     @content;
   }
 }
 
 @mixin large {
-  @media only screen and (min-width : 1280px) {
+  @media only screen and (min-width: 1280px) {
     @content;
   }
 }
@@ -37,27 +43,49 @@
   width: 100%;
   background-color: rgba(33, 33, 33, 0.7);
   text-align: center;
-  padding: 10px;
+  padding: 10px 30px;
   box-sizing: border-box;
   @include medium {
     width: 100%;
   }
 }
 
-.teaser img {
-  width: 300px;
-  height: auto;
-  padding: 10px;
-  padding-bottom: 20px;
+.title {
+  font-size: 4rem;
+  color: #DC810E;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 5px;
+  padding: 40px;
+  @include smartfone-big {
+    padding: 20px 40px 40px;
+  }
   @include medium {
-    width: 450px;
-    padding: 15px;
-    padding-bottom: 3%;
+    font-size: 5rem;
+    //padding: 20px 40px 40px;
+    letter-spacing: 8px;
   }
   @include large {
-    width: 548px;
-    padding: 20px;
-    padding-bottom: 5%;
+    font-size: 6rem;
+  }
+}
+
+.teaser img {
+  display: none;
+  @include smartfone-big {
+    display: inline-block;
+    width: 90px;
+    height: auto;
+    padding: 10px;
+    margin: 0 0 -25px -10px;
+    padding-bottom: 20px;
+  }
+  @include medium {
+    width: 120px;
+    margin: 0 0 -30px -10px;
+  }
+  @include large {
+    width: 150px;
+    margin: 0 0 -30px -10px;
   }
 }
 
@@ -75,10 +103,12 @@
 }
 
 .sec_p {
+  @extend .title;
   font-size: 1.2rem;
-  color: #DC810E;
-  font-family: 'Anton', sans-serif;
   letter-spacing: 2px;
+  padding: .5rem 0 1.1rem;
+  //padding-top: .5rem;
+  //padding-bottom: 1.1rem;
   @include medium {
     font-size: 1.5rem;
   }

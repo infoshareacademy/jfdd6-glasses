@@ -28,14 +28,17 @@
            src="img/logo.svg"
            alt="project logo">
     </div>
-    <a class="logo logo--desktop btn btn--logo"
+    <a class="logo logo--desktop btn--logo"
        href="#welcome">
-      <img class="logo__img"
+      <img class="logo__img logo__img--positive"
            src="img/logo.svg"
            alt="project logo">
+      <img class="logo__img logo__img--negative"
+           src="img/logo-negative.svg"
+           alt="logo-negative">
     </a>
     <div class="side-menu menu--mobile">
-      <input class="side-menu__checkbox" type="checkbox"/>
+      <input id="checkbox" class="side-menu__checkbox" type="checkbox"/>
       <span class="first-bar bar"></span>
       <span class="second-bar bar"></span>
       <span class="third-bar bar"></span>
@@ -82,10 +85,10 @@
   <section class="full-width section0" id="welcome">
     <a href="#premiera">
       <div class="teaser">
-        <img src="img/teaser_txt.png"
-             alt="Każdy lubi dobre filmy!">
-        <p class="main_p">Oglądaj filmy i poznawaj ludzi. Wkrótce nowa aplikacja <br> dla Ciebie i Twoich sąsiadów
-        </p>
+        <span class="title">KLATKA
+        <img src="img/logo_white.png"
+             alt="Każdy lubi dobre filmy!"></span>
+        <p class="main_p">Zorganizuj własny pokaz filmowy.<br>Nowa aplikacja dla Ciebie i Twoich sąsiadów.</p>
         <p class="sec_p">
           <span class="material-icons"
                 style="font-size:25px">grade</span>
@@ -102,15 +105,24 @@
          class="anchor"></div>
     <section class="film-frame section1">
       <div class="flex-container">
-        <div class="flex-item">
+        <div class="left" id="slide-left" onclick="slideLeft()"><p class="slider-nav"> < </p></div>
+        <div class="right" id="slide-right" onclick="slideRight()"><p class="slider-nav"> > </p></div>
+        <div class="s1head-title"><h2>Dzięki naszej aplikacji będziesz mógł:</h2></div>
+        <div class="s1head">
+          <ul>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Poznać sąsiadów kinomaniaków</li>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Skorzystać z tablicy ogłoszeń</li>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Nadrobić zaległości filmowe</li>
+            <li><span class="material-icons" style="font-size:25px">grade</span> Odkryć nowe filmy</li>
+          </ul>
+        </div>
+        <div class="flex-item" id="slide1">
           <div class="flex-item-content">
             <h2>Poznaj sąsiadów</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
-              <br>
-                <img src="./img/t.png" alt="" class="section1-img">
-              <br>grade grade grade
+              <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
             </span>
           </div>
           <div class="flex-item-content">
@@ -118,45 +130,45 @@
               pobliżu</p>
           </div>
         </div>
-        <div class="flex-item">
+        <div class="flex-item" id="slide2">
+          <div class="flex-item-content">
+            <h2>Zgłoś seans</h2>
+          </div>
+          <div class="flex-item-content star">
+            <span class="material-icons" style="font-size:25px">grade grade grade
+            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
+            </span>
+          </div>
+          <div class="flex-item-content">
+            <p>Ogłoś swój seans na naszej tablicy lub zobacz co proponują inni</p>
+          </div>
+        </div>
+        <div class="flex-item" id="slide3">
           <div class="flex-item-content">
             <h2>Nadrób zaległości filmowe</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>
-            grade grade grade</span>
+            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
+            </span>
           </div>
           <div class="flex-item-content">
             <p>Przegapiłeś niedawny film, który wyszedł już z kina? Nigdy nie widziałeś
               klasyka sprzed lat? Obejrzyj go z sąsiadem</p>
           </div>
         </div>
-        <div class="flex-item">
+        <div class="flex-item" id="slide4">
           <div class="flex-item-content">
-            <h2>Podyskutuj o filmach</h2>
+            <h2>Odkryj nowe filmy</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>
-            grade grade grade</span>
+            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
+            </span>
           </div>
           <div class="flex-item-content">
-            <p>Najlepiej tuż po seansie. Ale możesz też pogadać przez nasz wbudowany
-              komunikator i umówić się na następne spotkanie</p>
-          </div>
-        </div>
-        <div class="flex-item">
-          <div class="flex-item-content">
-            <h2>Stwórz własną bibliotekę filmów</h2>
-          </div>
-          <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>
-            grade grade grade</span></div>
-          <div class="flex-item-content">
-            <p>Uporządkuj swoje filmy i seriale. Pokaż sąsiadom swoją bibliotekę i daj znać
-              czego szukasz</p>
+            <p>Nasza wyszukiwarka pozwoli Ci znaleźć filmy według twoich upodobań i podpowie co warto jeszcze zobaczyć
+            </p>
           </div>
         </div>
       </div>
@@ -166,15 +178,11 @@
          class="anchor"></div>
     <section class="film-frame section2">
       <p class="invite invisible-large">
-        <span class="material-icons">grade</span>
-        Zapisz się
-          <span class="visible-small">
-            <span class="material-icons">grade</span>
-            <br>
-            <span class="material-icons">grade</span>
-          </span>
-        na premierę
-        <span class="material-icons">grade</span>
+        <span class="material-icons"
+              style="">grade</span>
+        Zapisz się<br class="visible-small"> na premierę
+        <span class="material-icons"
+              style="">grade</span>
       </p>
       <div class="clapperboard">
         <p class="">Zainteresowany? Zainteresowana?</p>
@@ -204,7 +212,8 @@
       <h1 class="team_title">developers team</h1>
       <p class="team_title team_sub_title">
         <span class="material-icons"
-              style="font-size:22px">grade</span>czyli wystąpili
+              style="font-size:22px">grade</span>
+        czyli wystąpili
         <span class="material-icons"
               style="font-size:22px">grade</span>
       </p>
@@ -227,9 +236,9 @@
           <p class="name">Sylwia</p>
           <p class="surname">Rzedzicka</p>
           <div class="social_media">
-            <img src="img/facebook.svg">
-            <img src="img/google-plus.svg">
-            <img src="img/linkedin.svg">
+            <a href="mailto:sylwiarzedzicka@gmail.com"><img src="img/mail.svg"></a>
+            <a href="https://github.com/zemr"><img src="img/GitHub.png"></a>
+            <img src="img/linkedin_inactive.svg">
           </div>
           <a href="#"><p class="homepage">Homepage</p></a>
         </div>
@@ -251,9 +260,9 @@
           <p class="name">Michał</p>
           <p class="surname">Trocha</p>
           <div class="social_media">
-            <img src="img/facebook.svg">
-            <img src="img/google-plus.svg">
-            <img src="img/linkedin.svg">
+            <a href="mailto:michaltrocha@gmail.com"><img src="img/mail.svg"></a>
+            <a href="https://github.com/mitroc"><img src="img/GitHub.png"></a>
+            <a href="https://pl.linkedin.com/in/michaltrocha"><img src="img/linkedin.svg"></a>
           </div>
           <a href="#"><p class="homepage">Homepage</p></a>
         </div>
@@ -275,9 +284,9 @@
           <p class="name">Krzysiek</p>
           <p class="surname">Zieliński</p>
           <div class="social_media">
-            <img src="img/facebook.svg">
-            <img src="img/google-plus.svg">
-            <img src="img/linkedin.svg">
+            <a href="mailto:krzysztof.zielinski.work@gmail.com"><img src="img/mail.svg"></a>
+            <a href="https://github.com/KrzysztofZielinskiWork"><img src="img/GitHub.png"></a>
+            <a href="https://www.linkedin.com/in/krzysztof-zielinski-gda-376020a5"><img src="img/linkedin.svg"></a>
           </div>
           <a href="#"><p class="homepage">Homepage</p></a>
         </div>
@@ -299,11 +308,11 @@
           <p class="name">ADAM</p>
           <p class="surname">Milko</p>
           <div class="social_media">
-            <img src="img/facebook.svg">
-            <img src="img/google-plus.svg">
-            <img src="img/linkedin.svg">
+            <a href="mailto:adam.milko@gmail.com"><img src="img/mail.svg"></a>
+            <a href="https://github.com/natan-mlk"><img src="img/GitHub.png"></a>
+            <a href="https://www.linkedin.com/in/adam-milko-395303121/"><img src="img/linkedin.svg"></a>
           </div>
-          <a href="#"><p class="homepage">Homepage</p></a>
+          <a href="https://adammilko.com"><p class="homepage">Homepage</p></a>
         </div>
       </div>
     </section>
@@ -311,13 +320,19 @@
   </div>
 </main>
 
-<script
+<footer class="footer">
+  <p> &copy; Gl@sses </p>
+</footer>
+<!--<script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous">
-</script>
+</script>-->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+<script src="js/jquery-3.1.1.js"></script>
 <script src="js/website-scroll.js"></script>
 <script src="js/avatar-animation.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/side-menu-hide.js"></script>
 </body>
 </html>

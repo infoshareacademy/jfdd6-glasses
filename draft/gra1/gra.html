@@ -81,7 +81,7 @@
   <div id="walk" class="plate walk">Wyprowadź psa, gra skończona. <img src="img/walking.png">
     <div class="close">x</div>
   </div>
-  <div id="end" class="plate end">
+  <div id="end" class="plate end">Gra skończona. Twój wynik to <span id="score">0</span>.
     <div class="close">x</div>
   </div>
 </div>
@@ -91,10 +91,11 @@
 
 <script>
 
-  var i, text, projector, dog, score;
+  var i, projector, dog, score;
 
   //wypełnienie bloku
   var block = document.getElementById('block');
+/*
   for (i = 0; i < 8; i++) {
     var floor = "clear: left;";
     for (var j = 0; j < 6; j++) {
@@ -104,6 +105,13 @@
       flat.className = 'flats';
       block.appendChild(flat);
     }
+  }
+*/
+  // jeżeli wypełniamy przestrzeń ograniczoną wymiarami, wystarczy taka funkcja:
+  for (i = 0; i < 48; i++) {
+    var flat = document.createElement('div');
+    flat.className = 'flats';
+    block.appendChild(flat);
   }
 
   //wybieranie okna
@@ -160,7 +168,6 @@
   }
 
   function endOfGame() {
-    document.getElementById('start-btn').setAttribute('disabled', true);
     for (i = 0; i < blankFlats.length; i++) {
       blankFlats[i].style.backgroundColor = "#b3b3b3";
     }
@@ -171,16 +178,11 @@
     for (i = 0; i < blankFlats.length; i++) {
       blankFlats[i].style.backgroundColor = "";
     }
-    if (text) {
-      text.parentNode.removeChild(text);
-    }
   }
 
   function endOfTime() {
-    var endPlate = document.getElementById('end');
-    endPlate.style.display = "block";
-    text = document.createTextNode("Gra skończona. Twój wynik to " + score + ".");
-    endPlate.appendChild(text);
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('end').style.display = "block";
   }
 
   function walkTime() {

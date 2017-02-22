@@ -52,11 +52,11 @@ $contrastColor: #DC810E;
       background-color: $headerBgColorMain;
 
       .logo__img--positive {
-        display: block;
+        display: none;
       }
 
       .logo__img--negative {
-        display: none;
+        display: block;
         background-color: blue; // tu jest problem
       }
 
@@ -71,14 +71,14 @@ $contrastColor: #DC810E;
           .logo__img--negative {
             display: block;
             background-color: green;
-            //transition: background-color 0.4s ease-in-out;
+            transition: background-color 0.4s ease-in-out;
           }
         }
       }
 
       .logo__img {
         height: 4rem;
-        background-color: $headerBgColorMain;
+        //background-color: $headerBgColorMain;
 
         @include desktop {
           margin: 0;

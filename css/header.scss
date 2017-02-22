@@ -51,6 +51,31 @@ $contrastColor: #DC810E;
       justify-content: center;
       background-color: $headerBgColorMain;
 
+      .logo__img--positive {
+        display: block;
+      }
+
+      .logo__img--negative {
+        display: none;
+        background-color: blue; // tu jest problem
+      }
+
+      &:hover {
+        @include desktop {
+          box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75);
+
+          .logo__img--positive {
+            display: none;
+          }
+
+          .logo__img--negative {
+            display: block;
+            background-color: green;
+            //transition: background-color 0.4s ease-in-out;
+          }
+        }
+      }
+
       .logo__img {
         height: 4rem;
         background-color: $headerBgColorMain;
@@ -69,16 +94,11 @@ $contrastColor: #DC810E;
           }
         }
 
-        &:hover {
-          @include desktop {
-            box-shadow: 2px 0 8px 0 rgba(0, 0, 0, 0.75);
-          }
-        }
       }
     }
 
-    .btn--logo {
-      /* no button logo for mobile */
+/*    .btn--logo {
+      !* no button logo for mobile *!
       &:active {
         @include desktop {
           .logo__img {
@@ -86,7 +106,7 @@ $contrastColor: #DC810E;
           }
         }
       }
-    }
+    }*/
 
     .menu--mobile {
       display: block;

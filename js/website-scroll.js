@@ -4,11 +4,11 @@
 
 $(document).ready(function(){
   $('a[href^="#"]').on('click',function (event) {
-    event.preventDefault();
-
     var hash = this.hash;
     var $target = $(hash);
     var $topOffset = 0;
+
+    event.preventDefault();
 
     $('html, body').stop().animate(
       {'scrollTop': $target.offset().top - $topOffset},
@@ -48,5 +48,5 @@ $(document).ready(function(){
 * [complete] ----------------
 * A function to call once the animation is complete,
 * called once per matched element.
-* window.location.hash = anchor
+* window.location.hash = anchor - visible in URL
 * */

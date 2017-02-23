@@ -2,6 +2,8 @@
  * Created by zemr on 23.02.17.
  */
 
+
+var mq = window.matchMedia('(min-width: 993px)');
 var $emailError = $('.email-error');
 
 $('.enrollment-form').submit(function(event) {
@@ -12,8 +14,24 @@ $('.enrollment-form').submit(function(event) {
     if ($emailError) { $('.email-error').remove(); }
     $('#info').append($('<p class="email-error">').text("Podany adres mailowy jest niepoprawny."));
   } else {
-    $('.section2').css("display", "none");
-    $('.game').css("display", "flex");
+    if (mq.matches) {
+      $('.section2').css("display", "none");
+      $('.game').css("display", "flex");
+    } else {
+      $('.section2').css("display", "none");
+      $('.thanks').css("display", "flex");
+    }
+    mq.addListener(function(changed) {
+      if(changed.matches) {
+        // the width of browser is more then 993px
+        $('.thanks').css("display", "none");
+        $('.game').css("display", "flex");
+      } else {
+        // the width of browser is less then 993px
+        $('.game').css("display", "none");
+        $('.thanks').css("display", "flex");
+      }
+    });
   }
 });
 

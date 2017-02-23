@@ -9,6 +9,7 @@
   background-color: #DC810E; }
 
 .clapperboard {
+  position: relative;
   margin-top: .8em;
   margin-bottom: .8em;
   text-align: center;
@@ -46,6 +47,16 @@
   line-height: 1.5;
   text-align: left; }
 
+.email-error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: none;
+  color: #fff;
+  font-size: .7rem; }
+
 .invite {
   font-size: 1.2rem;
   color: #fff;
@@ -58,6 +69,17 @@
 
 .visible-small {
   display: inline; }
+
+.thanks {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  margin: 30px 0;
+  min-height: 40vh;
+  width: 85%;
+  background-color: #222;
+  color: #fff; }
 
 @media screen and (max-width: 576px) {
   .invite {
@@ -101,7 +123,10 @@
 
   .enrollment-form-button {
     letter-spacing: 2px;
-    margin-left: 4px; } }
+    margin-left: 4px; }
+
+  .email-error {
+    font-size: .9rem; } }
 @media screen and (min-width: 993px) and (max-width: 1366px) {
   .invisible-large {
     display: none; }
@@ -143,7 +168,10 @@
     color: #FF8C00;
     border: 1px solid #FF8C00; }
     .enrollment-form-button:active, .enrollment-form-button:focus {
-      border: 3px solid #FF8C00; } }
+      border: 3px solid #FF8C00; }
+
+  .email-error {
+    color: #FF8C00; } }
 @media screen and (min-width: 1367px) {
   .invisible-large {
     display: none; }
@@ -186,6 +214,10 @@
     color: #FF8C00;
     border: 1px solid #FF8C00; }
     .enrollment-form-button:active, .enrollment-form-button:focus {
-      border: 3px solid #FF8C00; } }
+      border: 3px solid #FF8C00; }
+
+  .email-error {
+    color: #FF8C00;
+    font-size: 1rem; } }
 
 /*# sourceMappingURL=section2_res.css.map */

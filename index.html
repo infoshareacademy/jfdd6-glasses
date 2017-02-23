@@ -107,18 +107,9 @@
       <div class="flex-container">
         <div class="left" id="slide-left" onclick="slideLeft()"><p class="slider-nav"> < </p></div>
         <div class="right" id="slide-right" onclick="slideRight()"><p class="slider-nav"> > </p></div>
-        <div class="s1head-title"><h2>Dzięki naszej aplikacji będziesz mógł:</h2></div>
-        <div class="s1head">
-          <ul>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Poznać sąsiadów kinomaniaków</li>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Skorzystać z tablicy ogłoszeń</li>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Nadrobić zaległości filmowe</li>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Odkryć nowe filmy</li>
-          </ul>
-        </div>
         <div class="flex-item" id="slide1">
           <div class="flex-item-content">
-            <h2>Poznaj sąsiadów</h2>
+            <h2>Poznaj sąsiadów kinomaników</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
@@ -132,7 +123,7 @@
         </div>
         <div class="flex-item" id="slide2">
           <div class="flex-item-content">
-            <h2>Zgłoś seans</h2>
+            <h2>Skorzystaj z tablicy ogłoszeń</h2>
           </div>
           <div class="flex-item-content star">
             <span class="material-icons" style="font-size:25px">grade grade grade
@@ -189,8 +180,8 @@
         <span class="material-icons">grade</span>
       </p>
       <div class="clapperboard">
-        <p class="">Zainteresowany? Zainteresowana?</p>
-        <p>Damy Wam znać o starcie<br class="visible-medium"> prosto na skrzynkę!</p>
+        <p>Zainteresowany? Zainteresowana?</p>
+        <p id="info">Damy Wam znać o starcie<br class="visible-medium"> prosto na skrzynkę!</p>
 
         <form action=""
               method="post"
@@ -198,7 +189,7 @@
           <input type="email"
                  name="email"
                  placeholder="Podaj swój adres e-mail">
-          <button type="button"
+          <button type="submit"
                   class="enrollment-form-button">Zawiadomcie mnie
           </button>
         </form>
@@ -211,8 +202,12 @@
       </div>
     </section>
 
-    <section class="film-frame gra">
+    <section class="game">
       <div class="game-board"></div>
+    </section>
+
+    <section class="thanks">
+      <div>Dziękujemy za zapisanie się na premierę Klatki!</div>
     </section>
 
     <div id="zespol" class="anchor"></div>
@@ -342,5 +337,6 @@
 <script src="js/avatar-animation.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/side-menu-hide.js"></script>
+<script src="js/form-button.js"></script>
 </body>
 </html>

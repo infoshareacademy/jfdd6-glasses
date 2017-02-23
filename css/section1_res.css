@@ -121,7 +121,7 @@
 .slider-nav {
   vertical-align: middle;
   display: table-cell;
-  height: 100vh;
+  height: 85vh;
   font-size: 50px;
   visibility: visible; }
 
@@ -142,27 +142,6 @@
 
   .slide1 {
     margin-left: 0; } }
-.s1head-title {
-  width: 100%;
-  background-color: #DC810E;
-  padding: 0 10px;
-  margin: 0 10px;
-  margin-left: auto;
-  margin-right: auto; }
-  .s1head-title h2 {
-    text-align: center;
-    font-size: 3.5rem; }
-
-.s1head {
-  text-align: center;
-  margin: 0 auto; }
-  .s1head li {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin-right: 20px; }
-  .s1head ul {
-    background-color: #383838; }
-
 @media screen and (max-width: 565px) {
   .s1head-title {
     display: none; }

@@ -211,9 +211,44 @@
       </div>
     </section>
 
-    <section class="film-frame gra">
-      <div class="game-board"></div>
+    <!-- -----------------GRA -------------------------->
+
+    <section class="film-frame game">
+      <div class="game-board">
+
+        <div id="block"></div>
+        <div id="before-start" class="plate before-start">
+          <h3>Dziękujemy! Powiadomimy Cię gdy aplikacja będzie gotowa. </h3>
+          <p>Tymczasem spróbuj zagrać w naszą grę.<br>
+            W oknach pojawiają się różne ikony. Klikaj na nie jak najszybciej. <br>
+            X jest warty 1 punkt<br>
+            Popcorn jest warty 3 punkty<br>
+            Uważaj na psa! Będzie chciał wyjść na spacer i przerwie seans!</p>
+          <p>Masz 15 sekund. Ile punktów uzbierasz?</p>
+          <button id="see-game">Zagraj!</button>
+        </div>
+
+        <div id="walk" class="plate walk">Wyprowadź psa, gra skończona. <img src="img/game/walking.png">
+          <div class="close">X</div>
+        </div>
+        <div id="end" class="plate end">Gra skończona. Twój wynik to <span id="score">0</span>.
+          <div class="close">X</div>
+        </div>
+
+
+
+        <br>
+        <button type="button" id="start-btn" onclick="startGame();">START</button>
+        <div class="points-counter">
+          <p>Twoje punkty: <span id="points">...</span></p>
+        </div>
+
+
+      </div>
     </section>
+
+
+    <!-- -----------------KONIEC -------------------------->
 
     <div id="zespol" class="anchor"></div>
     <section class="film-frame section3">
@@ -342,5 +377,7 @@
 <script src="js/avatar-animation.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/side-menu-hide.js"></script>
+<script src="js/game.js"></script>
+
 </body>
 </html>

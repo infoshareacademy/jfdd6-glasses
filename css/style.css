@@ -5,7 +5,7 @@
 @import "section2_res.css";
 @import "section3_res.css";
 @import "footer.css";
-@import "gra.css";
+@import "game.css";
 
 html,
 body {
@@ -83,9 +83,3 @@ body {
     margin-bottom: 30px;
   }
 }
-
-/*footer {*/
-  /*height: 30px;*/
-  /*background-color: #4d4d4d;*/
-  /*width: 100%;*/
-/*}*/

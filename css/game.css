@@ -68,11 +68,13 @@ button {
   font-family: 'Anton', sans-serif;
   text-decoration: none;
   padding: 8px 32px;
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75); }
-  button .disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    box-shadow: 0 0 0 0; }
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
+  cursor: pointer; }
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 0; }
 
 #see-game {
   cursor: pointer; }
@@ -83,8 +85,10 @@ button {
   transform: translateX(-50%);
   bottom: 20px; }
 
-#score {
+#score,
+#points {
   font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
   color: #DC810E; }
 
 .close {
@@ -98,5 +102,13 @@ button {
 
 .walk img {
   vertical-align: top; }
+
+.points-counter {
+  position: absolute;
+  bottom: 5px;
+  left: 30px;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center; }
 
 /*# sourceMappingURL=game.css.map */

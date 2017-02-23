@@ -2,11 +2,13 @@
 
 //ekran przed startem
 document.getElementById('see-game').addEventListener("click", seeGame);
-document.getElementById('start-btn').setAttribute('disabled', true);
+var startButton = document.getElementById('start-btn');
+startButton.setAttribute('disabled', true);
 
 function seeGame() {
   document.getElementById('before-start').style.display = "none";
-  document.getElementById('start-btn').disabled = false;
+  startButton.disabled = false;
+  startButton.classList.remove("disabled");
 }
 
 
@@ -53,7 +55,9 @@ var clearing = function (screen) {
 function startGame() {
   var counter = 0;
   score = 0;
-  document.getElementById('start-btn').setAttribute('disabled', true);
+  document.getElementById('points').innerHTML = '0';
+  startButton.setAttribute('disabled', true);
+  startButton.classList.add("disabled");
 
   projector = setInterval(function () {
     clearing('projector');
@@ -94,7 +98,8 @@ function endOfGame() {
 }
 
 function startOfGame() {
-  document.getElementById('start-btn').removeAttribute('disabled');
+  startButton.removeAttribute('disabled');
+  startButton.classList.remove("disabled");
   for (i = 0; i < blankFlats.length; i++) {
     blankFlats[i].style.backgroundColor = "";
   }

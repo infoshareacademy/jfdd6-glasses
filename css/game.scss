@@ -33,8 +33,8 @@
   height: 30px;
   margin-left: 15px;
   margin-top: 20px;
-  background-color: white;
-  border: 1px solid #666;
+  background: url(../img/game/window.svg);
+  border: 1px solid #cbcbcb;
   float: left;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .projector:active {
-  background-image: url(../img/game/projkt-n.png);
+  background-image: url(../img/game/star_white.svg);
 }
 
 .dog {

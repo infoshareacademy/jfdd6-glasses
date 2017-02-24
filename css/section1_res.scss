@@ -1,3 +1,7 @@
+.hide{
+  display: none;
+}
+
 @media screen and (max-width: 565px) {
   .section1 {
     overflow: hidden;
@@ -24,6 +28,7 @@
     position: relative;
     width: 100%;
   }
+
 }
 
 @media screen and (max-width: 565px) {
@@ -84,6 +89,7 @@
     width: 23.5%;
 
   }
+
 }
 
 @media screen and (max-width: 565px) {
@@ -158,7 +164,7 @@
 .slider-nav {
   vertical-align: middle;
   display: table-cell;
-  height: 100vh;
+  height: 85vh;
   font-size: 50px;
   visibility: visible;
 }
@@ -184,37 +190,17 @@
   }
 }
 
-.s1head-title {
-  width: 100%;
-  background-color: #DC810E;
-  padding: 0 10px;
-  margin: 0 10px;
-  margin-left: auto;
-  margin-right: auto;
-  h2 {
-    text-align: center;
-    font-size: 3.5rem;
-  }
-}
-
-.s1head {
-  text-align: center;
-  margin: 0 auto;
-  li {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin-right: 20px;
-  }
-  ul {
-    background-color: #383838;
-  }
-}
-
 @media screen and (max-width: 565px) {
   .s1head-title {
     display: none;
   }
   .s1head {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .hide{
+    display: inline;
   }
 }

@@ -9,3 +9,123 @@
   width: 85%;
   background-color: #222;
 }
+
+.game-board {
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  height: 500px;
+  background: url(../img/game/game-background.svg);
+  background-size: 700px 500px;
+}
+
+#block {
+  position: relative;
+  margin: 0 auto;
+  top: 30px;
+  width: 255px;
+  height: 500px;
+}
+
+.flats {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  margin-top: 20px;
+  background: url(../img/game/window.svg);
+  border: 1px solid #cbcbcb;
+  float: left;
+}
+
+.projector {
+  background-image: url(../img/game/projkt-p.png);
+}
+
+.projector:active {
+  background-image: url(../img/game/star_white.svg);
+}
+
+.dog {
+  background-image: url(../img/game/dog.png);
+}
+
+.plate {
+  position: relative;
+  top: -50%;
+  transform: translateY(-50%);
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #444;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+
+.before-start {
+  display: block;
+}
+
+.end,
+.walk {
+  display: none;
+}
+
+button {
+  background-color: #DC810E;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-family: 'Anton', sans-serif;
+  text-decoration: none;
+  padding: 8px 32px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 0;
+}
+
+#see-game {
+  cursor: pointer;
+}
+
+#start-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+}
+
+#score,
+#points {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  color: #DC810E;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #999;
+  font-size: 1.9em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.walk img {
+  vertical-align: top;
+}
+
+.points-counter {
+  position: absolute;
+  bottom: 5px;
+  left: 30px;
+  color: white;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}

@@ -15,7 +15,7 @@
   margin: 0 auto;
   width: 700px;
   height: 500px;
-  background: url(../img/game/game-background.svg);
+  background-image: url(../img/game/game-background.svg);
   background-size: 700px 500px;
 }
 
@@ -32,9 +32,13 @@
   height: 30px;
   margin-left: 15px;
   margin-top: 20px;
-  background: url(../img/game/window.svg);
+  background-image: url(../img/game/window.svg);
   border: 1px solid #cbcbcb;
   float: left;
+}
+
+.flats-shutdown {
+  background-image: url(../img/game/window-inactive.svg);
 }
 
 .projector {
@@ -47,6 +51,14 @@
 
 .dog {
   background-image: url(../img/game/dog.png);
+}
+
+.popcorn {
+  background-image: url(../img/game/popcorn.png);
+}
+
+.popcorn:active {
+  background-image: url(../img/game/star.svg);
 }
 
 .plate {
@@ -71,7 +83,11 @@
   display: none;
 }
 
-button {
+#start-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
   background-color: #DC810E;
   border: none;
   border-radius: 8px;
@@ -91,13 +107,6 @@ button {
 
 #see-game {
   cursor: pointer;
-}
-
-#start-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
 }
 
 #score,

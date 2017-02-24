@@ -1,9 +1,12 @@
 .game {
-  //display: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 25px;
+  margin-top: 30px;
+  min-height: 80vh;
+  width: 85%;
   background-color: #222;
 }
 
@@ -23,10 +26,6 @@
   width: 255px;
   height: 500px;
 }
-
-/*button {
-  margin-left: 200px;
-}*/
 
 .flats {
   width: 30px;

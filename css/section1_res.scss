@@ -1,3 +1,7 @@
+.hide{
+  display: none;
+}
+
 @media screen and (max-width: 565px) {
   .section1 {
     overflow: hidden;
@@ -24,6 +28,7 @@
     position: relative;
     width: 100%;
   }
+
 }
 
 @media screen and (max-width: 565px) {
@@ -84,6 +89,7 @@
     width: 23.5%;
 
   }
+
 }
 
 @media screen and (max-width: 565px) {
@@ -190,5 +196,11 @@
   }
   .s1head {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .hide{
+    display: inline;
   }
 }

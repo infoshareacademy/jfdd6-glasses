@@ -1,3 +1,6 @@
+.hide {
+  display: none; }
+
 @media screen and (max-width: 565px) {
   .section1 {
     overflow: hidden;
@@ -148,5 +151,8 @@
 
   .s1head {
     display: none; } }
+@media screen and (min-width: 1100px) {
+  .hide {
+    display: inline; } }
 
 /*# sourceMappingURL=section1_res.css.map */

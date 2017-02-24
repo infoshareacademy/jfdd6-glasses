@@ -81,6 +81,9 @@
   background-color: #222;
   color: #fff; }
 
+.thanks-text {
+  text-align: center; }
+
 @media screen and (max-width: 576px) {
   .invite {
     font-size: 2rem; }

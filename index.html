@@ -203,7 +203,32 @@
     </section>
 
     <section class="game">
-      <div class="game-board"></div>
+      <div class="game-board">
+
+        <div id="block"></div>
+        <div id="before-start" class="plate before-start">
+          <h3>Dziękujemy! Powiadomimy Cię gdy aplikacja będzie gotowa. </h3>
+          <p>Tymczasem spróbuj zagrać w naszą grę.<br>
+            W oknach pojawiają się różne ikony. Klikaj na nie jak najszybciej. <br>
+            X jest warty 1 punkt<br>
+            Popcorn jest warty 3 punkty<br>
+            Uważaj na psa! Będzie chciał wyjść na spacer i przerwie seans!</p>
+          <p>Masz 15 sekund. Ile punktów uzbierasz?</p>
+          <button type="button" id="see-game">Zagraj!</button>
+        </div>
+
+        <div id="walk" class="plate walk">Wyprowadź psa, gra skończona. <img src="img/game/walking.png">
+          <div class="close">X</div>
+        </div>
+        <div id="end" class="plate end">Koniec! Twój wynik: <br><br><span id="score">0</span> punktów.
+          <div class="close">X</div>
+        </div>
+        <br>
+        <button type="button" class="disabled" id="start-btn" onclick="startGame();">START</button>
+        <div class="points-counter">
+          <p>Twoje punkty:</p><p><span id="points">0</span></p>
+        </div>
+      </div>
     </section>
 
     <section class="thanks">
@@ -338,5 +363,7 @@
 <script src="js/slider.js"></script>
 <script src="js/side-menu-hide.js"></script>
 <script src="js/form-button.js"></script>
+<script src="js/game.js"></script>
+
 </body>
 </html>

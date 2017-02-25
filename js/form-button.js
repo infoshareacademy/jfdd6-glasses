@@ -57,4 +57,9 @@ $('.exit-game').click(function() {
   $('.section2').css("display", "flex");
   $('#before-start').css("display", "block");
   $('input[name="email"]').val('');
+  $('#walk').css("display", "none");
+  $('#end').css("display", "none");
+  $('#points').text('0');
+  stopGame();
+  startOfGame();
 });

@@ -105,16 +105,15 @@
          class="anchor"></div>
     <section class="film-frame section1">
       <div class="flex-container">
-        <div class="left" id="slide-left" onclick="slideLeft()"><p class="slider-nav"> < </p></div>
-        <div class="right" id="slide-right" onclick="slideRight()"><p class="slider-nav"> > </p></div>
+        <div class="left" id="slide-left" onclick="changeSlide(-1)"><p class="slider-nav"> < </p></div>
+        <div class="right" id="slide-right" onclick="changeSlide(+1)"><p class="slider-nav"> > </p></div>
         <div class="flex-item" id="slide1">
           <div class="flex-item-content">
             <h2>Poznaj sąsiadów <span class="hide">kinomaniaków</span></h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-              <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
             <p>Zintegruj się z lokalną społecznością. Będziesz zaskoczony, jak wiele osób takich jak Ty mieszka w
@@ -126,12 +125,12 @@
             <h2>Skorzystaj z tablicy ogłoszeń</h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
-            <p>Ogłoś swój seans na naszej tablicy lub zobacz, co proponują inni, i zapisz się na najbliższy pokaz w Twojej okolicy.</p>
+            <p>Ogłoś swój seans na naszej tablicy lub zobacz, co proponują inni, i zapisz się na najbliższy pokaz w
+              Twojej okolicy.</p>
           </div>
         </div>
         <div class="flex-item" id="slide3">
@@ -139,9 +138,8 @@
             <h2>Nadrób zaległości filmowe</h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
             <p>Przegapiłeś film, który niedawno wyszedł z kin? Nigdy nie widziałeś
@@ -153,9 +151,8 @@
             <h2>Odkryj nowe filmy</h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
             <p>Nasza wyszukiwarka pozwoli Ci znaleźć filmy według Twoich upodobań i podpowie, co warto jeszcze zobaczyć.
@@ -226,7 +223,8 @@
         <br>
         <button type="button" class="disabled" id="start-btn" onclick="startGame();">START</button>
         <div class="points-counter">
-          <p>Twoje punkty:</p><p><span id="points">0</span></p>
+          <p>Twoje punkty:</p>
+          <p><span id="points">0</span></p>
         </div>
       </div>
     </section>

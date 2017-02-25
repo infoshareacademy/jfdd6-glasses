@@ -53,16 +53,16 @@ function startGame() {
     clearing('projector');
     screening('projector');
 
-    if (counter === 10) {
+    if (counter === 15) {
       stopGame('end');
     }
     counter++;
-  }, 1000);
+  }, 1250);
 
   dog = setInterval(function () {
     clearing('dog');
     screening('dog');
-  }, 1250);
+  }, 1500);
 
 // ------------- ZMIANY KRZYŚKA
   var popcornAppear = (1900 + Math.random() * 4000);
@@ -73,7 +73,7 @@ function startGame() {
     popcornHide = setTimeout(function () {
       clearing('popcorn');
 
-    }, 750);
+    }, 1000);
 
   }, popcornAppear);
 // --------------

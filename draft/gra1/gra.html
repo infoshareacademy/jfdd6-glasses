@@ -45,6 +45,18 @@
       background-image: url(img/dog.png);
     }
 
+    .bonus {
+      /*background-color: red;*/
+      background-image: url("img/popcorn1.png");
+      background-repeat: no-repeat;
+    }
+
+    .bonus:active {
+      /*background-color: #00FF00;*/
+      background-image: url("img/popcorn1.png");
+      background-repeat: no-repeat;
+    }
+
     .plate {
       position: absolute;
       top: 50%;
@@ -114,6 +126,7 @@
 
 <br>
 <button type="button" id="start-btn" onclick="startGame();">Zagraj</button>
+<button type="button" id="end-btn" onclick="endOfGameButton();">Zakończ</button>
 <div class="points-counter">
   <p>Twoje punkty: <span id="points">...</span></p>
 </div>
@@ -124,15 +137,17 @@
   //ekran przed startem
   document.getElementById('see-game').addEventListener("click", seeGame);
   document.getElementById('start-btn').setAttribute('disabled', true);
+  document.getElementById('end-btn').disabled = true;
 
   function seeGame() {
     document.getElementById('before-start').style.display = "none";
     document.getElementById('start-btn').disabled = false;
-  }
+    document.getElementById('end-btn').disabled = false;
+      }
 
 
   // ------------- SYLWIA -------------
-  var i, projector, dog, score;
+  var i, projector, dog, score, bonus;
 
   //wypełnienie bloku
   var block = document.getElementById('block');
@@ -186,6 +201,20 @@
       counter++;
     }, 1000);
 
+    var bonusappear = (1900 + Math.random() * 4000);
+
+    bonus = setInterval(function () {
+      screening('bonus');
+
+      bonusHide = setInterval(function () {
+        clearing('bonus');
+
+      }, 750);
+
+    }, bonusappear);
+
+
+
     dog = setInterval(function () {
       clearing('dog');
       screening('dog');
@@ -195,9 +224,11 @@
 
   function stopGame(type) {
     clearInterval(projector);
+    clearInterval(bonus);
     clearInterval(dog);
     clearing('projector');
     clearing('dog');
+    clearing('bonus');
     endOfGame();
 
     if (type === 'end') {
@@ -213,6 +244,25 @@
       blankFlats[i].style.backgroundColor = "#b3b3b3";
     }
   }
+
+  function endOfGameButton() {
+    isNaN(score) ? score = 0 : score;
+
+    for (i = 0; i < blankFlats.length; i++) {
+      blankFlats[i].style.backgroundColor = "#b3b3b3";
+    }
+    endOfTime();
+
+    clearInterval(projector);
+    clearInterval(bonus);
+    clearInterval(dog);
+    clearing('projector');
+    clearing('bonus');
+    clearing('dog');
+    document.getElementById('start-btn').disabled = true;
+
+  }
+
 
   function startOfGame() {
     document.getElementById('start-btn').removeAttribute('disabled');
@@ -237,6 +287,12 @@
       score++;
       document.getElementById('points').innerHTML = score;
     }
+
+    if (hit.className.match(/\bbonus\b/)) {
+      score += 2;
+      document.getElementById('points').innerHTML = score;
+    }
+
     if (hit.className.match(/\bdog\b/)) {
       stopGame('dog');
     }

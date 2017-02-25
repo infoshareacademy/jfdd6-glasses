@@ -105,42 +105,32 @@
          class="anchor"></div>
     <section class="film-frame section1">
       <div class="flex-container">
-        <div class="left" id="slide-left" onclick="slideLeft()"><p class="slider-nav"> < </p></div>
-        <div class="right" id="slide-right" onclick="slideRight()"><p class="slider-nav"> > </p></div>
-        <div class="s1head-title"><h2>Dzięki naszej aplikacji będziesz mógł:</h2></div>
-        <div class="s1head">
-          <ul>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Poznać sąsiadów kinomaniaków</li>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Skorzystać z tablicy ogłoszeń</li>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Nadrobić zaległości filmowe</li>
-            <li><span class="material-icons" style="font-size:25px">grade</span> Odkryć nowe filmy</li>
-          </ul>
-        </div>
+        <div class="left" id="slide-left" onclick="changeSlide(-1)"><p class="slider-nav"> < </p></div>
+        <div class="right" id="slide-right" onclick="changeSlide(+1)"><p class="slider-nav"> > </p></div>
         <div class="flex-item" id="slide1">
           <div class="flex-item-content">
-            <h2>Poznaj sąsiadów</h2>
+            <h2>Poznaj sąsiadów <span class="hide">kinomaniaków</span></h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-              <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
-            <p>Zintegruj się z lokalną społecznością. Będziesz zaskoczony jak wiele osób takich jak Ty mieszka w
-              pobliżu</p>
+            <p>Zintegruj się z lokalną społecznością. Będziesz zaskoczony, jak wiele osób takich jak Ty mieszka w
+              pobliżu.</p>
           </div>
         </div>
         <div class="flex-item" id="slide2">
           <div class="flex-item-content">
-            <h2>Zgłoś seans</h2>
+            <h2>Skorzystaj z tablicy ogłoszeń</h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
-            <p>Ogłoś swój seans na naszej tablicy lub zobacz co proponują inni</p>
+            <p>Ogłoś swój seans na naszej tablicy lub zobacz, co proponują inni, i zapisz się na najbliższy pokaz w
+              Twojej okolicy.</p>
           </div>
         </div>
         <div class="flex-item" id="slide3">
@@ -148,13 +138,12 @@
             <h2>Nadrób zaległości filmowe</h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
-            <p>Przegapiłeś niedawny film, który wyszedł już z kina? Nigdy nie widziałeś
-              klasyka sprzed lat? Obejrzyj go z sąsiadem</p>
+            <p>Przegapiłeś film, który niedawno wyszedł z kin? Nigdy nie widziałeś
+              klasyka sprzed lat? Obejrzyj go z sąsiadem.</p>
           </div>
         </div>
         <div class="flex-item" id="slide4">
@@ -162,12 +151,11 @@
             <h2>Odkryj nowe filmy</h2>
           </div>
           <div class="flex-item-content star">
-            <span class="material-icons" style="font-size:25px">grade grade grade
-            <br><img src="./img/t.png" alt="" class="section1-img"><br>grade grade grade
-            </span>
+            <span class="material-icons" style="font-size:25px">grade grade grade<br><img src="./img/t.png" alt=""
+                                                                                          class="section1-img"><br>grade grade grade</span>
           </div>
           <div class="flex-item-content">
-            <p>Nasza wyszukiwarka pozwoli Ci znaleźć filmy według twoich upodobań i podpowie co warto jeszcze zobaczyć
+            <p>Nasza wyszukiwarka pozwoli Ci znaleźć filmy według Twoich upodobań i podpowie, co warto jeszcze zobaczyć.
             </p>
           </div>
         </div>
@@ -189,8 +177,8 @@
         <span class="material-icons">grade</span>
       </p>
       <div class="clapperboard">
-        <p class="">Zainteresowany? Zainteresowana?</p>
-        <p>Damy Wam znać o starcie<br class="visible-medium"> prosto na skrzynkę!</p>
+        <p>Zainteresowany? Zainteresowana?</p>
+        <p id="info">Damy Wam znać o starcie<br class="visible-medium"> prosto na skrzynkę!</p>
 
         <form action=""
               method="post"
@@ -198,7 +186,7 @@
           <input type="email"
                  name="email"
                  placeholder="Podaj swój adres e-mail">
-          <button type="button"
+          <button type="submit"
                   class="enrollment-form-button">Zawiadomcie mnie
           </button>
         </form>
@@ -211,8 +199,46 @@
       </div>
     </section>
 
-    <section class="film-frame gra">
-      <div class="game-board"></div>
+    <section class="game">
+      <div class="game-board">
+
+        <div id="block"></div>
+        <div id="before-start" class="plate before-start">
+          <h3>Dziękujemy! Powiadomimy Cię, gdy aplikacja będzie gotowa. </h3>
+          <p>Tymczasem wypróbuj naszą grę.<br>
+            W oknach pojawiają się różne ikony. Klikaj na nie jak najszybciej. <br>
+            <img src="img/game/projkt-p.png"> Projektor jest warty 1 punkt<br>
+            <img src="img/game/popcorn.png"> Popcorn jest warty 3 punkty<br>
+            Uważaj na psa! <img src="img/game/dog.png"> Będzie chciał wyjść na spacer i przerwie seans!</p>
+          <p>Masz <b>15 sekund</b>. Ile punktów uzbierasz?</p>
+          <button type="button" class="game-button" id="see-game">Zagraj!</button>
+        </div>
+        <div class="points-counter">
+          <p>Twoje punkty:</p>
+          <p><span id="points">0</span></p>
+        </div>
+        <div id="walk" class="plate walk">Wyprowadź psa, gra skończona.<p><img src="img/game/walking.png"></p>
+          <div class="close">X</div>
+        </div>
+        <div id="end" class="plate end">Koniec! Twój wynik: <br><br><span id="score">0</span> <span
+          id="score-label"></span>.
+          <div class="close">X</div>
+        </div>
+        <br>
+        <button type="button" class="game-button disabled" id="start-btn">START</button>
+
+
+      </div>
+      <div class="exit-game">X</div>
+    </section>
+
+    <section class="thanks">
+      <div class="thanks-text">
+        <img src="img/logo_white.png"
+             alt="Klatka">
+        <p>Dziękujemy za zapisanie się na premierę!</p>
+      </div>
+      <div class="exit-game">X</div>
     </section>
 
     <div id="zespol" class="anchor"></div>
@@ -245,10 +271,10 @@
           <p class="surname">Rzedzicka</p>
           <div class="social_media">
             <a href="mailto:sylwiarzedzicka@gmail.com"><img src="img/mail.svg"></a>
-            <a href="https://github.com/zemr"><img src="img/GitHub.png"></a>
+            <a target="_blank" href="https://github.com/zemr"><img src="img/GitHub.png"></a>
             <img src="img/linkedin_inactive.svg">
           </div>
-          <a href="#"><p class="homepage">Homepage</p></a>
+          <p class="homepage inactive">Homepage</p>
         </div>
         <!-- MICHAŁ -->
         <div class="person">
@@ -269,10 +295,10 @@
           <p class="surname">Trocha</p>
           <div class="social_media">
             <a href="mailto:michaltrocha@gmail.com"><img src="img/mail.svg"></a>
-            <a href="https://github.com/mitroc"><img src="img/GitHub.png"></a>
-            <a href="https://pl.linkedin.com/in/michaltrocha"><img src="img/linkedin.svg"></a>
+            <a target="_blank" href="https://github.com/mitroc"><img src="img/GitHub.png"></a>
+            <a target="_blank" href="https://pl.linkedin.com/in/michaltrocha"><img src="img/linkedin.svg"></a>
           </div>
-          <a href="#"><p class="homepage">Homepage</p></a>
+          <p class="homepage inactive">Homepage</p>
         </div>
         <!-- KRZYSIEK -->
         <div class="person">
@@ -293,10 +319,11 @@
           <p class="surname">Zieliński</p>
           <div class="social_media">
             <a href="mailto:krzysztof.zielinski.work@gmail.com"><img src="img/mail.svg"></a>
-            <a href="https://github.com/KrzysztofZielinskiWork"><img src="img/GitHub.png"></a>
-            <a href="https://www.linkedin.com/in/krzysztof-zielinski-gda-376020a5"><img src="img/linkedin.svg"></a>
+            <a target="_blank" href="https://github.com/KrzysztofZielinskiWork"><img src="img/GitHub.png"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/krzysztof-zielinski-gda-376020a5"><img
+              src="img/linkedin.svg"></a>
           </div>
-          <a href="#"><p class="homepage">Homepage</p></a>
+          <p class="homepage inactive">Homepage</p>
         </div>
         <!-- ADAM -->
         <div class="person">
@@ -317,10 +344,10 @@
           <p class="surname">Milko</p>
           <div class="social_media">
             <a href="mailto:adam.milko@gmail.com"><img src="img/mail.svg"></a>
-            <a href="https://github.com/natan-mlk"><img src="img/GitHub.png"></a>
-            <a href="https://www.linkedin.com/in/adam-milko-395303121/"><img src="img/linkedin.svg"></a>
+            <a target="_blank" href="https://github.com/natan-mlk"><img src="img/GitHub.png"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/adam-milko-395303121/"><img src="img/linkedin.svg"></a>
           </div>
-          <a href="https://adammilko.com"><p class="homepage">Homepage</p></a>
+          <a target="_blank" href="http://adammilko.com"><p class="homepage">Homepage</p></a>
         </div>
       </div>
     </section>
@@ -342,5 +369,8 @@
 <script src="js/avatar-animation.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/side-menu-hide.js"></script>
+<script src="js/form-button.js"></script>
+<script src="js/game.js"></script>
+
 </body>
 </html>

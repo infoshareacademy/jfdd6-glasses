@@ -53,6 +53,9 @@
 .homepage {
   font-size: 1.5rem; }
 
+.inactive {
+  color: grey; }
+
 .surname {
   font-size: 1.2rem;
   letter-spacing: 2px; }

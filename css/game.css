@@ -12,10 +12,10 @@
 .game-board {
   position: relative;
   margin: 0 auto;
-  width: 700px;
+  width: 660px;
   height: 500px;
   background-image: url(../img/game/game-background.svg);
-  background-size: 700px 500px; }
+  background-size: 660px 500px; }
 
 #block {
   position: relative;
@@ -57,7 +57,7 @@
   transform: translateY(-50%);
   width: 80%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
   background-color: #444;
   color: white;
   font-family: 'Varela Round', sans-serif;
@@ -70,11 +70,7 @@
 .walk {
   display: none; }
 
-#start-btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
+.game-button {
   background-color: #DC810E;
   border: none;
   border-radius: 8px;
@@ -84,6 +80,12 @@
   padding: 8px 32px;
   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.75);
   cursor: pointer; }
+
+#start-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px; }
 
 .disabled {
   opacity: 0.4;

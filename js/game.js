@@ -13,23 +13,13 @@ function seeGame() {
 
 
 // ------------- SYLWIA -------------
-var i, projector, dog, score;
+startButton.onclick = startGame;
+
+var i, projector, dog, popcorn, score;
 
 //wypełnienie bloku
 var block = document.getElementById('block');
-/*
- for (i = 0; i < 8; i++) {
- var floor = "clear: left;";
- for (var j = 0; j < 6; j++) {
- var flat = document.createElement('div');
- flat.setAttribute('style', floor);
- floor = "";
- flat.className = 'flats';
- block.appendChild(flat);
- }
- }
- */
-// jeżeli wypełniamy przestrzeń ograniczoną wymiarami, wystarczy taka funkcja:
+
 for (i = 0; i < 35; i++) {
   var flat = document.createElement('div');
   flat.className = 'flats';
@@ -40,7 +30,7 @@ for (i = 0; i < 35; i++) {
 var blankFlats = document.getElementsByClassName('flats');
 
 var screening = function (screen) {
-  var draw = Math.floor(Math.random() * 35);
+  var draw = Math.floor(Math.random() * 36);
   blankFlats[draw].classList.add(screen);
 };
 
@@ -63,24 +53,39 @@ function startGame() {
     clearing('projector');
     screening('projector');
 
-    if (counter === 10) {
+    if (counter === 15) {
       stopGame('end');
     }
     counter++;
-  }, 1000);
+  }, 1250);
 
   dog = setInterval(function () {
     clearing('dog');
     screening('dog');
-  }, 1250);
+  }, 1500);
 
+// ------------- ZMIANY KRZYŚKA
+  var popcornAppear = (1900 + Math.random() * 4000);
+
+  popcorn = setInterval(function () {
+    screening('popcorn');
+
+    popcornHide = setTimeout(function () {
+      clearing('popcorn');
+
+    }, 1000);
+
+  }, popcornAppear);
+// --------------
 }
 
 function stopGame(type) {
   clearInterval(projector);
   clearInterval(dog);
+  clearInterval(popcorn);
   clearing('projector');
   clearing('dog');
+  clearing('popcorn');
   endOfGame();
 
   if (type === 'end') {
@@ -93,7 +98,7 @@ function stopGame(type) {
 
 function endOfGame() {
   for (i = 0; i < blankFlats.length; i++) {
-    blankFlats[i].style.backgroundColor = "#b3b3b3";
+    blankFlats[i].classList.add("flats-shutdown");
   }
 }
 
@@ -101,11 +106,18 @@ function startOfGame() {
   startButton.removeAttribute('disabled');
   startButton.classList.remove("disabled");
   for (i = 0; i < blankFlats.length; i++) {
-    blankFlats[i].style.backgroundColor = "";
+    blankFlats[i].classList.remove("flats-shutdown");
   }
 }
 
 function endOfTime() {
+  if (score === 1) {
+    document.getElementById('score-label').innerHTML = "punkt";
+  } else if (score > 1 && score < 5) {
+    document.getElementById('score-label').innerHTML = "punkty";
+  } else {
+    document.getElementById('score-label').innerHTML = "punktów";
+  }
   document.getElementById('score').innerHTML = score;
   document.getElementById('end').style.display = "block";
 }
@@ -119,6 +131,10 @@ document.onclick = function (shot) {
 
   if (hit.className.match(/\bprojector\b/)) {
     score++;
+    document.getElementById('points').innerHTML = score;
+  }
+  if (hit.className.match(/\bpopcorn\b/)) {
+    score += 2;
     document.getElementById('points').innerHTML = score;
   }
   if (hit.className.match(/\bdog\b/)) {

@@ -21,15 +21,19 @@ $('.enrollment-form').submit(function(event) {
       $('.section2').css("display", "none");
       $('.thanks').css("display", "flex");
     }
+
     mq.addListener(function(changed) {
-      if(changed.matches) {
-        // the width of browser is more then 993px
-        $('.thanks').css("display", "none");
-        $('.game').css("display", "flex");
-      } else {
-        // the width of browser is less then 993px
-        $('.game').css("display", "none");
-        $('.thanks').css("display", "flex");
+      /* only if exit function wasn't used */
+      if ($('.game').css("display") !==  $('.thanks').css("display")) {
+        if (changed.matches) {
+          // the width of browser is more then 993px
+          $('.thanks').css("display", "none");
+          $('.game').css("display", "flex");
+        } else {
+          // the width of browser is less then 993px
+          $('.game').css("display", "none");
+          $('.thanks').css("display", "flex");
+        }
       }
     });
   }
@@ -45,3 +49,11 @@ if ($emailError) {
     $('.email-error').remove();
   });
 }
+
+/* exit function for .game and .thanks */
+$('.exit-game').click(function() {
+  $('.thanks').css("display", "none");
+  $('.game').css("display", "none");
+  $('.section2').css("display", "flex");
+  $('#before-start').css("display", "block");
+});

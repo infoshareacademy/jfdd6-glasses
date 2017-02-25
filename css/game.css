@@ -1,11 +1,12 @@
 .game {
-  display: flex;
+  position: relative;
+  display: none;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-  margin-top: 30px;
+  margin-top: 15px;
   min-height: 80vh;
-  width: 85%;
+  width: 84%;
   background-color: #222; }
 
 .game-board {
@@ -117,5 +118,63 @@
   color: white;
   font-family: 'Varela Round', sans-serif;
   text-align: center; }
+
+.exit-game {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #999;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer; }
+
+/* replacement screen */
+.thanks {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  min-height: 40vh;
+  width: 85%;
+  background-color: #222;
+  color: #fff; }
+
+.thanks-text {
+  text-align: center;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.2rem; }
+
+.thanks img {
+  max-width: 30%;
+  margin-top: 1rem; }
+
+/* queries */
+@media screen and (max-width: 576px) {
+  .thanks {
+    width: 83%;
+    margin-top: 8px; } }
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .thanks {
+    width: 84%;
+    margin-top: 15px; }
+
+  .thanks-text {
+    font-size: 1.5rem; }
+
+  .exit-game {
+    font-size: 1.4rem; } }
+@media screen and (min-width: 993px) and (max-width: 1199px) {
+  .exit-game {
+    font-size: 1.6rem; } }
+@media screen and (min-width: 1200px) {
+  .game {
+    width: 85%;
+    margin-top: 30px; }
+
+  .exit-game {
+    font-size: 1.9rem; } }
 
 /*# sourceMappingURL=game.css.map */

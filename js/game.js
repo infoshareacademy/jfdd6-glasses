@@ -30,7 +30,7 @@ for (i = 0; i < 35; i++) {
 var blankFlats = document.getElementsByClassName('flats');
 
 var screening = function (screen) {
-  var draw = Math.floor(Math.random() * 36);
+  var draw = Math.floor(Math.random() * 35);
   blankFlats[draw].classList.add(screen);
 };
 

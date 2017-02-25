@@ -66,6 +66,9 @@
 .before-start {
   display: block; }
 
+.before-start img {
+  width: 20px; }
+
 .end,
 .walk {
   display: none; }

@@ -100,7 +100,6 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 20px;
-
 }
 
 .disabled {
@@ -113,10 +112,15 @@
   cursor: pointer;
 }
 
-#score,
 #points {
   font-family: 'Anton', sans-serif;
   font-size: 1.5rem;
+  color: #DC810E;
+}
+
+#score {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
   color: #DC810E;
 }
 

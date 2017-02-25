@@ -1,38 +1,39 @@
 /**
- * Created by zieli on 17.02.2017.
+ * Created by zieli on 24.02.2017.
  */
 
-var el = document.getElementById('slide1');
+var currentSlide = 1;
+showSlides(currentSlide);
 
-var i = 0;
-var slideLeft = function () {
-  i += 1;
-  console.log(i);
-  console.log(el);
-  if (i > 0 && i < 4) {
-    el.style.marginLeft = "-" + i + "00%";
-  }
-  if (i >= 4 || i < 0) {
-    i = 0;
-    el.style.marginLeft = "0";
-  }
-};
+function changeSlide(n) {
+  showSlides(currentSlide += n);
+}
 
-var slideRight = function () {
-  console.log(i);
-  console.log(el);
-  i -= 1;
-  if (i > 0 && i < 4) {
-    el.style.marginLeft = "-" + i + "00%";
+function showSlides(n) {
+  var i;
+  var domElements = $('.flex-item');
+  if (n > domElements.length) {
+    currentSlide = 1
   }
-  if (i <= 0) {
-    i = 4;
-    el.style.marginLeft = "0";
-
+  if (n < 1) {
+    currentSlide = domElements.length
   }
-  return i;
-};
+  for (i = 0; i < domElements.length; i++) {
+    domElements[i].style.display = "none";
+  }
+  domElements[currentSlide - 1].style.display = "block";
+}
 
 window.onresize = function () {
-  el.style.marginLeft = "0"
+  var domElements = $('.flex-item');
+  for (var i = 0; i < domElements.length; i += 1) {
+    domElements[i].style.display = ""
+  }
+};
+
+window.onload = function () {
+  var domElements = $('.flex-item');
+  for (var i = 0; i < domElements.length; i += 1) {
+    domElements[i].style.display = ""
+  }
 };

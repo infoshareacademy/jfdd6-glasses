@@ -111,6 +111,13 @@ function startOfGame() {
 }
 
 function endOfTime() {
+  if (score === 1) {
+    document.getElementById('score-label').innerHTML = "punkt";
+  } else if (score > 1 && score < 5) {
+    document.getElementById('score-label').innerHTML = "punkty";
+  } else {
+    document.getElementById('score-label').innerHTML = "punktów";
+  }
   document.getElementById('score').innerHTML = score;
   document.getElementById('end').style.display = "block";
 }

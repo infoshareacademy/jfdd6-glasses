@@ -145,6 +145,7 @@
   background-color: #DC810E;
   min-height: 100px;
   position: relative;
+
 }
 
 .section1-img {
@@ -175,8 +176,9 @@
 
 .slider-nav {
   font-size: 2.5rem;
-  height: 85vh;
-  line-height: 32rem;
+  height: 100vh;
+  line-height: 36.5rem;
+  margin: 0;
   transition-duration: 2s;
   visibility: visible;
 }
@@ -185,6 +187,19 @@
   background-color: rgba(12, 12, 12, 0.16);
   color: #383838;
   font-size: 2.5rem;
+  margin: 0;
   width: 2.5rem;
   visibility: visible;
+}
+
+.blink {
+  display: block;
+  animation-iteration-count: 1;
+  animation:
+    tlo 500ms linear 0s  normal forwards;
+  @keyframes tlo
+  {
+    0% { background-color:#FFF; }
+    100% { background-color: #DC810E; }
+  }
 }

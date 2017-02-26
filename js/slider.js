@@ -20,14 +20,16 @@ function showSlides(n) {
   }
   for (i = 0; i < domElements.length; i++) {
     domElements[i].style.display = "none";
+    $('#slide'+[i+1]).removeClass("blink");
   }
   domElements[currentSlide - 1].style.display = "block";
+  $('#slide'+[currentSlide]).addClass("blink");
 }
 
 window.onresize = function () {
   var domElements = $('.flex-item');
   for (var i = 0; i < domElements.length; i += 1) {
-    domElements[i].style.display = ""
+    domElements[i].style.display = "";
   }
 };
 

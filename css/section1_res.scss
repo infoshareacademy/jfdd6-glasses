@@ -107,9 +107,6 @@
   .slider-nav {
     display: none;
   }
-  .slide1 {
-    margin-left: 0;
-  }
 }
 
 @media screen and (min-width: 565px) and (max-width: 992px) {
@@ -132,6 +129,9 @@
     margin: 0.5%;
     width: 23.5%;
   }
+  .slide1 {
+    margin-left: 0;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -145,8 +145,6 @@
   background-color: #DC810E;
   min-height: 100px;
   position: relative;
-  min-height: 100px;
-
 }
 
 .section1-img {
@@ -194,15 +192,14 @@
 }
 
 .blink {
-  display: block;
   animation-iteration-count: 1;
-  animation:
-    tlo 500ms linear 0s  normal forwards;
+  animation: tlo 500ms linear 0s  normal forwards;
   @keyframes tlo
   {
     0% { background-color:#FFF; }
     100% { background-color: #DC810E; }
   }
+  display: flex;
 }
 
 .img-section1 {

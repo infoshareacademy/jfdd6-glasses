@@ -30,6 +30,8 @@ window.onresize = function () {
   var domElements = $('.flex-item');
   for (var i = 0; i < domElements.length; i += 1) {
     domElements[i].style.display = "";
+    $('#slide'+[i+1]).removeClass("blink");
+
   }
 };
 

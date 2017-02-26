@@ -61,7 +61,6 @@
   }
   @include medium {
     font-size: 5rem;
-    //padding: 20px 40px 40px;
     letter-spacing: 8px;
   }
   @include large {
@@ -107,8 +106,6 @@
   font-size: 1.2rem;
   letter-spacing: 2px;
   padding: .5rem 0 1.1rem;
-  //padding-top: .5rem;
-  //padding-bottom: 1.1rem;
   @include medium {
     font-size: 1.5rem;
   }

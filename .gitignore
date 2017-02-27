@@ -1,3 +1,6 @@
 .idea
 *.iml
 *.css.map
+*.css
+!style.css
+!normalize.css

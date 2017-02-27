@@ -108,7 +108,8 @@
   align-items: center;
   background-color: #DC810E;
   min-height: 100px;
-  position: relative; }
+  position: relative;
+  min-height: 100px; }
 
 .section1-img {
   max-width: 25%; }
@@ -157,5 +158,8 @@
     background-color: #FFF; }
   100% {
     background-color: #DC810E; } }
+.img-section1 {
+  max-width: 50%;
+  max-height: 50%; }
 
 /*# sourceMappingURL=section1_res.css.map */
